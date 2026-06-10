@@ -1,32 +1,370 @@
-{
-  "meta": {
-    "weekLabel": "Week of June 8–12, 2026",
-    "dayOfWeek": 3,
-    "totalDays": 5,
-    "lastUpdated": "6/10 updated 3 PM — GP & Calls",
-    "monthDaysTracked": 8,
-    "monthTotalDays": 20,
-    "tiGoal": 30000,
-    "chGoal": 230000
-  },
-  "reps": [
-    {"name":"Alex McClellan","team":"intrusion","goal":5000,"nba":0,"callTarget":80,"dailyCallTarget":16,"callLabel":"80/wk","gp_d1":93.80,"gp_d2":0,"gp_d3":0,"calls_d1":7,"calls_d2":5,"calls_d3":6},
-    {"name":"Alex Robinson","team":"intrusion","goal":5000,"nba":1,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":84.09,"gp_d2":245.65,"gp_d3":0,"calls_d1":86,"calls_d2":83,"calls_d3":13},
-    {"name":"Dalton Martinez","team":"intrusion","goal":10000,"nba":0,"callTarget":300,"dailyCallTarget":60,"callLabel":"60/day","gp_d1":1146.28,"gp_d2":993.47,"gp_d3":219.89,"calls_d1":72,"calls_d2":76,"calls_d3":55},
-    {"name":"Daryn Hightower","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":1900.00,"gp_d2":0,"gp_d3":500.00,"calls_d1":66,"calls_d2":75,"calls_d3":30},
-    {"name":"Kieran Logue","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":750.00,"gp_d2":100.00,"gp_d3":500.00,"calls_d1":85,"calls_d2":35,"calls_d3":0},
-    {"name":"Lee Epling","team":"chamblee","goal":10000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":1050.00,"gp_d2":600.00,"gp_d3":0,"calls_d1":35,"calls_d2":30,"calls_d3":28},
-    {"name":"Luke Kush","team":"chamblee","goal":105000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":7423.27,"gp_d2":2491.79,"gp_d3":5362.68,"calls_d1":26,"calls_d2":25,"calls_d3":28},
-    {"name":"Spencer Hines","team":"chamblee","goal":115000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":1200.00,"gp_d2":90.00,"gp_d3":215.00,"calls_d1":29,"calls_d2":17,"calls_d3":0}
-  ],
-  "prevWeek": [
-    {"name":"Alex McClellan","gp":172.45,"outbound":38,"nba":1},
-    {"name":"Alex Robinson","gp":1564.22,"outbound":365,"nba":0},
-    {"name":"Dalton Martinez","gp":2025.17,"outbound":371,"nba":1},
-    {"name":"Daryn Hightower","gp":826.89,"outbound":406,"nba":0},
-    {"name":"Kieran Logue","gp":2250.00,"outbound":367,"nba":0},
-    {"name":"Lee Epling","gp":3090.00,"outbound":133,"nba":0},
-    {"name":"Luke Kush","gp":21773.80,"outbound":187,"nba":0},
-    {"name":"Spencer Hines","gp":6442.30,"outbound":128,"nba":0}
-  ]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Dashboard — June 2026</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<style>
+  :root{--bg:#ffffff;--bg2:#f7f7f5;--bg3:#efede8;--border:#e0ddd6;--text:#1a1a18;--text2:#6b6a65;--green:#639922;--amber:#EF9F27;--red:#E24B4A;--green-bg:#EAF3DE;--green-fg:#27500A;--amber-bg:#FAEEDA;--amber-fg:#633806;--red-bg:#FCEBEB;--red-fg:#791F1F;--blue-bg:#E6F1FB;--blue-fg:#0C447C;--pur-bg:#EEEDFE;--pur-fg:#3C3489;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.07)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg2);color:var(--text);min-height:100vh}
+  header{background:var(--bg);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .logo{font-size:16px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .logo-dot{width:10px;height:10px;border-radius:50%;background:var(--green)}
+  .live-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-bg);color:var(--green-fg);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:500}
+  .live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .header-meta{font-size:12px;color:var(--text2)}
+  .container{max-width:1100px;margin:0 auto;padding:24px 16px}
+  .tab-bar{display:flex;gap:4px;margin-bottom:24px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+  .tab-btn{padding:8px 16px;font-size:13px;font-weight:500;border:none;background:transparent;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s}
+  .tab-btn:hover{color:var(--text)}.tab-btn.active{color:var(--text);border-bottom-color:var(--text)}
+  .sub-tab-bar{display:flex;gap:6px;margin-bottom:20px}
+  .sub-tab{padding:5px 14px;font-size:12px;border-radius:20px;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text2);font-weight:500;transition:all .15s}
+  .sub-tab.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+  .page{display:none}.page.active{display:block}
+  .sec{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;margin-top:24px}
+  .sec:first-child{margin-top:0}
+  .chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+  .chip{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;box-shadow:var(--shadow)}
+  .chip-label{font-size:11px;color:var(--text2);margin-bottom:3px}
+  .chip-val{font-size:16px;font-weight:600}
+  .chip-sub{font-size:11px;color:var(--text2);margin-top:2px}
+  .nba-box{background:var(--pur-bg);border:1px solid #AFA9EC;border-radius:var(--radius);padding:12px 16px;margin-bottom:20px;display:flex;gap:10px;align-items:flex-start}
+  .nba-icon{color:#534AB7;font-size:18px;flex-shrink:0;margin-top:1px}
+  .nba-title{font-size:12px;font-weight:600;color:#3C3489;margin-bottom:3px}
+  .nba-def{font-size:11px;color:#534AB7;margin-top:3px}
+  .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+  .team-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+  .team-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+  .team-pct{font-size:28px;font-weight:600}
+  .team-detail{font-size:11px;color:var(--text2);margin-top:2px;margin-bottom:8px}
+  .team-bk{font-size:10px;color:var(--text2);margin-top:5px}
+  .prog-wrap{background:var(--bg2);border-radius:20px;height:7px;overflow:hidden}
+  .prog-bar{height:100%;border-radius:20px}
+  .pg{background:var(--green)}.pa{background:var(--amber)}.pr{background:var(--red)}
+  .tbl-wrap{overflow-x:auto;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:24px}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th{text-align:left;padding:10px 12px;font-size:11px;font-weight:600;color:var(--text2);border-bottom:1px solid var(--border);background:var(--bg2)}
+  td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:middle}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .rank{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-weight:600;font-size:11px}
+  .r1{background:#FAC775;color:#412402}.r2{background:#D3D1C7;color:#2C2C2A}.r3{background:#F5C4B3;color:#4A1B0C}.ro{background:var(--bg2);color:var(--text2)}
+  .badge{display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600}
+  .bg2c{background:var(--green-bg);color:var(--green-fg)}.ba2c{background:var(--amber-bg);color:var(--amber-fg)}.br2c{background:var(--red-bg);color:var(--red-fg)}.bb2c{background:var(--blue-bg);color:var(--blue-fg)}.bp2c{background:var(--pur-bg);color:var(--pur-fg)}
+  .ton{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:500;background:var(--green-bg);color:var(--green-fg)}
+  .twn{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:500;background:var(--amber-bg);color:var(--amber-fg)}
+  .tof{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:500;background:var(--red-bg);color:var(--red-fg)}
+  .pw{background:var(--bg2);border-radius:20px;height:4px;overflow:hidden;margin-top:3px;width:70px}
+  .pb{height:100%;border-radius:20px}
+  .mu{color:var(--green);font-size:12px;font-weight:700}.md{color:var(--red);font-size:12px;font-weight:700}.ms{color:var(--text2);font-size:12px}
+  .rep-name{font-weight:600;font-size:13px}
+  .rep-sub{font-size:10px;color:var(--text2);margin-top:1px}
+  .note{font-size:11px;color:var(--text2);margin-bottom:16px;line-height:1.6;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 14px}
+  .loading{text-align:center;padding:60px;color:var(--text2);font-size:14px}
+  .error-box{text-align:center;padding:40px;color:var(--red-fg);background:var(--red-bg);border-radius:var(--radius);margin:20px 0;font-size:13px}
+  @media(max-width:600px){.team-grid{grid-template-columns:1fr}.chips{grid-template-columns:1fr 1fr}header{padding:12px 16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><div class="logo-dot"></div> Team Dashboard — June 2026</div>
+  <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+    <span class="live-badge"><span class="live-dot"></span><span id="liveLabel">Loading...</span></span>
+    <span class="header-meta" id="weekLabel"></span>
+  </div>
+</header>
+
+<div class="container">
+  <div id="loadingMsg" class="loading"><i class="ti ti-loader" style="font-size:24px;display:block;margin-bottom:8px"></i>Loading dashboard data...</div>
+  <div id="errorMsg" class="error-box" style="display:none"></div>
+  <div id="dashContent" style="display:none">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="go('weekly',event)"><i class="ti ti-chart-bar"></i> This Week</button>
+      <button class="tab-btn" onclick="go('leaderboard',event)"><i class="ti ti-trophy"></i> Leaderboard</button>
+    </div>
+
+    <!-- WEEKLY -->
+    <div id="page-weekly" class="page active">
+      <p style="font-size:11px;color:var(--text2);margin-bottom:16px" id="updatedLabel"></p>
+      <div class="chips" id="highlights"></div>
+      <div class="nba-box">
+        <i class="ti ti-star nba-icon"></i>
+        <div>
+          <div class="nba-title">NBA — New Buying Account</div>
+          <div style="font-size:12px" id="nbaText"></div>
+          <div class="nba-def">A new buying account is a brand-new customer that has placed their first load or is fully onboarded — not a reactivation.</div>
+        </div>
+      </div>
+      <p class="sec">June running total — % to goal</p>
+      <div class="team-grid">
+        <div class="team-box">
+          <div class="team-label"><i class="ti ti-users"></i> Team Intrusion</div>
+          <div class="team-pct" id="ti-pct"></div>
+          <div class="team-detail" id="ti-det"></div>
+          <div class="prog-wrap"><div class="prog-bar" id="ti-bar"></div></div>
+          <div class="team-bk" id="ti-bk"></div>
+        </div>
+        <div class="team-box">
+          <div class="team-label"><i class="ti ti-building"></i> Chamblee</div>
+          <div class="team-pct" id="ch-pct"></div>
+          <div class="team-detail" id="ch-det"></div>
+          <div class="prog-wrap"><div class="prog-bar" id="ch-bar"></div></div>
+          <div class="team-bk" id="ch-bk"></div>
+        </div>
+      </div>
+      <p class="sec" id="wkTableTitle"></p>
+      <div class="tbl-wrap"><table>
+        <thead><tr id="wkTableHead"></tr></thead>
+        <tbody id="weekBody"></tbody>
+      </table></div>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div id="page-leaderboard" class="page">
+      <div class="sub-tab-bar">
+        <button class="sub-tab active" onclick="showLB('weekly',event)">This Week</button>
+        <button class="sub-tab" onclick="showLB('monthly',event)">June Monthly</button>
+      </div>
+      <div id="lb-weekly">
+        <div class="note">
+          <strong>Scoring:</strong> GP pace vs weekly goal (3 pts) · NBA this week (2 pts) · Call pace vs target (1 pt) · Max 6 pts<br>
+          <strong>Call targets:</strong> Alex R, Daryn, Kieran → 80/day &nbsp;·&nbsp; Dalton → 60/day &nbsp;·&nbsp; Lee, Luke, Spencer → 35/day &nbsp;·&nbsp; Alex M → 80/week<br>
+          <strong>Pace:</strong> <span class="ton"><i class="ti ti-check"></i> ≥90%</span> &nbsp;<span class="twn"><i class="ti ti-alert-triangle"></i> 70–89%</span> &nbsp;<span class="tof"><i class="ti ti-alert-circle"></i> &lt;70%</span>
+        </div>
+        <div class="tbl-wrap"><table>
+          <thead><tr>
+            <th style="width:24px">#</th><th style="width:130px">Rep</th><th style="width:60px">Score</th>
+            <th style="width:120px">GP pace</th><th style="width:50px">NBA</th>
+            <th style="width:130px">Call pace</th><th style="width:65px">Team</th>
+          </tr></thead>
+          <tbody id="lbWeekBody"></tbody>
+        </table></div>
+      </div>
+      <div id="lb-monthly" style="display:none">
+        <div class="note">
+          <strong>Scoring:</strong> Cumulative GP vs goal (3 pts) · Total NBAs all month (2 pts each) · Call avg/day vs target (1 pt) · Max 8 pts<br>
+          <strong>Call target (monthly):</strong> Each rep measured vs their own daily target — rolling avg over <span id="daysTracked"></span> days tracked<br>
+          <strong>Move:</strong> Rank change vs prior week (Jun 1–5)
+        </div>
+        <div class="tbl-wrap"><table>
+          <thead><tr>
+            <th style="width:24px">#</th><th style="width:130px">Rep</th><th style="width:60px">Score</th>
+            <th style="width:120px">GP vs goal</th><th style="width:55px">NBA total</th>
+            <th style="width:130px">Calls avg/day</th><th style="width:50px">Move</th>
+          </tr></thead>
+          <tbody id="lbMonthBody"></tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA_URL='data.json';
+let D=null;
+
+async function loadData(){
+  try{
+    const res=await fetch(DATA_URL+'?t='+Date.now());
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    D=await res.json();
+    document.getElementById('loadingMsg').style.display='none';
+    document.getElementById('dashContent').style.display='block';
+    renderAll();
+  }catch(e){
+    document.getElementById('loadingMsg').style.display='none';
+    document.getElementById('errorMsg').style.display='block';
+    document.getElementById('errorMsg').innerHTML='<i class="ti ti-alert-circle"></i> Could not load dashboard data. Please try refreshing.<br><small>'+e.message+'</small>';
+  }
 }
+
+function fmt(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtS(v){return '$'+Math.round(v).toLocaleString('en-US');}
+function pcC(p){return p>=40?'pg':p>=20?'pa':'pr';}
+function ts(p){return p>=90?'on':p>=70?'warn':'off';}
+function pill(pct,label){
+  const s=ts(pct),cls=s==='on'?'ton':s==='warn'?'twn':'tof';
+  const ic=s==='on'?'ti-check':s==='warn'?'ti-alert-triangle':'ti-alert-circle';
+  return `<span class="${cls}"><i class="ti ${ic}"></i>${label}</span>`;
+}
+
+// Sum all GP days dynamically
+function wkGP(r){
+  let t=0;
+  const days=D.meta.dayOfWeek;
+  if(days>=1&&r.gp_d1!=null) t+=r.gp_d1;
+  if(days>=2&&r.gp_d2!=null) t+=r.gp_d2;
+  if(days>=3&&r.gp_d3!=null) t+=r.gp_d3;
+  if(days>=4&&r.gp_d4!=null) t+=r.gp_d4;
+  if(days>=5&&r.gp_d5!=null) t+=r.gp_d5;
+  return t;
+}
+function wkCalls(r){
+  let t=0;
+  const days=D.meta.dayOfWeek;
+  if(days>=1&&r.calls_d1!=null) t+=r.calls_d1;
+  if(days>=2&&r.calls_d2!=null) t+=r.calls_d2;
+  if(days>=3&&r.calls_d3!=null) t+=r.calls_d3;
+  if(days>=4&&r.calls_d4!=null) t+=r.calls_d4;
+  if(days>=5&&r.calls_d5!=null) t+=r.calls_d5;
+  return t;
+}
+function gpDay(r,d){return r['gp_d'+d]||0;}
+function callsDay(r,d){return r['calls_d'+d]||0;}
+
+function prevRep(name){return D.prevWeek.find(x=>x.name===name)||{};}
+function moGP(r){const p=prevRep(r.name);return wkGP(r)+(p.gp||0);}
+function moNBA(r){const p=prevRep(r.name);return r.nba+(p.nba||0);}
+function moTotalCalls(r){const p=prevRep(r.name);return wkCalls(r)+(p.outbound||0);}
+function moAvg(r){return Math.round(moTotalCalls(r)/D.meta.monthDaysTracked*10)/10;}
+function moCallPct(r){
+  if(r.dailyCallTarget===16) return Math.round(wkCalls(r)/80*100);
+  return Math.round(moAvg(r)/r.dailyCallTarget*100);
+}
+function gpWkPace(r){return wkGP(r)/D.meta.dayOfWeek*D.meta.totalDays;}
+function gpWkPct(r){return Math.round(gpWkPace(r)/r.goal*100);}
+function gpMoPace(r){return moGP(r)/D.meta.monthDaysTracked*D.meta.monthTotalDays;}
+function gpMoPct(r){return Math.round(gpMoPace(r)/r.goal*100);}
+function callWkPct(r){
+  const t=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek;
+  return Math.round(wkCalls(r)/t*100);
+}
+function moPct(r){return Math.min(999,Math.round(moGP(r)/r.goal*100));}
+function wGs(r){return Math.min(3,Math.round((wkGP(r)/r.goal)*3*10)/10);}
+function wCs(r){const t=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek;return Math.min(1,Math.round((wkCalls(r)/t)*10)/10);}
+function wT(r){return Math.round((wGs(r)+(r.nba?2:0)+wCs(r))*10)/10;}
+function mGs(r){return Math.min(3,Math.round((moGP(r)/r.goal)*3*10)/10);}
+function mNs(r){return Math.min(4,moNBA(r)*2);}
+function mCs(r){return Math.min(1,Math.round((moCallPct(r)/100)*10)/10);}
+function mT(r){return Math.round((mGs(r)+mNs(r)+mCs(r))*10)/10;}
+const DAY_LABELS=['Mon','Tue','Wed','Thu','Fri'];
+
+function renderAll(){
+  const m=D.meta,reps=D.reps;
+  document.getElementById('liveLabel').textContent=m.lastUpdated;
+  document.getElementById('weekLabel').textContent=m.weekLabel+' · Day '+m.dayOfWeek+' of '+m.totalDays;
+  document.getElementById('updatedLabel').textContent='Updated: '+m.lastUpdated;
+  document.getElementById('wkTableTitle').textContent='Individual performance — '+m.weekLabel+' (days 1–'+m.dayOfWeek+')';
+  document.getElementById('daysTracked').textContent=m.monthDaysTracked;
+
+  const ti=reps.filter(r=>r.team==='intrusion'),ch=reps.filter(r=>r.team==='chamblee');
+  const nbas=reps.filter(r=>r.nba>0);
+  const byWk=[...reps].sort((a,b)=>wkGP(b)-wkGP(a))[0];
+  const byMo=[...reps].sort((a,b)=>moPct(b)-moPct(a))[0];
+  const onGP=reps.filter(r=>ts(gpWkPct(r))==='on').length;
+
+  document.getElementById('highlights').innerHTML=`
+    <div class="chip"><div class="chip-label"><i class="ti ti-cash"></i> Most GP this week</div><div class="chip-val">${byWk.name.split(' ')[0]}</div><div class="chip-sub">${fmt(wkGP(byWk))}</div></div>
+    <div class="chip"><div class="chip-label"><i class="ti ti-target"></i> Best % to goal (June)</div><div class="chip-val">${byMo.name.split(' ')[0]}</div><div class="chip-sub">${moPct(byMo)}% of goal</div></div>
+    <div class="chip"><div class="chip-label"><i class="ti ti-trending-up"></i> GP on track</div><div class="chip-val">${onGP} of ${reps.length}</div><div class="chip-sub">reps on pace</div></div>
+    <div class="chip"><div class="chip-label"><i class="ti ti-star"></i> NBA this week</div><div class="chip-val">${nbas.length?nbas.map(r=>r.name.split(' ')[0]).join(', '):'None yet'}</div><div class="chip-sub">${nbas.length} new buying account${nbas.length!==1?'s':''}</div></div>`;
+
+  document.getElementById('nbaText').innerHTML=nbas.length
+    ?`This week: <strong>${nbas.map(r=>r.name).join(', ')}</strong>`
+    :'No NBAs yet this week. Prior week: Dalton Martinez (NGR), Alex McClellan (Sunny Delight/Harvest Hill).';
+
+  // Teams
+  const tiMo=ti.reduce((s,r)=>s+moGP(r),0),tiPct=Math.round(tiMo/m.tiGoal*100);
+  const tiW1=D.prevWeek.filter(r=>ti.find(c=>c.name===r.name)).reduce((s,r)=>s+r.gp,0);
+  const tiW2=ti.reduce((s,r)=>s+wkGP(r),0);
+  document.getElementById('ti-pct').textContent=tiPct+'%';
+  document.getElementById('ti-det').textContent=fmtS(tiMo)+' of '+fmtS(m.tiGoal)+' goal';
+  document.getElementById('ti-bk').innerHTML='Wk1 Jun 1–5: '+fmtS(tiW1)+' &nbsp;·&nbsp; Wk2 so far: '+fmtS(tiW2);
+  const tb=document.getElementById('ti-bar');tb.style.width=Math.min(100,tiPct)+'%';tb.className='prog-bar '+pcC(tiPct);
+  const chMo=ch.reduce((s,r)=>s+moGP(r),0),chPct=Math.round(chMo/m.chGoal*100);
+  const chW1=D.prevWeek.filter(r=>ch.find(c=>c.name===r.name)).reduce((s,r)=>s+r.gp,0);
+  const chW2=ch.reduce((s,r)=>s+wkGP(r),0);
+  document.getElementById('ch-pct').textContent=chPct+'%';
+  document.getElementById('ch-det').textContent=fmtS(chMo)+' of '+fmtS(m.chGoal)+' goal';
+  document.getElementById('ch-bk').innerHTML='Wk1 Jun 1–5: '+fmtS(chW1)+' &nbsp;·&nbsp; Wk2 so far: '+fmtS(chW2);
+  const cb=document.getElementById('ch-bar');cb.style.width=Math.min(100,chPct)+'%';cb.className='prog-bar '+pcC(chPct);
+
+  // Weekly table header — dynamic day columns
+  let headHTML='<th style="width:24px">#</th><th style="width:130px">Rep</th>';
+  for(let d=1;d<=m.dayOfWeek;d++) headHTML+=`<th style="width:72px">${DAY_LABELS[d-1]} GP</th>`;
+  headHTML+='<th style="width:85px">Week total</th><th style="width:100px">GP on track</th><th style="width:115px">Calls on track</th><th style="width:44px">NBA</th>';
+  document.getElementById('wkTableHead').innerHTML=headHTML;
+
+  // Weekly table rows
+  const ws=[...reps].sort((a,b)=>wkGP(b)-wkGP(a));
+  document.getElementById('weekBody').innerHTML=ws.map((rep,i)=>{
+    const gpPct=gpWkPct(rep),cPct=callWkPct(rep);
+    const tgt=rep.dailyCallTarget===16?80:rep.dailyCallTarget*m.dayOfWeek;
+    const rC=i===0?'r1':i===1?'r2':i===2?'r3':'ro';
+    let dayCells='';
+    for(let d=1;d<=m.dayOfWeek;d++){
+      const v=gpDay(rep,d);
+      dayCells+=`<td>${v>0?fmt(v):'<span style="color:var(--text2)">—</span>'}</td>`;
+    }
+    return `<tr>
+      <td><span class="rank ${rC}">${i+1}</span></td>
+      <td><div class="rep-name">${rep.name}</div><div class="rep-sub">${rep.team==='intrusion'?'Team Intrusion':'Chamblee'}</div></td>
+      ${dayCells}
+      <td><strong>${fmt(wkGP(rep))}</strong></td>
+      <td>${pill(gpPct,gpPct+'%')}<div class="pw"><div class="pb ${pcC(gpPct)}" style="width:${Math.min(100,gpPct)}%"></div></div><div style="font-size:10px;color:var(--text2);margin-top:2px">proj: ${fmtS(gpWkPace(rep))}</div></td>
+      <td>${pill(cPct,cPct+'%')}<div style="font-size:10px;color:var(--text2);margin-top:2px">${wkCalls(rep)}/${tgt} · ${rep.callLabel}</div></td>
+      <td>${rep.nba?'<span class="badge bp2c"><i class="ti ti-star"></i> NBA</span>':'<span style="color:var(--text2)">—</span>'}</td>
+    </tr>`;
+  }).join('');
+
+  // Weekly LB
+  const wlb=[...reps].sort((a,b)=>wT(b)-wT(a));
+  document.getElementById('lbWeekBody').innerHTML=wlb.map((rep,i)=>{
+    const gs=wGs(rep),cs=wCs(rep),ts_=wT(rep),gpPct=gpWkPct(rep),cPct=callWkPct(rep);
+    const tgt=rep.dailyCallTarget===16?80:rep.dailyCallTarget*m.dayOfWeek;
+    const rC=i===0?'r1':i===1?'r2':i===2?'r3':'ro';
+    return `<tr>
+      <td><span class="rank ${rC}">${i+1}</span></td>
+      <td><div class="rep-name">${rep.name}</div><div class="rep-sub">${rep.callLabel}</div></td>
+      <td><span style="font-size:18px;font-weight:700">${ts_.toFixed(1)}</span><span style="font-size:10px;color:var(--text2)">/6</span></td>
+      <td>${pill(gpPct,gpPct+'%')}<div style="font-size:10px;color:var(--text2);margin-top:2px">${fmtS(wkGP(rep))} · ${gs.toFixed(1)}/3 pts</div></td>
+      <td>${rep.nba?'<span class="badge bp2c">2/2</span>':'<span class="badge bb2c">0/2</span>'}</td>
+      <td>${pill(cPct,cPct+'%')}<div style="font-size:10px;color:var(--text2);margin-top:2px">${wkCalls(rep)}/${tgt} · ${cs.toFixed(1)}/1 pt</div></td>
+      <td><span style="font-size:11px;color:var(--text2)">${rep.team==='intrusion'?'Intrusion':'Chamblee'}</span></td>
+    </tr>`;
+  }).join('');
+
+  // Monthly LB
+  const prevRanks=[...D.prevWeek].sort((a,b)=>b.gp-a.gp).map((r,i)=>({name:r.name,rank:i+1}));
+  const mlb=[...reps].sort((a,b)=>mT(b)-mT(a));
+  document.getElementById('lbMonthBody').innerHTML=mlb.map((rep,i)=>{
+    const gs=mGs(rep),ns=mNs(rep),cs=mCs(rep),ts_=mT(rep);
+    const mo=moGP(rep),pct=Math.round(mo/rep.goal*100),nba=moNBA(rep),avg=moAvg(rep),cPct=moCallPct(rep),gpPacePct=gpMoPct(rep);
+    const rC=i===0?'r1':i===1?'r2':i===2?'r3':'ro';
+    const pr=prevRanks.find(x=>x.name===rep.name);
+    const diff=pr?pr.rank-(i+1):null;
+    const mv=diff===null?'<span class="ms">—</span>':diff>0?`<span class="mu">▲${diff}</span>`:diff<0?`<span class="md">▼${Math.abs(diff)}</span>`:'<span class="ms">—</span>';
+    const callDisp=rep.dailyCallTarget===16?`${wkCalls(rep)}/80 wk`:`${avg.toFixed(1)}/day`;
+    const tgtLabel=rep.dailyCallTarget===16?'80/week':rep.dailyCallTarget+'/day';
+    return `<tr>
+      <td><span class="rank ${rC}">${i+1}</span></td>
+      <td><div class="rep-name">${rep.name}</div><div class="rep-sub">${rep.team==='intrusion'?'Team Intrusion':'Chamblee'}</div></td>
+      <td><span style="font-size:18px;font-weight:700">${ts_.toFixed(1)}</span><span style="font-size:10px;color:var(--text2)">/8</span></td>
+      <td>${pill(gpPacePct,pct+'% of goal')}<div style="font-size:10px;color:var(--text2);margin-top:2px">${fmtS(mo)} · proj ${fmtS(gpMoPace(rep))}</div><div style="font-size:10px">${gs.toFixed(1)}/3 pts</div></td>
+      <td>${nba?`<span class="badge bp2c">${nba} NBA</span>`:'<span class="badge bb2c">0</span>'}<div style="font-size:10px;color:var(--text2);margin-top:2px">${ns}/4 pts</div></td>
+      <td>${pill(cPct,callDisp)}<div style="font-size:10px;color:var(--text2);margin-top:2px">target: ${tgtLabel} · ${cs.toFixed(1)}/1 pt</div></td>
+      <td>${mv}</td>
+    </tr>`;
+  }).join('');
+}
+
+function go(name,e){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  if(e&&e.target) e.target.classList.add('active');
+}
+function showLB(which,e){
+  document.getElementById('lb-weekly').style.display=which==='weekly'?'block':'none';
+  document.getElementById('lb-monthly').style.display=which==='monthly'?'block':'none';
+  document.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  if(e&&e.target) e.target.classList.add('active');
+}
+
+loadData();
+</script>
+</body>
+</html>
