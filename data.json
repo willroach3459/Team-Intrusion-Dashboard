@@ -1,23 +1,23 @@
 {
   "meta": {
     "weekLabel": "Week of June 8–12, 2026",
-    "dayOfWeek": 3,
+    "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "EOD 6/10 — GP & Calls final",
-    "monthDaysTracked": 8,
+    "lastUpdated": "6/11 updated 12:30 PM — GP & Calls",
+    "monthDaysTracked": 9,
     "monthTotalDays": 20,
     "tiGoal": 30000,
     "chGoal": 230000
   },
   "reps": [
-    {"name":"Alex McClellan","team":"intrusion","goal":5000,"nba":0,"callTarget":80,"dailyCallTarget":16,"callLabel":"80/wk","gp_d1":93.80,"gp_d2":0,"gp_d3":0,"calls_d1":7,"calls_d2":5,"calls_d3":8},
-    {"name":"Alex Robinson","team":"intrusion","goal":5000,"nba":1,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":84.09,"gp_d2":245.65,"gp_d3":75.00,"calls_d1":86,"calls_d2":83,"calls_d3":15},
-    {"name":"Dalton Martinez","team":"intrusion","goal":10000,"nba":0,"callTarget":300,"dailyCallTarget":60,"callLabel":"60/day","gp_d1":1146.28,"gp_d2":993.47,"gp_d3":219.89,"calls_d1":72,"calls_d2":76,"calls_d3":66},
-    {"name":"Daryn Hightower","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":1900.00,"gp_d2":0,"gp_d3":500.00,"calls_d1":66,"calls_d2":75,"calls_d3":51},
-    {"name":"Kieran Logue","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":750.00,"gp_d2":100.00,"gp_d3":500.00,"calls_d1":85,"calls_d2":35,"calls_d3":3},
-    {"name":"Lee Epling","team":"chamblee","goal":10000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":1050.00,"gp_d2":600.00,"gp_d3":0,"calls_d1":35,"calls_d2":30,"calls_d3":30},
-    {"name":"Luke Kush","team":"chamblee","goal":105000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":7423.27,"gp_d2":2491.79,"gp_d3":5362.68,"calls_d1":26,"calls_d2":25,"calls_d3":33},
-    {"name":"Spencer Hines","team":"chamblee","goal":115000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":1200.00,"gp_d2":90.00,"gp_d3":215.00,"calls_d1":29,"calls_d2":17,"calls_d3":9}
+    {"name":"Alex McClellan","team":"intrusion","goal":5000,"nba":0,"callTarget":80,"dailyCallTarget":16,"callLabel":"80/wk","gp_d1":93.80,"gp_d2":0,"gp_d3":0,"gp_d4":59.75,"calls_d1":7,"calls_d2":5,"calls_d3":8,"calls_d4":0},
+    {"name":"Alex Robinson","team":"intrusion","goal":5000,"nba":1,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":84.09,"gp_d2":245.65,"gp_d3":75.00,"gp_d4":50.00,"calls_d1":86,"calls_d2":83,"calls_d3":15,"calls_d4":21},
+    {"name":"Dalton Martinez","team":"intrusion","goal":10000,"nba":0,"callTarget":300,"dailyCallTarget":60,"callLabel":"60/day","gp_d1":1146.28,"gp_d2":993.47,"gp_d3":219.89,"gp_d4":831.99,"calls_d1":72,"calls_d2":76,"calls_d3":66,"calls_d4":34},
+    {"name":"Daryn Hightower","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":1900.00,"gp_d2":0,"gp_d3":500.00,"gp_d4":0,"calls_d1":66,"calls_d2":75,"calls_d3":51,"calls_d4":20},
+    {"name":"Kieran Logue","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":750.00,"gp_d2":100.00,"gp_d3":500.00,"gp_d4":200.00,"calls_d1":85,"calls_d2":35,"calls_d3":3,"calls_d4":31},
+    {"name":"Lee Epling","team":"chamblee","goal":10000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":1050.00,"gp_d2":600.00,"gp_d3":0,"gp_d4":400.00,"calls_d1":35,"calls_d2":30,"calls_d3":30,"calls_d4":24},
+    {"name":"Luke Kush","team":"chamblee","goal":105000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":7423.27,"gp_d2":2491.79,"gp_d3":5362.68,"gp_d4":6715.85,"calls_d1":26,"calls_d2":25,"calls_d3":33,"calls_d4":15},
+    {"name":"Spencer Hines","team":"chamblee","goal":115000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":1200.00,"gp_d2":90.00,"gp_d3":215.00,"gp_d4":90.00,"calls_d1":29,"calls_d2":17,"calls_d3":9,"calls_d4":9}
   ],
   "prevWeek": [
     {"name":"Alex McClellan","gp":14325.93,"outbound":38,"nba":1},
