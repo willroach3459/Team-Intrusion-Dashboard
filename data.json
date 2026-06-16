@@ -1,23 +1,23 @@
 {
   "meta": {
     "weekLabel": "Week of June 15–19, 2026",
-    "dayOfWeek": 1,
+    "dayOfWeek": 2,
     "totalDays": 5,
-    "lastUpdated": "EOD 6/15 — Final",
-    "monthDaysTracked": 11,
+    "lastUpdated": "6/16 updated 1:00 PM — Day 2",
+    "monthDaysTracked": 12,
     "monthTotalDays": 20,
     "tiGoal": 30000,
     "chGoal": 230000
   },
   "reps": [
-    {"name":"Alex McClellan","team":"intrusion","goal":5000,"nba":0,"callTarget":80,"dailyCallTarget":16,"callLabel":"80/wk","gp_d1":0,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":8,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0},
-    {"name":"Alex Robinson","team":"intrusion","goal":5000,"nba":3,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":270.79,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":86,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0},
-    {"name":"Dalton Martinez","team":"intrusion","goal":10000,"nba":0,"callTarget":300,"dailyCallTarget":60,"callLabel":"60/day","gp_d1":839.63,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":78,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0},
-    {"name":"Daryn Hightower","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":0,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":83,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0},
-    {"name":"Kieran Logue","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":200.00,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":75,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0},
-    {"name":"Lee Epling","team":"chamblee","goal":10000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":650.00,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":42,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0},
-    {"name":"Luke Kush","team":"chamblee","goal":105000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":3022.28,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":41,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0},
-    {"name":"Spencer Hines","team":"chamblee","goal":115000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":1440.00,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":33,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0}
+    {"name":"Alex McClellan","team":"intrusion","goal":5000,"nba":0,"callTarget":80,"dailyCallTarget":16,"callLabel":"80/wk","gp_d1":0,"gp_d2":63.10,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":8,"calls_d2":3,"calls_d3":0,"calls_d4":0,"calls_d5":0},
+    {"name":"Alex Robinson","team":"intrusion","goal":5000,"nba":3,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":270.79,"gp_d2":-49.25,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":86,"calls_d2":48,"calls_d3":0,"calls_d4":0,"calls_d5":0},
+    {"name":"Dalton Martinez","team":"intrusion","goal":10000,"nba":0,"callTarget":300,"dailyCallTarget":60,"callLabel":"60/day","gp_d1":839.63,"gp_d2":-673.58,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":78,"calls_d2":9,"calls_d3":0,"calls_d4":0,"calls_d5":0},
+    {"name":"Daryn Hightower","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":0,"gp_d2":400.00,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":83,"calls_d2":22,"calls_d3":0,"calls_d4":0,"calls_d5":0},
+    {"name":"Kieran Logue","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":200.00,"gp_d2":-50.00,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":75,"calls_d2":53,"calls_d3":0,"calls_d4":0,"calls_d5":0},
+    {"name":"Lee Epling","team":"chamblee","goal":10000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":650.00,"gp_d2":-70.00,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":42,"calls_d2":21,"calls_d3":0,"calls_d4":0,"calls_d5":0},
+    {"name":"Luke Kush","team":"chamblee","goal":105000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":3022.28,"gp_d2":3754.36,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":41,"calls_d2":13,"calls_d3":0,"calls_d4":0,"calls_d5":0},
+    {"name":"Spencer Hines","team":"chamblee","goal":115000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":1440.00,"gp_d2":-623.88,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":33,"calls_d2":12,"calls_d3":0,"calls_d4":0,"calls_d5":0}
   ],
   "prevWeek": [
     {"name":"Alex McClellan","gp":153.55,"outbound":69,"nba":0},
