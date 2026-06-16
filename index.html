@@ -134,7 +134,7 @@ tr:hover td{background:var(--bg2)}
           <strong>Proj month-end</strong> = MTD so far + (daily GP goal &times; remaining business days this month)
         </div>
         <div class="tw"><table>
-          <thead><tr><th>#</th><th>Rep</th><th>Score</th><th>GP on track</th><th>Proj month-end</th><th>NBA</th><th>Calls</th><th>Team</th></tr></thead>
+          <thead><tr><th>#</th><th>Rep</th><th>Score</th><th>GP this week</th><th>NBA</th><th>Calls</th><th>Team</th></tr></thead>
           <tbody id="lbwk"></tbody>
         </table></div>
       </div>
@@ -144,7 +144,7 @@ tr:hover td{background:var(--bg2)}
           <strong>Proj month-end</strong> = MTD so far + (daily GP goal &times; remaining business days this month)
         </div>
         <div class="tw"><table>
-          <thead><tr><th>#</th><th>Rep</th><th>Score</th><th>GP vs goal</th><th>Proj month-end</th><th>NBA total</th><th>Calls avg/day</th><th>Move</th></tr></thead>
+          <thead><tr><th>#</th><th>Rep</th><th>Score</th><th>GP vs goal</th><th>NBA total</th><th>Calls avg/day</th><th>Move</th></tr></thead>
           <tbody id="lbmo"></tbody>
         </table></div>
       </div>
@@ -365,18 +365,15 @@ function renderWeekLB(reps){
   for(var i=0;i<sorted.length;i++){
     var r=sorted[i];
     var gs=wGs(r),cs=wCs(r),tot=wT(r);
-    var otPct=gpOnTrackPct(r),proj=projMonthEnd(r),projPct=projMonthPct(r);
-    var tgt=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek,cPct=callWkPct(r);
+    var wpct=gpWkPct(r),cPct=callWkPct(r);
+    var tgt=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek;
     var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
-    var projColor=projPct>=100?'var(--green)':projPct>=70?'var(--amber)':'var(--red)';
-    var remaining=D.meta.monthTotalDays-D.meta.monthDaysTracked;
     rows+='<tr><td><span class="rk '+rC+'">'+(i+1)+'</span></td>'+
       '<td><strong style="font-weight:500">'+r.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+r.callLabel+'</span></td>'+
       '<td><span style="font-size:17px;font-weight:700">'+tot.toFixed(1)+'</span><span style="font-size:10px;color:var(--text2)">/6</span></td>'+
-      '<td>'+pill(otPct,otPct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+fmt(moGPTotal(r))+' MTD \u00b7 '+gs.toFixed(1)+'/3 pts</div></td>'+
-      '<td><span style="font-size:13px;font-weight:600;color:'+projColor+'">'+fmtS(proj)+'</span><div class="pace-box"><span class="pace-hit">If hits goal/day:</span> <span class="pace-proj">'+fmtS(proj)+' ('+projPct+'%)</span><br><span style="color:var(--text2)">'+fmt(dailyGPGoal(r))+'/day &times; '+remaining+' days left</span></div></td>'+
+      '<td>'+pill(wpct,wpct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+fmt(wkGP(r))+' this week · '+gs.toFixed(1)+'/3 pts</div><div class="ppw"><div class="ppb '+pcC(wpct)+'" style="width:'+Math.min(100,wpct)+'%"></div></div></td>'+
       '<td>'+(r.nba?'<span class="bd bp2">2/2</span>':'<span class="bd bb2">0/2</span>')+'</td>'+
-      '<td>'+pill(cPct,cPct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+wkCalls(r)+'/'+tgt+' \u00b7 '+cs.toFixed(1)+'/1</div></td>'+
+      '<td>'+pill(cPct,cPct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+wkCalls(r)+'/'+tgt+' · '+cs.toFixed(1)+'/1</div></td>'+
       '<td><span style="font-size:11px;color:var(--text2)">'+(r.team==='intrusion'?'Intrusion':'Chamblee')+'</span></td></tr>';
   }
   document.getElementById('lbwk').innerHTML=rows;
@@ -390,21 +387,17 @@ function renderMonthLB(reps){
     var r=sorted[i];
     var gs=mGs(r),ns=mNs(r),cs=mCs(r),tot=mT(r);
     var mo=moGPTotal(r),pct=moPct(r),nba=moNBA(r),avg=moAvg(r),cPct=moCallPct(r);
-    var otPct=gpOnTrackPct(r),proj=projMonthEnd(r),projPct=projMonthPct(r);
     var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
     var prObj=prevRanks.find(function(x){return x.name===r.name;});
     var pr=prObj?prObj.rank:null,diff=pr!==null?pr-(i+1):null;
     var mv=diff===null?'<span class="ms">&#8212;</span>':diff>0?'<span class="mu">&#9650;'+diff+'</span>':diff<0?'<span class="md">&#9660;'+Math.abs(diff)+'</span>':'<span class="ms">&#8212;</span>';
     var cDisp=r.dailyCallTarget===16?(wkCalls(r)+'/80wk'):(avg.toFixed(1)+'/day');
-    var projColor=projPct>=100?'var(--green)':projPct>=70?'var(--amber)':'var(--red)';
-    var remaining=D.meta.monthTotalDays-D.meta.monthDaysTracked;
     rows+='<tr><td><span class="rk '+rC+'">'+(i+1)+'</span></td>'+
       '<td><strong style="font-weight:500">'+r.name+'</strong></td>'+
       '<td><span style="font-size:17px;font-weight:700">'+tot.toFixed(1)+'</span><span style="font-size:10px;color:var(--text2)">/8</span></td>'+
-      '<td>'+pill(otPct,otPct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+fmtS(mo)+' MTD \u00b7 '+gs.toFixed(1)+'/3</div><div class="ppw"><div class="ppb '+pcC(otPct)+'" style="width:'+Math.min(100,otPct)+'%"></div></div></td>'+
-      '<td><span style="font-size:13px;font-weight:600;color:'+projColor+'">'+fmtS(proj)+'</span><div class="pace-box"><span class="pace-hit">If hits '+fmt(dailyGPGoal(r))+'/day:</span><br><span class="pace-proj">'+projPct+'% of goal &middot; '+remaining+' days left</span></div></td>'+
+      '<td>'+pill(pct,pct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+fmtS(mo)+' MTD · '+gs.toFixed(1)+'/3 pts</div><div class="ppw"><div class="ppb '+pcC(pct)+'" style="width:'+Math.min(100,pct)+'%"></div></div></td>'+
       '<td>'+(nba?'<span class="bd bp2">'+nba+'</span>':'<span class="bd bb2">0</span>')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+ns+'/4</div></td>'+
-      '<td>'+pill(cPct,cDisp)+'<div style="font-size:10px;color:var(--text2);margin-top:2px">tgt:'+(r.dailyCallTarget===16?'80/wk':r.dailyCallTarget+'/day')+' \u00b7 '+cs.toFixed(1)+'/1</div></td>'+
+      '<td>'+pill(cPct,cDisp)+'<div style="font-size:10px;color:var(--text2);margin-top:2px">tgt:'+(r.dailyCallTarget===16?'80/wk':r.dailyCallTarget+'/day')+' · '+cs.toFixed(1)+'/1</div></td>'+
       '<td>'+mv+'</td></tr>';
   }
   document.getElementById('lbmo').innerHTML=rows;
