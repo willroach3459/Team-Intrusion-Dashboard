@@ -1,10 +1,10 @@
 {
   "meta": {
     "weekLabel": "Week of June 15\u201319, 2026",
-    "dayOfWeek": 3,
+    "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "EOD 6/17 \u2014 Final",
-    "monthDaysTracked": 13,
+    "lastUpdated": "6/18 updated 3:36 PM \u2014 Day 4 \u00b7 warehouse training day",
+    "monthDaysTracked": 14,
     "monthTotalDays": 20,
     "tiGoal": 30000,
     "chGoal": 230000
@@ -26,7 +26,7 @@
       "calls_d1": 8,
       "calls_d2": 10,
       "calls_d3": 146,
-      "calls_d4": 0,
+      "calls_d4": 13,
       "calls_d5": 0
     },
     {
@@ -40,12 +40,12 @@
       "gp_d1": 270.79,
       "gp_d2": 221.54,
       "gp_d3": 20.94,
-      "gp_d4": 0,
+      "gp_d4": 121.19,
       "gp_d5": 0,
       "calls_d1": 86,
       "calls_d2": 81,
       "calls_d3": 78,
-      "calls_d4": 0,
+      "calls_d4": 6,
       "calls_d5": 0
     },
     {
@@ -59,12 +59,12 @@
       "gp_d1": 839.63,
       "gp_d2": 867.22,
       "gp_d3": 1032.36,
-      "gp_d4": 0,
+      "gp_d4": 1542.7,
       "gp_d5": 0,
       "calls_d1": 78,
       "calls_d2": 15,
       "calls_d3": 71,
-      "calls_d4": 0,
+      "calls_d4": 3,
       "calls_d5": 0
     },
     {
@@ -78,12 +78,12 @@
       "gp_d1": 0,
       "gp_d2": 400.0,
       "gp_d3": 700.0,
-      "gp_d4": 0,
+      "gp_d4": 200.0,
       "gp_d5": 0,
       "calls_d1": 83,
       "calls_d2": 57,
       "calls_d3": 73,
-      "calls_d4": 0,
+      "calls_d4": 15,
       "calls_d5": 0
     },
     {
@@ -102,7 +102,7 @@
       "calls_d1": 75,
       "calls_d2": 77,
       "calls_d3": 67,
-      "calls_d4": 0,
+      "calls_d4": 24,
       "calls_d5": 0
     },
     {
@@ -116,12 +116,12 @@
       "gp_d1": 650.0,
       "gp_d2": 580.0,
       "gp_d3": 0,
-      "gp_d4": 0,
+      "gp_d4": 437.0,
       "gp_d5": 0,
       "calls_d1": 42,
       "calls_d2": 32,
       "calls_d3": 28,
-      "calls_d4": 0,
+      "calls_d4": 25,
       "calls_d5": 0
     },
     {
@@ -135,12 +135,12 @@
       "gp_d1": 3022.28,
       "gp_d2": 6981.71,
       "gp_d3": 2397.56,
-      "gp_d4": 0,
+      "gp_d4": 1877.93,
       "gp_d5": 0,
       "calls_d1": 41,
       "calls_d2": 35,
       "calls_d3": 34,
-      "calls_d4": 0,
+      "calls_d4": 7,
       "calls_d5": 0
     },
     {
@@ -154,12 +154,12 @@
       "gp_d1": 1440.0,
       "gp_d2": 816.12,
       "gp_d3": 1766.12,
-      "gp_d4": 0,
+      "gp_d4": 1225.0,
       "gp_d5": 0,
       "calls_d1": 33,
       "calls_d2": 26,
       "calls_d3": 20,
-      "calls_d4": 0,
+      "calls_d4": 5,
       "calls_d5": 0
     }
   ],
