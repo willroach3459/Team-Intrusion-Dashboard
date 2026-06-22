@@ -1,10 +1,10 @@
 {
   "meta": {
     "weekLabel": "Week of June 15\u201319, 2026",
-    "dayOfWeek": 4,
+    "dayOfWeek": 5,
     "totalDays": 5,
-    "lastUpdated": "EOD 6/18 \u2014 Final \u00b7 training day",
-    "monthDaysTracked": 14,
+    "lastUpdated": "EOD 6/19 \u2014 Week 3 Final",
+    "monthDaysTracked": 15,
     "monthTotalDays": 20,
     "tiGoal": 30000,
     "chGoal": 230000
@@ -27,7 +27,7 @@
       "calls_d2": 10,
       "calls_d3": 146,
       "calls_d4": 13,
-      "calls_d5": 0
+      "calls_d5": 64
     },
     {
       "name": "Alex Robinson",
@@ -46,7 +46,7 @@
       "calls_d2": 81,
       "calls_d3": 78,
       "calls_d4": 9,
-      "calls_d5": 0
+      "calls_d5": 37
     },
     {
       "name": "Dalton Martinez",
@@ -60,12 +60,12 @@
       "gp_d2": 867.22,
       "gp_d3": 1032.36,
       "gp_d4": 1619.8,
-      "gp_d5": 0,
+      "gp_d5": 1580.88,
       "calls_d1": 78,
       "calls_d2": 15,
       "calls_d3": 71,
       "calls_d4": 11,
-      "calls_d5": 0
+      "calls_d5": 59
     },
     {
       "name": "Daryn Hightower",
@@ -84,7 +84,7 @@
       "calls_d2": 57,
       "calls_d3": 73,
       "calls_d4": 32,
-      "calls_d5": 0
+      "calls_d5": 62
     },
     {
       "name": "Kieran Logue",
@@ -98,12 +98,12 @@
       "gp_d2": 150.0,
       "gp_d3": 475.0,
       "gp_d4": 0,
-      "gp_d5": 0,
+      "gp_d5": 185.0,
       "calls_d1": 75,
       "calls_d2": 77,
       "calls_d3": 67,
       "calls_d4": 35,
-      "calls_d5": 0
+      "calls_d5": 72
     },
     {
       "name": "Lee Epling",
@@ -117,12 +117,12 @@
       "gp_d2": 580.0,
       "gp_d3": 0,
       "gp_d4": 983.0,
-      "gp_d5": 0,
+      "gp_d5": 300.0,
       "calls_d1": 42,
       "calls_d2": 32,
       "calls_d3": 28,
       "calls_d4": 28,
-      "calls_d5": 0
+      "calls_d5": 23
     },
     {
       "name": "Luke Kush",
@@ -136,12 +136,12 @@
       "gp_d2": 6981.71,
       "gp_d3": 2397.56,
       "gp_d4": 1877.93,
-      "gp_d5": 0,
+      "gp_d5": 6125.89,
       "calls_d1": 41,
       "calls_d2": 35,
       "calls_d3": 34,
       "calls_d4": 7,
-      "calls_d5": 0
+      "calls_d5": 37
     },
     {
       "name": "Spencer Hines",
@@ -155,12 +155,12 @@
       "gp_d2": 816.12,
       "gp_d3": 1766.12,
       "gp_d4": 1225.0,
-      "gp_d5": 0,
+      "gp_d5": 2885.0,
       "calls_d1": 33,
       "calls_d2": 26,
       "calls_d3": 20,
       "calls_d4": 5,
-      "calls_d5": 0
+      "calls_d5": 14
     }
   ],
   "prevWeek": [
