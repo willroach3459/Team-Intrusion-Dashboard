@@ -1,10 +1,10 @@
 {
   "meta": {
-    "weekLabel": "Week of June 15\u201319, 2026",
-    "dayOfWeek": 5,
+    "weekLabel": "Week of June 22\u201326, 2026",
+    "dayOfWeek": 1,
     "totalDays": 5,
-    "lastUpdated": "EOD 6/19 \u2014 Week 3 Final",
-    "monthDaysTracked": 15,
+    "lastUpdated": "6/22 updated 4:51 PM \u2014 Day 1 \u00b7 incl. warehouse GP",
+    "monthDaysTracked": 16,
     "monthTotalDays": 20,
     "tiGoal": 30000,
     "chGoal": 230000
@@ -18,16 +18,16 @@
       "callTarget": 80,
       "dailyCallTarget": 16,
       "callLabel": "80/wk",
-      "gp_d1": 0,
-      "gp_d2": 63.1,
+      "gp_d1": 5177.94,
+      "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 8,
-      "calls_d2": 10,
-      "calls_d3": 146,
-      "calls_d4": 13,
-      "calls_d5": 64
+      "calls_d1": 23,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0
     },
     {
       "name": "Alex Robinson",
@@ -37,16 +37,16 @@
       "callTarget": 400,
       "dailyCallTarget": 80,
       "callLabel": "80/day",
-      "gp_d1": 270.79,
-      "gp_d2": 221.54,
-      "gp_d3": 20.94,
-      "gp_d4": 121.19,
+      "gp_d1": 0,
+      "gp_d2": 0,
+      "gp_d3": 0,
+      "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 86,
-      "calls_d2": 81,
-      "calls_d3": 78,
-      "calls_d4": 9,
-      "calls_d5": 37
+      "calls_d1": 45,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0
     },
     {
       "name": "Dalton Martinez",
@@ -56,16 +56,16 @@
       "callTarget": 300,
       "dailyCallTarget": 60,
       "callLabel": "60/day",
-      "gp_d1": 839.63,
-      "gp_d2": 867.22,
-      "gp_d3": 1032.36,
-      "gp_d4": 1619.8,
-      "gp_d5": 1580.88,
-      "calls_d1": 78,
-      "calls_d2": 15,
-      "calls_d3": 71,
-      "calls_d4": 11,
-      "calls_d5": 59
+      "gp_d1": 329.84,
+      "gp_d2": 0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 60,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0
     },
     {
       "name": "Daryn Hightower",
@@ -75,16 +75,16 @@
       "callTarget": 400,
       "dailyCallTarget": 80,
       "callLabel": "80/day",
-      "gp_d1": 0,
-      "gp_d2": 400.0,
-      "gp_d3": 700.0,
-      "gp_d4": 200.0,
+      "gp_d1": 424.14,
+      "gp_d2": 0,
+      "gp_d3": 0,
+      "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 83,
-      "calls_d2": 57,
-      "calls_d3": 73,
-      "calls_d4": 32,
-      "calls_d5": 62
+      "calls_d1": 46,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0
     },
     {
       "name": "Kieran Logue",
@@ -94,16 +94,16 @@
       "callTarget": 400,
       "dailyCallTarget": 80,
       "callLabel": "80/day",
-      "gp_d1": 200.0,
-      "gp_d2": 150.0,
-      "gp_d3": 475.0,
+      "gp_d1": 730.0,
+      "gp_d2": 0,
+      "gp_d3": 0,
       "gp_d4": 0,
-      "gp_d5": 185.0,
-      "calls_d1": 75,
-      "calls_d2": 77,
-      "calls_d3": 67,
-      "calls_d4": 35,
-      "calls_d5": 72
+      "gp_d5": 0,
+      "calls_d1": 79,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0
     },
     {
       "name": "Lee Epling",
@@ -113,16 +113,16 @@
       "callTarget": 175,
       "dailyCallTarget": 35,
       "callLabel": "35/day",
-      "gp_d1": 650.0,
-      "gp_d2": 580.0,
+      "gp_d1": 280.0,
+      "gp_d2": 0,
       "gp_d3": 0,
-      "gp_d4": 983.0,
-      "gp_d5": 300.0,
-      "calls_d1": 42,
-      "calls_d2": 32,
-      "calls_d3": 28,
-      "calls_d4": 28,
-      "calls_d5": 23
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 20,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0
     },
     {
       "name": "Luke Kush",
@@ -132,16 +132,16 @@
       "callTarget": 175,
       "dailyCallTarget": 35,
       "callLabel": "35/day",
-      "gp_d1": 3022.28,
-      "gp_d2": 6981.71,
-      "gp_d3": 2397.56,
-      "gp_d4": 1877.93,
-      "gp_d5": 6125.89,
-      "calls_d1": 41,
-      "calls_d2": 35,
-      "calls_d3": 34,
-      "calls_d4": 7,
-      "calls_d5": 37
+      "gp_d1": 4702.88,
+      "gp_d2": 0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 25,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0
     },
     {
       "name": "Spencer Hines",
@@ -151,65 +151,65 @@
       "callTarget": 175,
       "dailyCallTarget": 35,
       "callLabel": "35/day",
-      "gp_d1": 1440.0,
-      "gp_d2": 816.12,
-      "gp_d3": 1766.12,
-      "gp_d4": 1225.0,
-      "gp_d5": 2885.0,
-      "calls_d1": 33,
-      "calls_d2": 26,
-      "calls_d3": 20,
-      "calls_d4": 5,
-      "calls_d5": 14
+      "gp_d1": 700.0,
+      "gp_d2": 0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 29,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0
     }
   ],
   "prevWeek": [
     {
       "name": "Alex McClellan",
-      "gp": 153.55,
-      "outbound": 69,
-      "nba": 1
+      "gp": 63.1,
+      "outbound": 241,
+      "nba": 0
     },
     {
       "name": "Alex Robinson",
-      "gp": 914.88,
-      "outbound": 325,
-      "nba": 2
-    },
-    {
-      "name": "Dalton Martinez",
-      "gp": 3945.26,
-      "outbound": 363,
+      "gp": 634.46,
+      "outbound": 291,
       "nba": 1
     },
     {
+      "name": "Dalton Martinez",
+      "gp": 5939.89,
+      "outbound": 234,
+      "nba": 0
+    },
+    {
       "name": "Daryn Hightower",
-      "gp": 2400.0,
-      "outbound": 333,
+      "gp": 1300.0,
+      "outbound": 307,
       "nba": 0
     },
     {
       "name": "Kieran Logue",
-      "gp": 1950.0,
-      "outbound": 277,
+      "gp": 1010.0,
+      "outbound": 326,
       "nba": 0
     },
     {
       "name": "Lee Epling",
-      "gp": 2700.0,
-      "outbound": 159,
+      "gp": 2513.0,
+      "outbound": 153,
       "nba": 0
     },
     {
       "name": "Luke Kush",
-      "gp": 28260.8,
-      "outbound": 142,
+      "gp": 20405.37,
+      "outbound": 154,
       "nba": 0
     },
     {
       "name": "Spencer Hines",
-      "gp": 2892.0,
-      "outbound": 86,
+      "gp": 8132.24,
+      "outbound": 98,
       "nba": 0
     }
   ]
