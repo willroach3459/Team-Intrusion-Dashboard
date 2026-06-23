@@ -219,14 +219,14 @@ var DAY_LABELS = ['Mon','Tue','Wed','Thu','Fri'];
 
 var JUNE_HISTORY = {
   reps: [
-    {name:'Alex McClellan', team:'intrusion', goal:5000,   wk1:14325.93,wk1c:38,  wk2:153.55,  wk2c:69,  wk3:null,wk3c:null,wk4:null,wk4c:null,nba_wk1:1,nba_wk2:0,nba_wk3:0},
-    {name:'Alex Robinson',  team:'intrusion', goal:5000,   wk1:1564.22, wk1c:365, wk2:914.88,  wk2c:325, wk3:null,wk3c:null,wk4:null,wk4c:null,nba_wk1:0,nba_wk2:2,nba_wk3:1},
-    {name:'Dalton Martinez',team:'intrusion', goal:10000,  wk1:2025.17, wk1c:371, wk2:3945.26, wk2c:363, wk3:null,wk3c:null,wk4:null,wk4c:null,nba_wk1:1,nba_wk2:0,nba_wk3:0},
-    {name:'Daryn Hightower',team:'intrusion', goal:5000,   wk1:826.89,  wk1c:406, wk2:2400.00, wk2c:333, wk3:null,wk3c:null,wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0},
-    {name:'Kieran Logue',   team:'intrusion', goal:5000,   wk1:2250.00, wk1c:367, wk2:1950.00, wk2c:277, wk3:null,wk3c:null,wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0},
-    {name:'Lee Epling',     team:'chamblee',  goal:10000,  wk1:3090.00, wk1c:133, wk2:2700.00, wk2c:159, wk3:null,wk3c:null,wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0},
-    {name:'Luke Kush',      team:'chamblee',  goal:105000, wk1:21773.80,wk1c:187, wk2:28260.80,wk2c:142, wk3:null,wk3c:null,wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0},
-    {name:'Spencer Hines',  team:'chamblee',  goal:115000, wk1:6442.30, wk1c:128, wk2:2892.00, wk2c:86,  wk3:null,wk3c:null,wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0}
+    {name:'Alex McClellan', team:'intrusion', goal:5000,   wk1:14325.93,wk1c:38,  wk2:153.55,   wk2c:69,  wk3:63.10,    wk3c:241, wk4:null,wk4c:null,nba_wk1:1,nba_wk2:0,nba_wk3:0},
+    {name:'Alex Robinson',  team:'intrusion', goal:5000,   wk1:1564.22, wk1c:365, wk2:914.88,   wk2c:325, wk3:634.46,   wk3c:291, wk4:null,wk4c:null,nba_wk1:0,nba_wk2:2,nba_wk3:1},
+    {name:'Dalton Martinez',team:'intrusion', goal:10000,  wk1:2025.17, wk1c:371, wk2:3945.26,  wk2c:363, wk3:5939.89,  wk3c:234, wk4:null,wk4c:null,nba_wk1:1,nba_wk2:0,nba_wk3:0},
+    {name:'Daryn Hightower',team:'intrusion', goal:5000,   wk1:826.89,  wk1c:406, wk2:2400.00,  wk2c:333, wk3:1300.00,  wk3c:307, wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0},
+    {name:'Kieran Logue',   team:'intrusion', goal:5000,   wk1:2250.00, wk1c:367, wk2:1950.00,  wk2c:277, wk3:1010.00,  wk3c:326, wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0},
+    {name:'Lee Epling',     team:'chamblee',  goal:10000,  wk1:3090.00, wk1c:133, wk2:2700.00,  wk2c:159, wk3:2513.00,  wk3c:153, wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0},
+    {name:'Luke Kush',      team:'chamblee',  goal:105000, wk1:21773.80,wk1c:187, wk2:28260.80, wk2c:142, wk3:20405.37, wk3c:154, wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0},
+    {name:'Spencer Hines',  team:'chamblee',  goal:115000, wk1:6442.30, wk1c:128, wk2:2892.00,  wk2c:86,  wk3:8132.24,  wk3c:98,  wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0}
   ]
 };
 
@@ -255,7 +255,7 @@ function moCallPct(r){return r.dailyCallTarget===16?Math.round(wkCalls(r)/80*100
 // MTD GP = prior weeks + this week
 function moGPTotal(r){
   var h=JUNE_HISTORY.reps.find(function(x){return x.name===r.name;});
-  return (h?((h.wk1||0)+(h.wk2||0)):0)+wkGP(r);
+  return (h?((h.wk1||0)+(h.wk2||0)+(h.wk3||0)):0)+wkGP(r);
 }
 function moPct(r){return Math.min(999,Math.round(moGPTotal(r)/r.goal*100));}
 
@@ -316,8 +316,9 @@ function render(){
     var histPrev=JUNE_HISTORY.reps.filter(function(h){return repsArr.find(function(r){return r.name===h.name;});});
     var wk1t=histPrev.reduce(function(s,h){return s+(h.wk1||0);},0);
     var wk2t=histPrev.reduce(function(s,h){return s+(h.wk2||0);},0);
-    var wk3t=repsArr.reduce(function(s,r){return s+wkGP(r);},0);
-    var total=wk1t+wk2t+wk3t,pct=Math.round(total/goal*100);
+    var wk3t=histPrev.reduce(function(s,h){return s+(h.wk3||0);},0);
+    var wk4t=repsArr.reduce(function(s,r){return s+wkGP(r);},0);
+    var total=wk1t+wk2t+wk3t+wk4t,pct=Math.round(total/goal*100);
     var remaining=D.meta.monthTotalDays-D.meta.monthDaysTracked;
     var dailyNeeded=goal/D.meta.monthTotalDays;
     var proj=Math.round(total+(dailyNeeded*remaining));
@@ -403,7 +404,15 @@ function renderMonthLB(reps){
 
 function renderPrevWeeks(reps){
   var hist=JUNE_HISTORY;
-  hist.reps.forEach(function(h){var live=reps.find(function(r){return r.name===h.name;});if(live){h.wk3=wkGP(live);h.wk3c=wkCalls(live);}});
+  hist.reps.forEach(function(h){
+    var live=reps.find(function(r){return r.name===h.name;});
+    if(live){
+      // Only fill wk3 if not already locked (null means current week is wk3)
+      if(h.wk3===null){h.wk3=wkGP(live);h.wk3c=wkCalls(live);}
+      // Wire live data into wk4
+      else{h.wk4=wkGP(live);h.wk4c=wkCalls(live);}
+    }
+  });
   var totalMonthNBAs=hist.reps.reduce(function(s,h){var live=reps.find(function(r){return r.name===h.name;});return s+(h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(live?live.nba:0);},0);
   document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in June</span>';
   var wk3Done=D.meta.dayOfWeek===5;
