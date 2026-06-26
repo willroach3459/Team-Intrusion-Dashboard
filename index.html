@@ -219,7 +219,7 @@ var DAY_LABELS = ['Mon','Tue','Wed','Thu','Fri'];
 
 var JUNE_HISTORY = {
   reps: [
-    {name:'Alex McClellan', team:'intrusion', goal:5000,   wk1:14325.93,wk1c:38,  wk2:153.55,   wk2c:69,  wk3:63.10,    wk3c:241, wk4:null,wk4c:null,nba_wk1:1,nba_wk2:0,nba_wk3:0},
+    {name:'Alex McClellan', team:'intrusion', goal:5000,   wk1:14325.93,wk1c:38,  wk2:153.55,   wk2c:69,  wk3:63.10,    wk3c:241, wk4:null,wk4c:null,nba_wk1:1,nba_wk2:0,nba_wk3:1},
     {name:'Alex Robinson',  team:'intrusion', goal:5000,   wk1:1564.22, wk1c:365, wk2:914.88,   wk2c:325, wk3:634.46,   wk3c:291, wk4:null,wk4c:null,nba_wk1:0,nba_wk2:2,nba_wk3:1},
     {name:'Dalton Martinez',team:'intrusion', goal:10000,  wk1:2025.17, wk1c:371, wk2:3945.26,  wk2c:363, wk3:5939.89,  wk3c:234, wk4:null,wk4c:null,nba_wk1:1,nba_wk2:0,nba_wk3:0},
     {name:'Daryn Hightower',team:'intrusion', goal:5000,   wk1:826.89,  wk1c:406, wk2:2400.00,  wk2c:333, wk3:1300.00,  wk3c:307, wk4:null,wk4c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0},
@@ -341,7 +341,7 @@ function render(){
     var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
     var dayCells='';
     for(var d=1;d<=5;d++){
-      if(d<=m.dayOfWeek){var v=r['gp_d'+d]||0;dayCells+='<td>'+(v>0?fmt(v):'<span style="color:var(--text2)">&#8212;</span>')+'</td>';}
+      if(d<=m.dayOfWeek){var v=r['gp_d'+d]||0;dayCells+='<td>'+(v>0?fmt(v):v<0?'<span style="color:var(--rfg);font-size:10px">reprice</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td>';}
       else{dayCells+='<td></td>';}
     }
     var projColor=projPct>=100?'var(--green)':projPct>=70?'var(--amber)':'var(--red)';
@@ -461,7 +461,7 @@ function renderPrevWeeks(reps){
       '<td class="gp-cell">'+fmt(h.wk2||0)+nba2+'</td><td class="calls-cell">'+(h.wk2c||0)+'</td>'+
       '<td class="gp-cell">'+(h.wk3!==null?fmt(h.wk3):'<span style="color:var(--text2)">&#8212;</span>')+nba3+'</td>'+
       '<td class="calls-cell">'+(h.wk3c!==null?h.wk3c:'<span style="color:var(--text2)">&#8212;</span>')+'</td>'+
-      '<td class="gp-cell">'+(h.wk4!==null&&h.wk4>0?fmt(h.wk4)+'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/5</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td><td class="calls-cell">'+(h.wk4c||'&#8212;')+'</td>'+
+      '<td class="gp-cell">'+(h.wk4!==null&&h.wk4>0?fmt(h.wk4)+'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/5</span>':h.wk4&&h.wk4<0?'<span style="color:var(--rfg);font-size:10px">reprice</span><br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/5</span>':'<span style="color:var(--text2)">&#8212;</span>'+(h.wk4>0?'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/5</span>':''))+'</td><td class="calls-cell">'+(h.wk4c||'&#8212;')+'</td>'+
       '<td><strong>'+fmt(total)+'</strong></td>'+
       '<td><span class="bd '+(pct>=40?'bg2':pct>=20?'ba2':'br2')+'">'+pct+'%</span><div style="background:var(--bg2);border-radius:20px;height:4px;overflow:hidden;margin-top:3px;width:55px"><div style="height:100%;border-radius:20px;width:'+Math.min(100,pct)+'%;background:'+barColor(pct)+'"></div></div></td>'+
       '<td>'+(totalNBA?'<span class="bd bp2">'+totalNBA+'</span>':'&#8212;')+'</td></tr>';
