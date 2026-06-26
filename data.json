@@ -1,10 +1,10 @@
 {
   "meta": {
     "weekLabel": "Week of June 22\u201326, 2026",
-    "dayOfWeek": 3,
+    "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "EOD 6/24 \u2014 Day 3 of 5",
-    "monthDaysTracked": 18,
+    "lastUpdated": "EOD 6/25 \u2014 Final \u00b7 1 day left",
+    "monthDaysTracked": 19,
     "monthTotalDays": 20,
     "tiGoal": 30000,
     "chGoal": 230000
@@ -26,8 +26,9 @@
       "calls_d1": 26,
       "calls_d2": 12,
       "calls_d3": 10,
-      "calls_d4": 0,
-      "calls_d5": 0
+      "calls_d4": 1,
+      "calls_d5": 0,
+      "mtd_override": 6454.66
     },
     {
       "name": "Alex Robinson",
@@ -40,13 +41,14 @@
       "gp_d1": 0,
       "gp_d2": 41.73,
       "gp_d3": 44.25,
-      "gp_d4": 0,
+      "gp_d4": 127.49,
       "gp_d5": 0,
       "calls_d1": 76,
       "calls_d2": 66,
       "calls_d3": 86,
-      "calls_d4": 0,
-      "calls_d5": 0
+      "calls_d4": 86,
+      "calls_d5": 0,
+      "mtd_override": 3486.64
     },
     {
       "name": "Dalton Martinez",
@@ -59,13 +61,14 @@
       "gp_d1": 329.84,
       "gp_d2": 180.13,
       "gp_d3": 433.78,
-      "gp_d4": 0,
+      "gp_d4": -39.13,
       "gp_d5": 0,
       "calls_d1": 71,
       "calls_d2": 50,
       "calls_d3": 86,
-      "calls_d4": 0,
-      "calls_d5": 0
+      "calls_d4": 63,
+      "calls_d5": 0,
+      "mtd_override": 13737.55
     },
     {
       "name": "Daryn Hightower",
@@ -78,13 +81,14 @@
       "gp_d1": 424.14,
       "gp_d2": 32.14,
       "gp_d3": 385,
-      "gp_d4": 0,
+      "gp_d4": 800,
       "gp_d5": 0,
       "calls_d1": 67,
       "calls_d2": 63,
       "calls_d3": 84,
-      "calls_d4": 0,
-      "calls_d5": 0
+      "calls_d4": 107,
+      "calls_d5": 0,
+      "mtd_override": 5893.76
     },
     {
       "name": "Kieran Logue",
@@ -102,8 +106,9 @@
       "calls_d1": 85,
       "calls_d2": 39,
       "calls_d3": 73,
-      "calls_d4": 0,
-      "calls_d5": 0
+      "calls_d4": 91,
+      "calls_d5": 0,
+      "mtd_override": 7240.0
     },
     {
       "name": "Lee Epling",
@@ -116,13 +121,14 @@
       "gp_d1": 280.0,
       "gp_d2": 2284.88,
       "gp_d3": 400,
-      "gp_d4": 0,
+      "gp_d4": 640,
       "gp_d5": 0,
       "calls_d1": 22,
       "calls_d2": 29,
       "calls_d3": 53,
-      "calls_d4": 0,
-      "calls_d5": 0
+      "calls_d4": 28,
+      "calls_d5": 0,
+      "mtd_override": 14097.88
     },
     {
       "name": "Luke Kush",
@@ -135,13 +141,14 @@
       "gp_d1": 4702.88,
       "gp_d2": 4640.93,
       "gp_d3": 3123.72,
-      "gp_d4": 0,
+      "gp_d4": 3300.21,
       "gp_d5": 0,
       "calls_d1": 25,
       "calls_d2": 30,
       "calls_d3": 14,
-      "calls_d4": 0,
-      "calls_d5": 0
+      "calls_d4": 21,
+      "calls_d5": 0,
+      "mtd_override": 90668.29
     },
     {
       "name": "Spencer Hines",
@@ -154,13 +161,14 @@
       "gp_d1": 700.0,
       "gp_d2": 1665,
       "gp_d3": 1600,
-      "gp_d4": 0,
+      "gp_d4": 90,
       "gp_d5": 0,
       "calls_d1": 29,
       "calls_d2": 0,
       "calls_d3": 0,
-      "calls_d4": 0,
-      "calls_d5": 0
+      "calls_d4": 23,
+      "calls_d5": 0,
+      "mtd_override": 81890.5
     }
   ],
   "prevWeek": [
