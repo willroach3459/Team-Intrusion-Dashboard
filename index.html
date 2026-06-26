@@ -415,8 +415,20 @@ function renderPrevWeeks(reps){
   });
   var totalMonthNBAs=hist.reps.reduce(function(s,h){var live=reps.find(function(r){return r.name===h.name;});return s+(h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(live?live.nba:0);},0);
   document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in June</span>';
-  var wk3Done=D.meta.dayOfWeek===5;
-  document.getElementById('pwNote').textContent=wk3Done?'Week 3 is complete. Week 4 numbers will appear once that week begins.':'Week 3 is in progress (Day '+D.meta.dayOfWeek+' of 5) \u2014 GP and calls shown are current totals, not final. Weeks 1 and 2 are locked.';
+  // Determine which week is current based on whether wk3 is locked
+  var allWk3Locked=hist.reps.every(function(h){return h.wk3!==null;});
+  var allWk4Empty=hist.reps.every(function(h){return !h.wk4||h.wk4===0;});
+  var wk3Done=allWk3Locked&&D.meta.dayOfWeek===5&&allWk4Empty;
+  var wk4InProg=allWk3Locked&&!allWk4Empty;
+  var noteText;
+  if(wk4InProg){
+    noteText='Week 4 is in progress (Day '+D.meta.dayOfWeek+' of 5) \u2014 GP and calls shown are current totals, not final. Weeks 1, 2, and 3 are locked.';
+  } else if(wk3Done){
+    noteText='Week 3 is complete. Week 4 numbers will appear once that week begins.';
+  } else {
+    noteText='Week 3 is in progress (Day '+D.meta.dayOfWeek+' of 5) \u2014 GP and calls shown are current totals, not final. Weeks 1 and 2 are locked.';
+  }
+  document.getElementById('pwNote').textContent=noteText;
   var tiReps=hist.reps.filter(function(h){return h.team==='intrusion';});
   var chReps=hist.reps.filter(function(h){return h.team==='chamblee';});
   function teamRow(label,repsArr,goal){
@@ -427,7 +439,7 @@ function renderPrevWeeks(reps){
     return '<tr><td><strong style="font-weight:500">'+label+'</strong></td>'+
       '<td class="gp-cell">'+fmtS(wk1)+'</td><td class="calls-cell">'+wk1c+'</td>'+
       '<td class="gp-cell">'+fmtS(wk2)+'</td><td class="calls-cell">'+wk2c+'</td>'+
-      '<td class="gp-cell">'+fmtS(wk3)+(D.meta.dayOfWeek<5?' <span style="font-size:10px;color:var(--text2)">in prog</span>':'')+'</td><td class="calls-cell">'+wk3c+'</td>'+
+      '<td class="gp-cell">'+fmtS(wk3)+'</td><td class="calls-cell">'+wk3c+'</td>'+
       '<td class="gp-cell" style="color:var(--text2)">&#8212;</td><td class="calls-cell">&#8212;</td>'+
       '<td><strong>'+fmtS(total)+'</strong></td><td><span class="bd '+(pct>=40?'bg2':pct>=20?'ba2':'br2')+'">'+pct+'%</span></td></tr>';
   }
@@ -447,19 +459,20 @@ function renderPrevWeeks(reps){
       '<td><span class="rk '+rC+'" style="margin-right:6px">'+(i+1)+'</span><strong style="font-weight:500">'+h.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+(h.team==='intrusion'?'Intrusion':'Chamblee')+' \u00b7 goal: '+fmtS(h.goal)+'</span></td>'+
       '<td class="gp-cell">'+fmt(h.wk1||0)+nba1+'</td><td class="calls-cell">'+(h.wk1c||0)+'</td>'+
       '<td class="gp-cell">'+fmt(h.wk2||0)+nba2+'</td><td class="calls-cell">'+(h.wk2c||0)+'</td>'+
-      '<td class="gp-cell">'+(h.wk3!==null?fmt(h.wk3):'<span style="color:var(--text2)">&#8212;</span>')+nba3+(D.meta.dayOfWeek<5?'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/5</span>':'')+'</td>'+
+      '<td class="gp-cell">'+(h.wk3!==null?fmt(h.wk3):'<span style="color:var(--text2)">&#8212;</span>')+nba3+'</td>'+
       '<td class="calls-cell">'+(h.wk3c!==null?h.wk3c:'<span style="color:var(--text2)">&#8212;</span>')+'</td>'+
-      '<td class="gp-cell" style="color:var(--text2)">&#8212;</td><td class="calls-cell">&#8212;</td>'+
+      '<td class="gp-cell">'+(h.wk4!==null&&h.wk4>0?fmt(h.wk4)+'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/5</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td><td class="calls-cell">'+(h.wk4c||'&#8212;')+'</td>'+
       '<td><strong>'+fmt(total)+'</strong></td>'+
       '<td><span class="bd '+(pct>=40?'bg2':pct>=20?'ba2':'br2')+'">'+pct+'%</span><div style="background:var(--bg2);border-radius:20px;height:4px;overflow:hidden;margin-top:3px;width:55px"><div style="height:100%;border-radius:20px;width:'+Math.min(100,pct)+'%;background:'+barColor(pct)+'"></div></div></td>'+
       '<td>'+(totalNBA?'<span class="bd bp2">'+totalNBA+'</span>':'&#8212;')+'</td></tr>';
   }
   document.getElementById('repWkTable').innerHTML=repRows;
+  var allWk3LockedW=hist.reps.every(function(h){return h.wk3!==null;});
   var weeks=[
     {label:'Week 1',dates:'Jun 1\u20135',key:'wk1',ck:'wk1c',locked:true},
     {label:'Week 2',dates:'Jun 8\u201312',key:'wk2',ck:'wk2c',locked:true},
-    {label:'Week 3',dates:'Jun 15\u201319',key:'wk3',ck:'wk3c',current:true},
-    {label:'Week 4',dates:'Jun 22\u201326',key:'wk4',ck:'wk4c'}
+    {label:'Week 3',dates:'Jun 15\u201319',key:'wk3',ck:'wk3c',locked:allWk3LockedW,current:!allWk3LockedW},
+    {label:'Week 4',dates:'Jun 22\u201330',key:'wk4',ck:'wk4c',current:allWk3LockedW}
   ];
   var wkCards='';
   for(var w=0;w<weeks.length;w++){
