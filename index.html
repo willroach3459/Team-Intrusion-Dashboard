@@ -439,38 +439,62 @@ function renderPrevWeeks(reps){
   document.getElementById('pwNote').textContent=noteText;
   var tiReps=hist.reps.filter(function(h){return h.team==='intrusion';});
   var chReps=hist.reps.filter(function(h){return h.team==='chamblee';});
-  function teamRow(label,repsArr,goal){
+  function teamRow(label,repsArr,goal,liveReps){
     var wk1=repsArr.reduce(function(s,h){return s+(h.wk1||0);},0),wk1c=repsArr.reduce(function(s,h){return s+(h.wk1c||0);},0);
     var wk2=repsArr.reduce(function(s,h){return s+(h.wk2||0);},0),wk2c=repsArr.reduce(function(s,h){return s+(h.wk2c||0);},0);
     var wk3=repsArr.reduce(function(s,h){return s+(h.wk3||0);},0),wk3c=repsArr.reduce(function(s,h){return s+(h.wk3c||0);},0);
-    var total=wk1+wk2+wk3,pct=Math.round(total/goal*100);
+    var wk4=repsArr.reduce(function(s,h){return s+(h.wk4||0);},0),wk4c=repsArr.reduce(function(s,h){return s+(h.wk4c||0);},0);
+    // MTD: sum of mtd_override from live reps if available, else wk1+wk2+wk3+wk4
+    var total=liveReps?liveReps.reduce(function(s,r){return s+(r.mtd_override||((h_lookup(r.name,repsArr))?(h_lookup(r.name,repsArr).wk1||0)+(h_lookup(r.name,repsArr).wk2||0)+(h_lookup(r.name,repsArr).wk3||0)+(h_lookup(r.name,repsArr).wk4||0):0));},0):wk1+wk2+wk3+wk4;
+    var pct=Math.round(total/goal*100);
+    var wk4disp=wk4>0?fmtS(wk4)+' <span style="font-size:10px;color:var(--text2)">in prog</span>':'&#8212;';
     return '<tr><td><strong style="font-weight:500">'+label+'</strong></td>'+
       '<td class="gp-cell">'+fmtS(wk1)+'</td><td class="calls-cell">'+wk1c+'</td>'+
       '<td class="gp-cell">'+fmtS(wk2)+'</td><td class="calls-cell">'+wk2c+'</td>'+
       '<td class="gp-cell">'+fmtS(wk3)+'</td><td class="calls-cell">'+wk3c+'</td>'+
-      '<td class="gp-cell" style="color:var(--text2)">&#8212;</td><td class="calls-cell">&#8212;</td>'+
+      '<td class="gp-cell">'+wk4disp+'</td><td class="calls-cell">'+(wk4c||'&#8212;')+'</td>'+
       '<td><strong>'+fmtS(total)+'</strong></td><td><span class="bd '+(pct>=40?'bg2':pct>=20?'ba2':'br2')+'">'+pct+'%</span></td></tr>';
   }
-  document.getElementById('teamWkTable').innerHTML=teamRow('Team Intrusion',tiReps,D.meta.tiGoal)+teamRow('Chamblee',chReps,D.meta.chGoal);
-  var sortedHist=[].concat(hist.reps).sort(function(a,b){var ta=(a.wk1||0)+(a.wk2||0)+(a.wk3||0),tb=(b.wk1||0)+(b.wk2||0)+(b.wk3||0);return tb-ta;});
+  function h_lookup(name,arr){return arr.find(function(h){return h.name===name;});}
+  var tiLive=reps.filter(function(r){return r.team==='intrusion';});
+  var chLive=reps.filter(function(r){return r.team==='chamblee';});
+  document.getElementById('teamWkTable').innerHTML=teamRow('Team Intrusion',tiReps,D.meta.tiGoal,tiLive)+teamRow('Chamblee',chReps,D.meta.chGoal,chLive);
+  // Sort by MTD override if available, else sum of all weeks
+  var sortedHist=[].concat(hist.reps).sort(function(a,b){
+    var la=reps.find(function(r){return r.name===a.name;}),lb=reps.find(function(r){return r.name===b.name;});
+    var ta=la&&la.mtd_override?la.mtd_override:(a.wk1||0)+(a.wk2||0)+(a.wk3||0)+(a.wk4||0);
+    var tb=lb&&lb.mtd_override?lb.mtd_override:(b.wk1||0)+(b.wk2||0)+(b.wk3||0)+(b.wk4||0);
+    return tb-ta;
+  });
   var repRows='';
   for(var i=0;i<sortedHist.length;i++){
     var h=sortedHist[i],live=reps.find(function(r){return r.name===h.name;});
-    var total=(h.wk1||0)+(h.wk2||0)+(h.wk3||0)+(h.wk4||0),pct=Math.round(total/h.goal*100);
+    // MTD: use mtd_override from live rep as source of truth
+    var mtd=live&&live.mtd_override?live.mtd_override:(h.wk1||0)+(h.wk2||0)+(h.wk3||0)+(h.wk4||0);
+    var pct=Math.round(mtd/h.goal*100);
     var totalNBA=(h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(live?live.nba:0);
     var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
+    // NBA badges per week — wk3 shows only wk3 NBAs, wk4 shows only wk4 NBAs
     var nba1=h.nba_wk1?' <span class="bd bp2" style="font-size:9px">'+h.nba_wk1+' NBA</span>':'';
     var nba2=h.nba_wk2?' <span class="bd bp2" style="font-size:9px">'+h.nba_wk2+' NBA</span>':'';
-    var nba3tot=h.nba_wk3+(live?live.nba:0);
-    var nba3=nba3tot>0?' <span class="bd bp2" style="font-size:9px">'+nba3tot+' NBA</span>':'';
+    var nba3=h.nba_wk3?' <span class="bd bp2" style="font-size:9px">'+h.nba_wk3+' NBA</span>':'';
+    var nba4=(live&&live.nba)?' <span class="bd bp2" style="font-size:9px">'+live.nba+' NBA</span>':'';
+    // Week 4 GP: use sum of gp_d1..d5 from live rep (auto-updates from daily entries)
+    var wk4gp=live?wkGP(live):0;
+    var wk4c=live?wkCalls(live):0;
+    var wk4cell=wk4gp>0?fmt(wk4gp)+nba4+'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/'+D.meta.totalDays+'</span>':
+                wk4gp<0?'<span style="color:var(--rfg);font-size:10px">reprice</span>'+nba4:
+                '<span style="color:var(--text2)">&#8212;</span>'+nba4;
+    var wk4cCell=wk4c>0?wk4c:'<span style="color:var(--text2)">&#8212;</span>';
     repRows+='<tr>'+
       '<td><span class="rk '+rC+'" style="margin-right:6px">'+(i+1)+'</span><strong style="font-weight:500">'+h.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+(h.team==='intrusion'?'Intrusion':'Chamblee')+' \u00b7 goal: '+fmtS(h.goal)+'</span></td>'+
       '<td class="gp-cell">'+fmt(h.wk1||0)+nba1+'</td><td class="calls-cell">'+(h.wk1c||0)+'</td>'+
       '<td class="gp-cell">'+fmt(h.wk2||0)+nba2+'</td><td class="calls-cell">'+(h.wk2c||0)+'</td>'+
       '<td class="gp-cell">'+(h.wk3!==null?fmt(h.wk3):'<span style="color:var(--text2)">&#8212;</span>')+nba3+'</td>'+
       '<td class="calls-cell">'+(h.wk3c!==null?h.wk3c:'<span style="color:var(--text2)">&#8212;</span>')+'</td>'+
-      '<td class="gp-cell">'+(h.wk4!==null&&h.wk4>0?fmt(h.wk4)+'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/5</span>':h.wk4&&h.wk4<0?'<span style="color:var(--rfg);font-size:10px">reprice</span><br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/5</span>':'<span style="color:var(--text2)">&#8212;</span>'+(h.wk4>0?'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/5</span>':''))+'</td><td class="calls-cell">'+(h.wk4c||'&#8212;')+'</td>'+
-      '<td><strong>'+fmt(total)+'</strong></td>'+
+      '<td class="gp-cell">'+wk4cell+'</td>'+
+      '<td class="calls-cell">'+wk4cCell+'</td>'+
+      '<td><strong>'+fmt(mtd)+'</strong></td>'+
       '<td><span class="bd '+(pct>=40?'bg2':pct>=20?'ba2':'br2')+'">'+pct+'%</span><div style="background:var(--bg2);border-radius:20px;height:4px;overflow:hidden;margin-top:3px;width:55px"><div style="height:100%;border-radius:20px;width:'+Math.min(100,pct)+'%;background:'+barColor(pct)+'"></div></div></td>'+
       '<td>'+(totalNBA?'<span class="bd bp2">'+totalNBA+'</span>':'&#8212;')+'</td></tr>';
   }
