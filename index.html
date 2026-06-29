@@ -262,6 +262,8 @@ function moCallPct(r){return r.dailyCallTarget===16?Math.round(wkCalls(r)/80*100
 
 // MTD GP = prior weeks + this week
 function moGPTotal(r){
+  // Use mtd_override as definitive source if available (reconciled TAI + warehouse)
+  if(r.mtd_override){return r.mtd_override;}
   var h=JUNE_HISTORY.reps.find(function(x){return x.name===r.name;});
   return (h?((h.wk1||0)+(h.wk2||0)+(h.wk3||0)):0)+wkGP(r);
 }
