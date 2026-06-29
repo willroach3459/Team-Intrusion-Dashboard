@@ -1,10 +1,10 @@
 {
   "meta": {
     "weekLabel": "Week of June 22\u201326 + June 29\u201330, 2026",
-    "dayOfWeek": 5,
+    "dayOfWeek": 1,
     "totalDays": 5,
-    "lastUpdated": "EOD 6/26 \u2014 Week 4 Day 5 (Final) \u00b7 2 days left (Mon 6/29, Tue 6/30)",
-    "monthDaysTracked": 20,
+    "lastUpdated": "6/29 \u2014 MTD reconciled \u00b7 1 day left (Tue 6/30)",
+    "monthDaysTracked": 21,
     "monthTotalDays": 22,
     "tiGoal": 30000,
     "chGoal": 230000
@@ -28,7 +28,7 @@
       "calls_d3": 10,
       "calls_d4": 1,
       "calls_d5": 33,
-      "mtd_override": 6604.66
+      "mtd_override": 6704.66
     },
     {
       "name": "Alex Robinson",
@@ -68,7 +68,7 @@
       "calls_d3": 86,
       "calls_d4": 63,
       "calls_d5": 48,
-      "mtd_override": 14898.39
+      "mtd_override": 14583.72
     },
     {
       "name": "Daryn Hightower",
@@ -108,7 +108,7 @@
       "calls_d3": 73,
       "calls_d4": 91,
       "calls_d5": 78,
-      "mtd_override": 8140.0
+      "mtd_override": 7555.0
     },
     {
       "name": "Lee Epling",
@@ -148,7 +148,7 @@
       "calls_d3": 14,
       "calls_d4": 21,
       "calls_d5": 28,
-      "mtd_override": 101626.3
+      "mtd_override": 95907.62
     },
     {
       "name": "Spencer Hines",
@@ -168,7 +168,7 @@
       "calls_d3": 0,
       "calls_d4": 23,
       "calls_d5": 28,
-      "mtd_override": 85103.6
+      "mtd_override": 91478.15
     }
   ],
   "prevWeek": [
