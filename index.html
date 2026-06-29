@@ -292,7 +292,7 @@ function gpWkPct(r){return Math.round(gpWkPace(r)/r.goal*100);}
 function callWkPct(r){var t=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek;return Math.round(wkCalls(r)/t*100);}
 
 // Scoring
-function wGs(r){return Math.min(3,Math.round((wkGP(r)/r.goal)*3*10)/10);}
+function wGs(r){var wkTarget=(r.goal/D.meta.monthTotalDays)*D.meta.totalDays;return Math.min(3,Math.round((wkGP(r)/wkTarget)*3*10)/10);}
 function wCs(r){var t=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek;return Math.min(1,Math.round((wkCalls(r)/t)*10)/10);}
 function wT(r){return Math.round((wGs(r)+(r.nba?2:0)+wCs(r))*10)/10;}
 function mGs(r){return Math.min(3,Math.round((moGPTotal(r)/r.goal)*3*10)/10);}
