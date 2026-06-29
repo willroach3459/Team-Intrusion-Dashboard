@@ -328,7 +328,10 @@ function render(){
     var wk2t=histPrev.reduce(function(s,h){return s+(h.wk2||0);},0);
     var wk3t=histPrev.reduce(function(s,h){return s+(h.wk3||0);},0);
     var wk4t=repsArr.reduce(function(s,r){return s+wkGP(r);},0);
-    var total=wk1t+wk2t+wk3t+wk4t,pct=Math.round(total/goal*100);
+    // Use mtd_override sum if available — definitive reconciled MTD
+    var hasMtdOverride=repsArr.every(function(r){return r.mtd_override;});
+    var total=hasMtdOverride?repsArr.reduce(function(s,r){return s+(r.mtd_override||0);},0):wk1t+wk2t+wk3t+wk4t;
+    var pct=Math.round(total/goal*100);
     var remaining=D.meta.monthTotalDays-D.meta.monthDaysTracked;
     var dailyNeeded=goal/D.meta.monthTotalDays;
     var proj=Math.round(total+(dailyNeeded*remaining));
