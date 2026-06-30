@@ -3,21 +3,21 @@
     "weekLabel": "Week of June 29\u201330, 2026",
     "dayOfWeek": 1,
     "totalDays": 2,
-    "lastUpdated": "6/29 EOD \u2014 outbound calls \u00b7 1 day left (Tue 6/30)",
+    "lastUpdated": "6/29 \u2014 definitive MTD (TAI + warehouse) \u00b7 outbound calls \u00b7 1 day left (Tue 6/30)",
     "monthDaysTracked": 21,
     "monthTotalDays": 22,
     "tiGoal": 30000,
     "chGoal": 230000
   },
   "reps": [
-    {"name":"Alex McClellan","team":"intrusion","goal":5000,"nba":0,"callTarget":80,"dailyCallTarget":16,"callLabel":"80/wk","gp_d1":0,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":0,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":6704.66},
+    {"name":"Alex McClellan","team":"intrusion","goal":5000,"nba":0,"callTarget":80,"dailyCallTarget":16,"callLabel":"80/wk","gp_d1":0,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":0,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":21704.66},
     {"name":"Alex Robinson","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":44.53,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":40,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":3684.22},
-    {"name":"Dalton Martinez","team":"intrusion","goal":10000,"nba":0,"callTarget":300,"dailyCallTarget":60,"callLabel":"60/day","gp_d1":1290.31,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":10,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":15874.03},
-    {"name":"Daryn Hightower","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":0,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":36,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":5093.76},
+    {"name":"Dalton Martinez","team":"intrusion","goal":10000,"nba":0,"callTarget":300,"dailyCallTarget":60,"callLabel":"60/day","gp_d1":1383.76,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":10,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":15967.48},
+    {"name":"Daryn Hightower","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":-250.00,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":36,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":4843.76},
     {"name":"Kieran Logue","team":"intrusion","goal":5000,"nba":0,"callTarget":400,"dailyCallTarget":80,"callLabel":"80/day","gp_d1":100.00,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":23,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":7655.00},
     {"name":"Lee Epling","team":"chamblee","goal":10000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":1000.00,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":33,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":14608.00},
-    {"name":"Luke Kush","team":"chamblee","goal":105000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":5322.93,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":3,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":101230.55},
-    {"name":"Spencer Hines","team":"chamblee","goal":115000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":0,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":15,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":91478.15}
+    {"name":"Luke Kush","team":"chamblee","goal":105000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":5159.64,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":3,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":101067.26},
+    {"name":"Spencer Hines","team":"chamblee","goal":115000,"nba":0,"callTarget":175,"dailyCallTarget":35,"callLabel":"35/day","gp_d1":2880.20,"gp_d2":0,"gp_d3":0,"gp_d4":0,"gp_d5":0,"calls_d1":15,"calls_d2":0,"calls_d3":0,"calls_d4":0,"calls_d5":0,"mtd_override":94358.35}
   ],
   "prevWeek": [
     {"name":"Alex McClellan","gp":5627.94,"outbound":82,"nba":2},
