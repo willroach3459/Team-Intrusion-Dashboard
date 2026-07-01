@@ -139,7 +139,7 @@ tr:hover td{background:var(--bg2)}
       </div>
       <div id="lb-mo" style="display:none">
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;margin-bottom:16px;font-size:12px;line-height:1.7">
-          <strong>Scoring:</strong> Cumulative GP vs goal (3 pts) &middot; Total NBAs all month (2 pts each, max 4) &middot; Call avg/day vs target (1 pt) &middot; Max 8 pts
+          <strong>Scoring:</strong> Cumulative GP vs goal (3 pts) &middot; 2 pts per NBA &mdash; no cap (3 = minimum) &middot; Call avg/day vs target (1 pt)
         </div>
         <div class="tw"><table>
           <thead><tr><th>#</th><th>Rep</th><th>Score</th><th>GP vs goal</th><th>NBA total</th><th>Calls avg/day</th><th>Move</th></tr></thead>
@@ -296,7 +296,7 @@ function wGs(r){var wkTarget=(r.goal/D.meta.monthTotalDays)*D.meta.totalDays;ret
 function wCs(r){var t=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek;return Math.min(1,Math.round((wkCalls(r)/t)*10)/10);}
 function wT(r){return Math.round((wGs(r)+(r.nba?2:0)+wCs(r))*10)/10;}
 function mGs(r){return Math.min(3,Math.round((moGPTotal(r)/r.goal)*3*10)/10);}
-function mNs(r){return Math.min(4,moNBA(r)*2);}
+function mNs(r){return moNBA(r)*2;}
 function mCs(r){return Math.min(1,Math.round((moCallPct(r)/100)*10)/10);}
 function mT(r){return Math.round((mGs(r)+mNs(r)+mCs(r))*10)/10;}
 
@@ -406,9 +406,9 @@ function renderMonthLB(reps){
     var cDisp=r.dailyCallTarget===16?(wkCalls(r)+'/80wk'):(avg.toFixed(1)+'/day');
     rows+='<tr><td><span class="rk '+rC+'">'+(i+1)+'</span></td>'+
       '<td><strong style="font-weight:500">'+r.name+'</strong></td>'+
-      '<td><span style="font-size:17px;font-weight:700">'+tot.toFixed(1)+'</span><span style="font-size:10px;color:var(--text2)">/8</span></td>'+
+      '<td><span style="font-size:17px;font-weight:700">'+tot.toFixed(1)+'</span><span style="font-size:10px;color:var(--text2)"> pts</span></td>'+
       '<td>'+pill(pct,pct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+fmtS(mo)+' MTD · '+gs.toFixed(1)+'/3 pts</div><div class="ppw"><div class="ppb '+pcC(pct)+'" style="width:'+Math.min(100,pct)+'%"></div></div></td>'+
-      '<td>'+(nba?'<span class="bd bp2">'+nba+'</span>':'<span class="bd bb2">0</span>')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+ns+'/4</div></td>'+
+      '<td>'+(nba?'<span class="bd bp2">'+nba+'</span>':'<span class="bd bb2">0</span>')+'<div style="font-size:10px;margin-top:2px;color:'+(nba>=3?'var(--text2)':'var(--afg)')+'">'+ns+' pts · '+(nba>=3?'✓ min':'✗ below 3')+'</div></td>'+
       '<td>'+pill(cPct,cDisp)+'<div style="font-size:10px;color:var(--text2);margin-top:2px">tgt:'+(r.dailyCallTarget===16?'80/wk':r.dailyCallTarget+'/day')+' · '+cs.toFixed(1)+'/1</div></td>'+
       '<td>'+mv+'</td></tr>';
   }
