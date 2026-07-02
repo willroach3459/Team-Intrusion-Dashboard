@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 1\u20133, 2026",
     "dayOfWeek": 1,
     "totalDays": 2,
-    "lastUpdated": "July 1 \u2014 month start (June archived). Awaiting first daily update.",
+    "lastUpdated": "7/1 (day 1 of July) \u2014 first daily GP + outbound calls",
     "monthDaysTracked": 1,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -18,7 +18,7 @@
       "callTarget": 80,
       "dailyCallTarget": 16,
       "callLabel": "80/wk",
-      "gp_d1": 0,
+      "gp_d1": 400.0,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
@@ -28,7 +28,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0
+      "mtd_override": 400.0
     },
     {
       "name": "Alex Robinson",
@@ -38,17 +38,17 @@
       "callTarget": 400,
       "dailyCallTarget": 80,
       "callLabel": "80/day",
-      "gp_d1": 0,
+      "gp_d1": 125.0,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 0,
+      "calls_d1": 1,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0
+      "mtd_override": 125.0
     },
     {
       "name": "Dalton Martinez",
@@ -58,17 +58,17 @@
       "callTarget": 300,
       "dailyCallTarget": 60,
       "callLabel": "60/day",
-      "gp_d1": 0,
+      "gp_d1": 632.64,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 0,
+      "calls_d1": 59,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0
+      "mtd_override": 632.64
     },
     {
       "name": "Daryn Hightower",
@@ -78,17 +78,17 @@
       "callTarget": 400,
       "dailyCallTarget": 80,
       "callLabel": "80/day",
-      "gp_d1": 0,
+      "gp_d1": 91.99,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 0,
+      "calls_d1": 81,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0
+      "mtd_override": 91.99
     },
     {
       "name": "Kieran Logue",
@@ -98,17 +98,17 @@
       "callTarget": 400,
       "dailyCallTarget": 80,
       "callLabel": "80/day",
-      "gp_d1": 0,
+      "gp_d1": 350.0,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 0,
+      "calls_d1": 76,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0
+      "mtd_override": 350.0
     },
     {
       "name": "Lee Epling",
@@ -118,17 +118,17 @@
       "callTarget": 175,
       "dailyCallTarget": 35,
       "callLabel": "35/day",
-      "gp_d1": 0,
+      "gp_d1": 100.0,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 0,
+      "calls_d1": 20,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0
+      "mtd_override": 100.0
     },
     {
       "name": "Luke Kush",
@@ -138,17 +138,17 @@
       "callTarget": 175,
       "dailyCallTarget": 35,
       "callLabel": "35/day",
-      "gp_d1": 0,
+      "gp_d1": 5596.45,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 0,
+      "calls_d1": 13,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0
+      "mtd_override": 5596.45
     },
     {
       "name": "Spencer Hines",
@@ -158,17 +158,17 @@
       "callTarget": 175,
       "dailyCallTarget": 35,
       "callLabel": "35/day",
-      "gp_d1": 0,
+      "gp_d1": 2140.0,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 0,
+      "calls_d1": 33,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0
+      "mtd_override": 2140.0
     }
   ],
   "prevWeek": [
