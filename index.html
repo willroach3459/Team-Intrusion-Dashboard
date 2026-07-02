@@ -305,7 +305,7 @@ function render(){
   document.getElementById('lbl').textContent=m.lastUpdated;
   document.getElementById('wkLabel').textContent=m.weekLabel+' \u00b7 Day '+m.dayOfWeek+' of '+m.totalDays;
   document.getElementById('upd').textContent='Updated: '+m.lastUpdated;
-  for(var d=1;d<=5;d++){var el=document.getElementById('h'+d);if(el)el.textContent=d<=m.dayOfWeek?DAY_LABELS[d-1]:'';}
+  for(var d=1;d<=5;d++){var el=document.getElementById('h'+d);if(el)el.textContent=d<=m.dayOfWeek?DAY_LABELS[(m.weekStartDow||0)+d-1]:'';}
 
   var byWk=[].concat(reps).sort(function(a,b){return wkGP(b)-wkGP(a);})[0];
   var byMo=[].concat(reps).sort(function(a,b){return moPct(b)-moPct(a);})[0];
@@ -427,7 +427,7 @@ function renderPrevWeeks(reps){
     }
   });
   var totalMonthNBAs=hist.reps.reduce(function(s,h){var live=reps.find(function(r){return r.name===h.name;});return s+(h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(h.nba_wk4||0)+(live?live.nba:0);},0);
-  document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in June</span>';
+  document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in July</span>';
   // Determine which week is current based on whether wk3 is locked
   var allWk4Locked=hist.reps.every(function(h){return h.wk4!==null;});
   var wk5HasData=hist.reps.some(function(h){return h.wk5&&h.wk5>0;});
