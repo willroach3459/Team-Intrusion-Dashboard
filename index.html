@@ -1,560 +1,225 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Team Dashboard — July 2026</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
-<style>
-:root{--bg:#fff;--bg2:#f7f7f5;--border:#e0ddd6;--text:#1a1a18;--text2:#6b6a65;--green:#639922;--amber:#EF9F27;--red:#E24B4A;--gbg:#EAF3DE;--gfg:#27500A;--abg:#FAEEDA;--afg:#633806;--rbg:#FCEBEB;--rfg:#791F1F;--bbg:#E6F1FB;--bfg:#0C447C;--pbg:#EEEDFE;--pfg:#3C3489;--r:10px;--sh:0 1px 4px rgba(0,0,0,.07)}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg2);color:var(--text);min-height:100vh}
-header{background:var(--bg);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.logo{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--green)}
-.live{display:inline-flex;align-items:center;gap:5px;background:var(--gbg);color:var(--gfg);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:500}
-.ldot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hmeta{font-size:12px;color:var(--text2)}
-.wrap{max-width:1200px;margin:0 auto;padding:20px 16px}
-.tabs{display:flex;gap:4px;margin-bottom:20px;border-bottom:1px solid var(--border);flex-wrap:wrap}
-.tab{padding:8px 14px;font-size:13px;font-weight:500;border:none;background:transparent;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s}
-.tab:hover{color:var(--text)}.tab.on{color:var(--text);border-bottom-color:var(--text)}
-.stabs{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap}
-.stab{padding:5px 13px;font-size:12px;border-radius:20px;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text2);font-weight:500;transition:all .15s}
-.stab.on{background:var(--text);color:var(--bg);border-color:var(--text)}
-.pg{display:none}.pg.on{display:block}
-.sec{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;margin-top:20px}
-.sec:first-child{margin-top:0}
-.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:9px;margin-bottom:18px}
-.chip{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:11px 13px;box-shadow:var(--sh)}
-.cl{font-size:11px;color:var(--text2);margin-bottom:3px}.cv{font-size:15px;font-weight:600}.cs{font-size:11px;color:var(--text2);margin-top:2px}
-.nba{background:var(--pbg);border:1px solid #AFA9EC;border-radius:var(--r);padding:11px 15px;margin-bottom:18px;display:flex;gap:10px;align-items:flex-start}
-.tg{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:18px}
-.tb{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:13px 15px;box-shadow:var(--sh)}
-.tbig{font-size:26px;font-weight:600}
-.pw{background:var(--bg2);border-radius:20px;height:6px;overflow:hidden;margin:6px 0}
-.pb{height:100%;border-radius:20px}
-.pg2{background:var(--green)}.pa{background:var(--amber)}.pr2{background:var(--red)}
-.tw{overflow-x:auto;background:var(--bg);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh);margin-bottom:20px}
-table{width:100%;border-collapse:collapse;font-size:12px}
-th{text-align:left;padding:9px 11px;font-size:11px;font-weight:600;color:var(--text2);border-bottom:1px solid var(--border);background:var(--bg2)}
-th.sub{font-size:10px;font-weight:500;color:var(--text2);background:var(--bg2)}
-td{padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:middle}
-tr:last-child td{border-bottom:none}
-tr:hover td{background:var(--bg2)}
-.rk{display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:50%;font-weight:600;font-size:11px}
-.rk1{background:#FAC775;color:#412402}.rk2{background:#D3D1C7;color:#2C2C2A}.rk3{background:#F5C4B3;color:#4A1B0C}.rko{background:var(--bg2);color:var(--text2)}
-.bd{display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600}
-.bg2{background:var(--gbg);color:var(--gfg)}.ba2{background:var(--abg);color:var(--afg)}.br2{background:var(--rbg);color:var(--rfg)}.bb2{background:var(--bbg);color:var(--bfg)}.bp2{background:var(--pbg);color:var(--pfg)}
-.ton{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:500;background:var(--gbg);color:var(--gfg)}
-.twn{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:500;background:var(--abg);color:var(--afg)}
-.tof{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:500;background:var(--rbg);color:var(--rfg)}
-.ppw{background:var(--bg2);border-radius:20px;height:4px;overflow:hidden;margin-top:3px;width:65px}
-.ppb{height:100%;border-radius:20px}
-.mu{color:var(--green);font-size:12px;font-weight:700}.md{color:var(--red);font-size:12px;font-weight:700}.ms{color:var(--text2);font-size:12px}
-.load{text-align:center;padding:50px;color:var(--text2);font-size:14px}
-.err{text-align:center;padding:30px;color:var(--rfg);background:var(--rbg);border-radius:var(--r);margin:16px 0;font-size:13px}
-.pace-box{background:var(--bg2);border-radius:8px;padding:6px 9px;margin-top:4px;font-size:11px;line-height:1.6}
-.pace-hit{color:var(--gfg);font-weight:600}
-.pace-proj{color:var(--text2)}
-.wk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:24px}
-.wk-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;box-shadow:var(--sh)}
-.wk-label{font-size:10px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
-.wk-big{font-size:22px;font-weight:600;margin-bottom:2px}
-.wk-sub{font-size:11px;color:var(--text2);margin-bottom:8px}
-.rep-wk-row{display:flex;align-items:center;padding:5px 0;border-bottom:1px solid var(--border);font-size:12px}
-.rep-wk-row:last-child{border-bottom:none}
-.rep-wk-name{font-weight:500;width:80px;flex-shrink:0;font-size:11px}
-.rep-wk-gp{font-weight:500;width:62px;text-align:right;flex-shrink:0;font-size:11px}
-.rep-wk-calls{width:44px;text-align:right;flex-shrink:0;font-size:10px;color:var(--text2)}
-.rep-wk-pct{width:32px;text-align:right;flex-shrink:0;font-size:10px;color:var(--text2)}
-.rep-wk-bar-wrap{flex:1;background:var(--bg2);border-radius:20px;height:5px;overflow:hidden;margin:0 6px}
-.rep-wk-bar{height:100%;border-radius:20px}
-.month-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
-.note-box{background:var(--abg);border:1px solid var(--amber);border-radius:var(--r);padding:11px 14px;font-size:12px;color:var(--afg);margin-bottom:16px;line-height:1.6}
-.gp-cell{font-weight:500}
-.calls-cell{font-size:11px;color:var(--text2)}
-@media(max-width:580px){.tg{grid-template-columns:1fr}.chips{grid-template-columns:1fr 1fr}header{padding:11px 14px}.wk-grid{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-<header>
-  <div class="logo"><div class="dot"></div>Team Dashboard &mdash; July 2026</div>
-  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-    <span class="live"><span class="ldot"></span><span id="lbl">Loading...</span></span>
-    <span class="hmeta" id="wkLabel"></span>
-  </div>
-</header>
-<div class="wrap">
-  <div id="loading" class="load">Loading dashboard...</div>
-  <div id="errBox" class="err" style="display:none"></div>
-  <div id="dash" style="display:none">
-    <div class="tabs">
-      <button class="tab on" onclick="go('hl',event)">Daily highlights</button>
-      <button class="tab" onclick="go('lb',event)">Leaderboard</button>
-      <button class="tab" onclick="go('pw',event)">Previous weeks</button>
-    </div>
-
-    <!-- DAILY HIGHLIGHTS -->
-    <div id="pg-hl" class="pg on">
-      <p style="font-size:11px;color:var(--text2);margin-bottom:14px" id="upd"></p>
-      <div class="chips" id="chips"></div>
-      <div class="nba">
-        <div>
-          <div style="font-size:12px;font-weight:600;color:#3C3489;margin-bottom:3px">NBA &mdash; New buying account</div>
-          <div style="font-size:12px" id="nbaText"></div>
-        </div>
-      </div>
-      <p class="sec">June running total &mdash; % to goal</p>
-      <div class="tg">
-        <div class="tb"><div style="font-size:12px;color:var(--text2);margin-bottom:5px">Team Intrusion</div><div class="tbig" id="ti-p"></div><div style="font-size:11px;color:var(--text2);margin-top:2px" id="ti-d"></div><div class="pw"><div class="pb" id="ti-b"></div></div><div style="font-size:10px;color:var(--text2);margin-top:4px" id="ti-bk"></div></div>
-        <div class="tb"><div style="font-size:12px;color:var(--text2);margin-bottom:5px">Chamblee</div><div class="tbig" id="ch-p"></div><div style="font-size:11px;color:var(--text2);margin-top:2px" id="ch-d"></div><div class="pw"><div class="pb" id="ch-b"></div></div><div style="font-size:10px;color:var(--text2);margin-top:4px" id="ch-bk"></div></div>
-      </div>
-      <p class="sec">Individual GP &mdash; this week so far</p>
-      <div class="tw"><table>
-        <thead><tr>
-          <th>#</th><th>Rep</th>
-          <th id="h1"></th><th id="h2"></th><th id="h3"></th><th id="h4"></th><th id="h5"></th>
-          <th>Week total</th><th>GP on track</th><th>Proj month-end</th><th>Calls</th><th>NBA</th>
-        </tr></thead>
-        <tbody id="wkBody"></tbody>
-      </table></div>
-    </div>
-
-    <!-- LEADERBOARD -->
-    <div id="pg-lb" class="pg">
-      <div class="stabs">
-        <button class="stab on" onclick="slb('wk',event)">This week</button>
-        <button class="stab" onclick="slb('mo',event)">July monthly</button>
-      </div>
-      <div id="lb-wk">
-        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;margin-bottom:16px;font-size:12px;line-height:1.7">
-          <strong>Scoring:</strong> GP pace vs goal (3 pts) &middot; NBA (2 pts) &middot; Call pace (1 pt) &middot; Max 6 pts
-        </div>
-        <div class="tw"><table>
-          <thead><tr><th>#</th><th>Rep</th><th>Score</th><th>GP this week</th><th>NBA</th><th>Calls</th><th>Team</th></tr></thead>
-          <tbody id="lbwk"></tbody>
-        </table></div>
-      </div>
-      <div id="lb-mo" style="display:none">
-        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;margin-bottom:16px;font-size:12px;line-height:1.7">
-          <strong>Scoring:</strong> Cumulative GP vs goal (3 pts) &middot; 2 pts per NBA &mdash; no cap (3 = minimum) &middot; Call avg/day vs target (1 pt)
-        </div>
-        <div class="tw"><table>
-          <thead><tr><th>#</th><th>Rep</th><th>Score</th><th>GP vs goal</th><th>NBA total</th><th>Calls avg/day</th><th>Move</th></tr></thead>
-          <tbody id="lbmo"></tbody>
-        </table></div>
-      </div>
-    </div>
-
-    <!-- PREVIOUS WEEKS -->
-    <div id="pg-pw" class="pg">
-      <div class="month-header">
-        <div>
-          <div style="font-size:16px;font-weight:600">July 2026 &mdash; Week by Week</div>
-          <div style="font-size:12px;color:var(--text2);margin-top:3px">GP &amp; calls by week &middot; Resets each new month</div>
-        </div>
-        <div id="moNBABadge"></div>
-      </div>
-      <div class="note-box" id="pwNote"></div>
-      <p class="sec">Team totals by week</p>
-      <div class="tw"><table>
-        <thead>
-          <tr>
-            <th rowspan="2" style="vertical-align:bottom">Team</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Jun 1&ndash;5)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Jun 8&ndash;12)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Jun 15&ndash;19)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Jun 22&ndash;26)</th>
-            <th rowspan="2" style="vertical-align:bottom">June MTD</th>
-            <th rowspan="2" style="vertical-align:bottom">% of goal</th>
-          </tr>
-          <tr>
-            <th class="sub">GP</th><th class="sub">Calls</th>
-            <th class="sub">GP</th><th class="sub">Calls</th>
-            <th class="sub">GP</th><th class="sub">Calls</th>
-            <th class="sub">GP</th><th class="sub">Calls</th>
-          </tr>
-        </thead>
-        <tbody id="teamWkTable"></tbody>
-      </table></div>
-      <p class="sec">Individual GP &amp; calls by week</p>
-      <div class="tw"><table>
-        <thead>
-          <tr>
-            <th rowspan="2" style="vertical-align:bottom">Rep</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Jun 1&ndash;5)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Jun 8&ndash;12)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Jun 15&ndash;19)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Jun 22&ndash;26)</th>
-            <th rowspan="2" style="vertical-align:bottom">June MTD</th>
-            <th rowspan="2" style="vertical-align:bottom">% of goal</th>
-            <th rowspan="2" style="vertical-align:bottom">NBA</th>
-          </tr>
-          <tr>
-            <th class="sub">GP</th><th class="sub">Calls</th>
-            <th class="sub">GP</th><th class="sub">Calls</th>
-            <th class="sub">GP</th><th class="sub">Calls</th>
-            <th class="sub">GP</th><th class="sub">Calls</th>
-          </tr>
-        </thead>
-        <tbody id="repWkTable"></tbody>
-      </table></div>
-      <p class="sec">Weekly breakdown</p>
-      <div class="wk-grid" id="wkCards"></div>
-    </div>
-  </div>
-</div>
-
-<script>
-var DATA_URL = 'data.json';
-var D = null;
-var DAY_LABELS = ['Mon','Tue','Wed','Thu','Fri'];
-
-// July 2026: 22 working days (July 3 holiday)
-// Days tracked so far comes from data.json monthDaysTracked
-// Remaining days = 20 - monthDaysTracked
-// Daily GP goal per rep = goal / 20
-
-var JUNE_HISTORY = {
-  reps: [
-    {name:'Alex McClellan', team:'intrusion', goal:6000,   wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Alex Robinson',  team:'intrusion', goal:6000,   wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Dalton Martinez',team:'intrusion', goal:11000,  wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Daryn Hightower',team:'intrusion', goal:6000,   wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Kieran Logue',   team:'intrusion', goal:6000,   wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Lee Epling',     team:'chamblee',  goal:11000,  wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Luke Kush',      team:'chamblee',  goal:106000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Spencer Hines',  team:'chamblee',  goal:115000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0}
+{
+  "meta": {
+    "weekLabel": "Week of July 1\u20132, 2026 (Fri 7/3 holiday)",
+    "dayOfWeek": 2,
+    "totalDays": 2,
+    "lastUpdated": "7/2 11:30am \u2014 GP + outbound calls",
+    "monthDaysTracked": 2,
+    "monthTotalDays": 22,
+    "tiGoal": 35000,
+    "chGoal": 232000,
+    "weekStartDow": 2
+  },
+  "reps": [
+    {
+      "name": "Alex McClellan",
+      "team": "intrusion",
+      "goal": 6000,
+      "nba": 0,
+      "callTarget": 80,
+      "dailyCallTarget": 16,
+      "callLabel": "80/wk",
+      "gp_d1": 400.0,
+      "gp_d2": 66.76,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 0,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0,
+      "mtd_override": 466.76
+    },
+    {
+      "name": "Alex Robinson",
+      "team": "intrusion",
+      "goal": 6000,
+      "nba": 0,
+      "callTarget": 400,
+      "dailyCallTarget": 80,
+      "callLabel": "80/day",
+      "gp_d1": 125.0,
+      "gp_d2": 0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 1,
+      "calls_d2": 8,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0,
+      "mtd_override": 125.0
+    },
+    {
+      "name": "Dalton Martinez",
+      "team": "intrusion",
+      "goal": 11000,
+      "nba": 0,
+      "callTarget": 300,
+      "dailyCallTarget": 60,
+      "callLabel": "60/day",
+      "gp_d1": 632.64,
+      "gp_d2": 200.0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 59,
+      "calls_d2": 11,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0,
+      "mtd_override": 832.64
+    },
+    {
+      "name": "Daryn Hightower",
+      "team": "intrusion",
+      "goal": 6000,
+      "nba": 0,
+      "callTarget": 400,
+      "dailyCallTarget": 80,
+      "callLabel": "80/day",
+      "gp_d1": 91.99,
+      "gp_d2": 0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 81,
+      "calls_d2": 15,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0,
+      "mtd_override": 91.99
+    },
+    {
+      "name": "Kieran Logue",
+      "team": "intrusion",
+      "goal": 6000,
+      "nba": 0,
+      "callTarget": 400,
+      "dailyCallTarget": 80,
+      "callLabel": "80/day",
+      "gp_d1": 350.0,
+      "gp_d2": 295.0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 76,
+      "calls_d2": 19,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0,
+      "mtd_override": 645.0
+    },
+    {
+      "name": "Lee Epling",
+      "team": "chamblee",
+      "goal": 11000,
+      "nba": 0,
+      "callTarget": 175,
+      "dailyCallTarget": 35,
+      "callLabel": "35/day",
+      "gp_d1": 100.0,
+      "gp_d2": 400.0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 20,
+      "calls_d2": 9,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0,
+      "mtd_override": 500.0
+    },
+    {
+      "name": "Luke Kush",
+      "team": "chamblee",
+      "goal": 106000,
+      "nba": 1,
+      "callTarget": 175,
+      "dailyCallTarget": 35,
+      "callLabel": "35/day",
+      "gp_d1": 5596.45,
+      "gp_d2": 3040.77,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 13,
+      "calls_d2": 21,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0,
+      "mtd_override": 8637.22
+    },
+    {
+      "name": "Spencer Hines",
+      "team": "chamblee",
+      "goal": 115000,
+      "nba": 0,
+      "callTarget": 175,
+      "dailyCallTarget": 35,
+      "callLabel": "35/day",
+      "gp_d1": 2140.0,
+      "gp_d2": 100.0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 33,
+      "calls_d2": 16,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0,
+      "mtd_override": 2240.0
+    }
+  ],
+  "prevWeek": [
+    {
+      "name": "Alex McClellan",
+      "gp": 5070.0,
+      "outbound": 0,
+      "nba": 0
+    },
+    {
+      "name": "Alex Robinson",
+      "gp": 44.53,
+      "outbound": 58,
+      "nba": 0
+    },
+    {
+      "name": "Dalton Martinez",
+      "gp": 2652.34,
+      "outbound": 40,
+      "nba": 0
+    },
+    {
+      "name": "Daryn Hightower",
+      "gp": -250.0,
+      "outbound": 119,
+      "nba": 0
+    },
+    {
+      "name": "Kieran Logue",
+      "gp": 850.0,
+      "outbound": 74,
+      "nba": 0
+    },
+    {
+      "name": "Lee Epling",
+      "gp": 1850.0,
+      "outbound": 62,
+      "nba": 0
+    },
+    {
+      "name": "Luke Kush",
+      "gp": 13452.57,
+      "outbound": 42,
+      "nba": 0
+    },
+    {
+      "name": "Spencer Hines",
+      "gp": 3130.2,
+      "outbound": 30,
+      "nba": 0
+    }
   ]
-};
-
-function load(){
-  fetch(DATA_URL+'?t='+Date.now())
-    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
-    .then(function(data){D=data;document.getElementById('loading').style.display='none';document.getElementById('dash').style.display='block';render();})
-    .catch(function(e){document.getElementById('loading').style.display='none';document.getElementById('errBox').style.display='block';document.getElementById('errBox').textContent='Could not load data. Try refreshing. '+e.message;});
 }
-
-function fmt(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
-function fmtS(v){return '$'+Math.round(v).toLocaleString();}
-function pcC(p){return p>=40?'pg2':p>=20?'pa':'pr2';}
-function barColor(p){return p>=40?'var(--green)':p>=20?'var(--amber)':'var(--red)';}
-function pill(pct,lbl){var s=pct>=90?'ton':pct>=70?'twn':'tof';return '<span class="'+s+'">'+lbl+'</span>';}
-function bdC(p){return p>=40?'bg2':p>=20?'ba2':'br2';}
-
-function wkGP(r){var t=0;for(var d=1;d<=D.meta.dayOfWeek;d++){t+=(r['gp_d'+d]||0);}return t;}
-function wkCalls(r){var t=0;for(var d=1;d<=D.meta.dayOfWeek;d++){t+=(r['calls_d'+d]||0);}return t;}
-function pv(name){return D.prevWeek.find(function(x){return x.name===name;})||{};}
-function moNBA(r){
-  var h=JUNE_HISTORY.reps.find(function(x){return x.name===r.name;});
-  var histNBA=h?((h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(h.nba_wk4||0)):0;
-  return histNBA+r.nba;
-}
-function moTotCalls(r){
-  var h=JUNE_HISTORY.reps.find(function(x){return x.name===r.name;});
-  var histCalls=h?((h.wk1c||0)+(h.wk2c||0)+(h.wk3c||0)+(h.wk4c||0)):0;
-  return histCalls+wkCalls(r);
-}
-function moAvg(r){return Math.round(moTotCalls(r)/D.meta.monthDaysTracked*10)/10;}
-function moCallPct(r){return r.dailyCallTarget===16?Math.round(wkCalls(r)/80*100):Math.round(moAvg(r)/r.dailyCallTarget*100);}
-
-// MTD GP = prior weeks + this week
-function moGPTotal(r){
-  // Use mtd_override as definitive source if available (reconciled TAI + warehouse)
-  if(r.mtd_override){return r.mtd_override;}
-  var h=JUNE_HISTORY.reps.find(function(x){return x.name===r.name;});
-  return (h?((h.wk1||0)+(h.wk2||0)+(h.wk3||0)):0)+wkGP(r);
-}
-function moPct(r){return Math.min(999,Math.round(moGPTotal(r)/r.goal*100));}
-
-// Daily GP goal = monthly goal / 20 working days in June
-function dailyGPGoal(r){return r.goal/D.meta.monthTotalDays;}
-
-// GP on track % = MTD / (days tracked * daily goal)
-function gpOnTrackPct(r){
-  var needed=D.meta.monthDaysTracked*dailyGPGoal(r);
-  if(needed===0)return 0;
-  return Math.round(moGPTotal(r)/needed*100);
-}
-
-// Projected month-end = MTD so far + (daily GP goal * remaining business days)
-function projMonthEnd(r){
-  var remaining=D.meta.monthTotalDays-D.meta.monthDaysTracked;
-  return moGPTotal(r)+(dailyGPGoal(r)*remaining);
-}
-function projMonthPct(r){return Math.round(projMonthEnd(r)/r.goal*100);}
-
-// Week pace
-function gpWkPace(r){return wkGP(r)/D.meta.dayOfWeek*D.meta.totalDays;}
-function gpWkPct(r){return Math.round(gpWkPace(r)/r.goal*100);}
-function callWkPct(r){var t=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek;return Math.round(wkCalls(r)/t*100);}
-
-// Scoring
-function wGs(r){var wkTarget=(r.goal/D.meta.monthTotalDays)*D.meta.totalDays;return Math.min(3,Math.round((wkGP(r)/wkTarget)*3*10)/10);}
-function wCs(r){var t=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek;return Math.min(1,Math.round((wkCalls(r)/t)*10)/10);}
-function wT(r){return Math.round((wGs(r)+(r.nba?2:0)+wCs(r))*10)/10;}
-function mGs(r){return Math.min(3,Math.round((moGPTotal(r)/r.goal)*3*10)/10);}
-function mNs(r){return moNBA(r)*2;}
-function mCs(r){return Math.min(1,Math.round((moCallPct(r)/100)*10)/10);}
-function mT(r){return Math.round((mGs(r)+mNs(r)+mCs(r))*10)/10;}
-
-function render(){
-  var m=D.meta, reps=D.reps;
-  document.getElementById('lbl').textContent=m.lastUpdated;
-  document.getElementById('wkLabel').textContent=m.weekLabel+' \u00b7 Day '+m.dayOfWeek+' of '+m.totalDays;
-  document.getElementById('upd').textContent='Updated: '+m.lastUpdated;
-  for(var d=1;d<=5;d++){var el=document.getElementById('h'+d);if(el)el.textContent=d<=m.dayOfWeek?DAY_LABELS[(m.weekStartDow||0)+d-1]:'';}
-
-  var byWk=[].concat(reps).sort(function(a,b){return wkGP(b)-wkGP(a);})[0];
-  var byMo=[].concat(reps).sort(function(a,b){return moPct(b)-moPct(a);})[0];
-  var onGP=reps.filter(function(r){return gpOnTrackPct(r)>=90;}).length;
-  var nbas=reps.filter(function(r){return r.nba>0;});
-  document.getElementById('chips').innerHTML=
-    '<div class="chip"><div class="cl">Most GP this week</div><div class="cv">'+byWk.name.split(' ')[0]+'</div><div class="cs">'+fmt(wkGP(byWk))+'</div></div>'+
-    '<div class="chip"><div class="cl">Best % to goal</div><div class="cv">'+byMo.name.split(' ')[0]+'</div><div class="cs">'+moPct(byMo)+'% of goal</div></div>'+
-    '<div class="chip"><div class="cl">GP on track</div><div class="cv">'+onGP+' of '+reps.length+'</div><div class="cs">at or above daily pace</div></div>'+
-    '<div class="chip"><div class="cl">NBA this week</div><div class="cv">'+(nbas.length?nbas.map(function(r){return r.name.split(' ')[0];}).join(', '):'None yet')+'</div><div class="cs">'+nbas.length+' account'+(nbas.length!==1?'s':'')+'</div></div>';
-
-  document.getElementById('nbaText').textContent=nbas.length
-    ?'This week: '+nbas.map(function(r){return r.name;}).join(', ')+'. See Previous Weeks tab for full month NBA totals.'
-    :'No NBAs yet this week. Check Previous Weeks for month totals.';
-
-  var ti=reps.filter(function(r){return r.team==='intrusion';}),ch=reps.filter(function(r){return r.team==='chamblee';});
-  function setTeam(pI,dI,bI,bkI,repsArr,goal){
-    var histPrev=JUNE_HISTORY.reps.filter(function(h){return repsArr.find(function(r){return r.name===h.name;});});
-    var wk1t=histPrev.reduce(function(s,h){return s+(h.wk1||0);},0);
-    var wk2t=histPrev.reduce(function(s,h){return s+(h.wk2||0);},0);
-    var wk3t=histPrev.reduce(function(s,h){return s+(h.wk3||0);},0);
-    var wk4t=repsArr.reduce(function(s,r){return s+wkGP(r);},0);
-    // Use mtd_override sum if available — definitive reconciled MTD
-    var hasMtdOverride=repsArr.every(function(r){return r.mtd_override;});
-    var total=hasMtdOverride?repsArr.reduce(function(s,r){return s+(r.mtd_override||0);},0):wk1t+wk2t+wk3t+wk4t;
-    var pct=Math.round(total/goal*100);
-    var remaining=D.meta.monthTotalDays-D.meta.monthDaysTracked;
-    var dailyNeeded=goal/D.meta.monthTotalDays;
-    var proj=Math.round(total+(dailyNeeded*remaining));
-    document.getElementById(pI).textContent=pct+'%';
-    document.getElementById(dI).textContent=fmtS(total)+' of '+fmtS(goal)+' goal \u00b7 proj '+fmtS(proj);
-    document.getElementById(bkI).textContent='Wk1: '+fmtS(wk1t)+' \u00b7 Wk2: '+fmtS(wk2t)+' \u00b7 Wk3: '+fmtS(wk3t)+' \u00b7 '+remaining+' days left';
-    var b=document.getElementById(bI);b.style.width=Math.min(100,pct)+'%';b.className='pb '+pcC(pct);
-  }
-  setTeam('ti-p','ti-d','ti-b','ti-bk',ti,m.tiGoal);
-  setTeam('ch-p','ch-d','ch-b','ch-bk',ch,m.chGoal);
-
-  // Weekly highlights table
-  var ws=[].concat(reps).sort(function(a,b){return wkGP(b)-wkGP(a);});
-  var wkRows='';
-  for(var i=0;i<ws.length;i++){
-    var r=ws[i];
-    var otPct=gpOnTrackPct(r),proj=projMonthEnd(r),projPct=projMonthPct(r);
-    var tgt=r.dailyCallTarget===16?80:r.dailyCallTarget*m.dayOfWeek;
-    var cPct=callWkPct(r);
-    var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
-    var dayCells='';
-    for(var d=1;d<=5;d++){
-      if(d<=m.dayOfWeek){var v=r['gp_d'+d]||0;dayCells+='<td>'+(v>0?fmt(v):v<0?'<span style="color:var(--rfg);font-size:10px">reprice</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td>';}
-      else{dayCells+='<td></td>';}
-    }
-    var projColor=projPct>=100?'var(--green)':projPct>=70?'var(--amber)':'var(--red)';
-    wkRows+='<tr><td><span class="rk '+rC+'">'+(i+1)+'</span></td>'+
-      '<td><strong style="font-weight:500">'+r.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+(r.team==='intrusion'?'Intrusion':'Chamblee')+'</span></td>'+
-      dayCells+
-      '<td><strong>'+fmt(wkGP(r))+'</strong></td>'+
-      '<td>'+pill(otPct,otPct+'%')+'<div class="ppw"><div class="ppb '+pcC(otPct)+'" style="width:'+Math.min(100,otPct)+'%"></div></div><div style="font-size:10px;color:var(--text2);margin-top:2px">'+fmt(moGPTotal(r))+' MTD</div></td>'+
-      '<td><span style="font-size:13px;font-weight:600;color:'+projColor+'">'+fmtS(proj)+'</span><br><span style="font-size:10px;color:var(--text2)">'+projPct+'% of goal \u00b7 '+fmt(dailyGPGoal(r))+'/day needed</span></td>'+
-      '<td>'+pill(cPct,cPct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+wkCalls(r)+'/'+tgt+' \u00b7 '+r.callLabel+'</div></td>'+
-      '<td>'+(r.nba?'<span class="bd bp2">&#9733;</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td></tr>';
-  }
-  document.getElementById('wkBody').innerHTML=wkRows;
-  renderWeekLB(reps);renderMonthLB(reps);renderPrevWeeks(reps);
-}
-
-function renderWeekLB(reps){
-  var sorted=[].concat(reps).sort(function(a,b){return wT(b)-wT(a);});
-  var rows='';
-  for(var i=0;i<sorted.length;i++){
-    var r=sorted[i];
-    var gs=wGs(r),cs=wCs(r),tot=wT(r);
-    var wpct=gpWkPct(r),cPct=callWkPct(r);
-    var tgt=r.dailyCallTarget===16?80:r.dailyCallTarget*D.meta.dayOfWeek;
-    var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
-    rows+='<tr><td><span class="rk '+rC+'">'+(i+1)+'</span></td>'+
-      '<td><strong style="font-weight:500">'+r.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+r.callLabel+'</span></td>'+
-      '<td><span style="font-size:17px;font-weight:700">'+tot.toFixed(1)+'</span><span style="font-size:10px;color:var(--text2)">/6</span></td>'+
-      '<td>'+pill(wpct,wpct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+fmt(wkGP(r))+' this week · '+gs.toFixed(1)+'/3 pts</div><div class="ppw"><div class="ppb '+pcC(wpct)+'" style="width:'+Math.min(100,wpct)+'%"></div></div></td>'+
-      '<td>'+(r.nba?'<span class="bd bp2">2/2</span>':'<span class="bd bb2">0/2</span>')+'</td>'+
-      '<td>'+pill(cPct,cPct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+wkCalls(r)+'/'+tgt+' · '+cs.toFixed(1)+'/1</div></td>'+
-      '<td><span style="font-size:11px;color:var(--text2)">'+(r.team==='intrusion'?'Intrusion':'Chamblee')+'</span></td></tr>';
-  }
-  document.getElementById('lbwk').innerHTML=rows;
-}
-
-function renderMonthLB(reps){
-  var prevRanks=[].concat(D.prevWeek).sort(function(a,b){return b.gp-a.gp;}).map(function(r,i){return{name:r.name,rank:i+1};});
-  var sorted=[].concat(reps).sort(function(a,b){return mT(b)-mT(a);});
-  var rows='';
-  for(var i=0;i<sorted.length;i++){
-    var r=sorted[i];
-    var gs=mGs(r),ns=mNs(r),cs=mCs(r),tot=mT(r);
-    var mo=moGPTotal(r),pct=moPct(r),nba=moNBA(r),avg=moAvg(r),cPct=moCallPct(r);
-    var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
-    var prObj=prevRanks.find(function(x){return x.name===r.name;});
-    var pr=prObj?prObj.rank:null,diff=pr!==null?pr-(i+1):null;
-    var mv=diff===null?'<span class="ms">&#8212;</span>':diff>0?'<span class="mu">&#9650;'+diff+'</span>':diff<0?'<span class="md">&#9660;'+Math.abs(diff)+'</span>':'<span class="ms">&#8212;</span>';
-    var cDisp=r.dailyCallTarget===16?(wkCalls(r)+'/80wk'):(avg.toFixed(1)+'/day');
-    rows+='<tr><td><span class="rk '+rC+'">'+(i+1)+'</span></td>'+
-      '<td><strong style="font-weight:500">'+r.name+'</strong></td>'+
-      '<td><span style="font-size:17px;font-weight:700">'+tot.toFixed(1)+'</span><span style="font-size:10px;color:var(--text2)"> pts</span></td>'+
-      '<td>'+pill(pct,pct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+fmtS(mo)+' MTD · '+gs.toFixed(1)+'/3 pts</div><div class="ppw"><div class="ppb '+pcC(pct)+'" style="width:'+Math.min(100,pct)+'%"></div></div></td>'+
-      '<td>'+(nba?'<span class="bd bp2">'+nba+'</span>':'<span class="bd bb2">0</span>')+'<div style="font-size:10px;margin-top:2px;color:'+(nba>=3?'var(--text2)':'var(--afg)')+'">'+ns+' pts · '+(nba>=3?'✓ min':'✗ below 3')+'</div></td>'+
-      '<td>'+pill(cPct,cDisp)+'<div style="font-size:10px;color:var(--text2);margin-top:2px">tgt:'+(r.dailyCallTarget===16?'80/wk':r.dailyCallTarget+'/day')+' · '+cs.toFixed(1)+'/1</div></td>'+
-      '<td>'+mv+'</td></tr>';
-  }
-  document.getElementById('lbmo').innerHTML=rows;
-}
-
-function renderPrevWeeks(reps){
-  var hist=JUNE_HISTORY;
-  hist.reps.forEach(function(h){
-    var live=reps.find(function(r){return r.name===h.name;});
-    if(live){
-      // wk1,wk2,wk3,wk4 all locked — wire live data into wk5
-      if(h.wk4!==null){h.wk5=wkGP(live);h.wk5c=wkCalls(live);}
-      // wk3 locked but wk4 not yet — wire live into wk4
-      else if(h.wk3!==null){h.wk4=wkGP(live);h.wk4c=wkCalls(live);}
-    }
-  });
-  var totalMonthNBAs=hist.reps.reduce(function(s,h){var live=reps.find(function(r){return r.name===h.name;});return s+(h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(h.nba_wk4||0)+(live?live.nba:0);},0);
-  document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in July</span>';
-  // Determine which week is current based on whether wk3 is locked
-  var allWk4Locked=hist.reps.every(function(h){return h.wk4!==null;});
-  var wk5HasData=hist.reps.some(function(h){return h.wk5&&h.wk5>0;});
-  var noteText;
-  if(allWk4Locked&&wk5HasData){
-    noteText='Week 5 (Jun 29\u201330) is in progress (Day '+D.meta.dayOfWeek+' of '+D.meta.totalDays+') \u2014 GP and calls shown are current totals. Weeks 1\u20134 are locked.';
-  } else if(allWk4Locked){
-    noteText='Week 4 is complete. Week 5 (Jun 29\u201330) numbers will appear once entered.';
-  } else {
-    noteText='Week 4 is in progress (Day '+D.meta.dayOfWeek+' of 5) \u2014 GP and calls shown are current totals, not final. Weeks 1, 2, and 3 are locked.';
-  }
-  document.getElementById('pwNote').textContent=noteText;
-  var tiReps=hist.reps.filter(function(h){return h.team==='intrusion';});
-  var chReps=hist.reps.filter(function(h){return h.team==='chamblee';});
-  function teamRow(label,repsArr,goal,liveReps){
-    var wk1=repsArr.reduce(function(s,h){return s+(h.wk1||0);},0),wk1c=repsArr.reduce(function(s,h){return s+(h.wk1c||0);},0);
-    var wk2=repsArr.reduce(function(s,h){return s+(h.wk2||0);},0),wk2c=repsArr.reduce(function(s,h){return s+(h.wk2c||0);},0);
-    var wk3=repsArr.reduce(function(s,h){return s+(h.wk3||0);},0),wk3c=repsArr.reduce(function(s,h){return s+(h.wk3c||0);},0);
-    var wk4=repsArr.reduce(function(s,h){return s+(h.wk4||0);},0),wk4c=repsArr.reduce(function(s,h){return s+(h.wk4c||0);},0);
-    // MTD: sum of mtd_override from live reps if available, else wk1+wk2+wk3+wk4
-    var total=liveReps?liveReps.reduce(function(s,r){return s+(r.mtd_override||((h_lookup(r.name,repsArr))?(h_lookup(r.name,repsArr).wk1||0)+(h_lookup(r.name,repsArr).wk2||0)+(h_lookup(r.name,repsArr).wk3||0)+(h_lookup(r.name,repsArr).wk4||0):0));},0):wk1+wk2+wk3+wk4;
-    var pct=Math.round(total/goal*100);
-    var wk4disp=wk4>0?fmtS(wk4)+' <span style="font-size:10px;color:var(--text2)">in prog</span>':'&#8212;';
-    return '<tr><td><strong style="font-weight:500">'+label+'</strong></td>'+
-      '<td class="gp-cell">'+fmtS(wk1)+'</td><td class="calls-cell">'+wk1c+'</td>'+
-      '<td class="gp-cell">'+fmtS(wk2)+'</td><td class="calls-cell">'+wk2c+'</td>'+
-      '<td class="gp-cell">'+fmtS(wk3)+'</td><td class="calls-cell">'+wk3c+'</td>'+
-      '<td class="gp-cell">'+wk4disp+'</td><td class="calls-cell">'+(wk4c||'&#8212;')+'</td>'+
-      '<td><strong>'+fmtS(total)+'</strong></td><td><span class="bd '+(pct>=40?'bg2':pct>=20?'ba2':'br2')+'">'+pct+'%</span></td></tr>';
-  }
-  function h_lookup(name,arr){return arr.find(function(h){return h.name===name;});}
-  var tiLive=reps.filter(function(r){return r.team==='intrusion';});
-  var chLive=reps.filter(function(r){return r.team==='chamblee';});
-  document.getElementById('teamWkTable').innerHTML=teamRow('Team Intrusion',tiReps,D.meta.tiGoal,tiLive)+teamRow('Chamblee',chReps,D.meta.chGoal,chLive);
-  // Sort by MTD override if available, else sum of all weeks
-  var sortedHist=[].concat(hist.reps).sort(function(a,b){
-    var la=reps.find(function(r){return r.name===a.name;}),lb=reps.find(function(r){return r.name===b.name;});
-    var ta=la&&la.mtd_override?la.mtd_override:(a.wk1||0)+(a.wk2||0)+(a.wk3||0)+(a.wk4||0);
-    var tb=lb&&lb.mtd_override?lb.mtd_override:(b.wk1||0)+(b.wk2||0)+(b.wk3||0)+(b.wk4||0);
-    return tb-ta;
-  });
-  var repRows='';
-  for(var i=0;i<sortedHist.length;i++){
-    var h=sortedHist[i],live=reps.find(function(r){return r.name===h.name;});
-    // MTD: use mtd_override from live rep as source of truth
-    var mtd=live&&live.mtd_override?live.mtd_override:(h.wk1||0)+(h.wk2||0)+(h.wk3||0)+(h.wk4||0);
-    var pct=Math.round(mtd/h.goal*100);
-    var totalNBA=(h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(h.nba_wk4||0)+(live?live.nba:0);
-    var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
-    // NBA badges per week — wk3 shows only wk3 NBAs, wk4 shows only wk4 NBAs
-    var nba1=h.nba_wk1?' <span class="bd bp2" style="font-size:9px">'+h.nba_wk1+' NBA</span>':'';
-    var nba2=h.nba_wk2?' <span class="bd bp2" style="font-size:9px">'+h.nba_wk2+' NBA</span>':'';
-    var nba3=h.nba_wk3?' <span class="bd bp2" style="font-size:9px">'+h.nba_wk3+' NBA</span>':'';
-    var nba4=h.nba_wk4?' <span class="bd bp2" style="font-size:9px">'+h.nba_wk4+' NBA</span>':'';
-    var nba5=(live&&live.nba)?' <span class="bd bp2" style="font-size:9px">'+live.nba+' NBA</span>':'';
-    // Week 4: locked in history; Week 5 (Jun 29-30): live
-    var wk4disp=h.wk4!==null?fmt(h.wk4)+nba4:'<span style="color:var(--text2)">&#8212;</span>';
-    var wk4cDisp=h.wk4c!==null?h.wk4c:'<span style="color:var(--text2)">&#8212;</span>';
-    var wk5gp=live?wkGP(live):0;
-    var wk5c=live?wkCalls(live):0;
-    var wk5cell=wk5gp>0?fmt(wk5gp)+nba5+'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/'+D.meta.totalDays+'</span>':
-                wk5gp<0?'<span style="color:var(--rfg);font-size:10px">reprice</span>'+nba5:
-                '<span style="color:var(--text2)">&#8212;</span>';
-    var wk5cCell=wk5c>0?wk5c:'<span style="color:var(--text2)">&#8212;</span>';
-    repRows+='<tr>'+
-      '<td><span class="rk '+rC+'" style="margin-right:6px">'+(i+1)+'</span><strong style="font-weight:500">'+h.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+(h.team==='intrusion'?'Intrusion':'Chamblee')+' \u00b7 goal: '+fmtS(h.goal)+'</span></td>'+
-      '<td class="gp-cell">'+fmt(h.wk1||0)+nba1+'</td><td class="calls-cell">'+(h.wk1c||0)+'</td>'+
-      '<td class="gp-cell">'+fmt(h.wk2||0)+nba2+'</td><td class="calls-cell">'+(h.wk2c||0)+'</td>'+
-      '<td class="gp-cell">'+(h.wk3!==null?fmt(h.wk3):'<span style="color:var(--text2)">&#8212;</span>')+nba3+'</td>'+
-      '<td class="calls-cell">'+(h.wk3c!==null?h.wk3c:'<span style="color:var(--text2)">&#8212;</span>')+'</td>'+
-      '<td class="gp-cell">'+wk4disp+'</td>'+
-      '<td class="calls-cell">'+wk4cDisp+'</td>'+
-      '<td class="gp-cell">'+wk5cell+'</td>'+
-      '<td class="calls-cell">'+wk5cCell+'</td>'+
-      '<td><strong>'+fmt(mtd)+'</strong></td>'+
-      '<td><span class="bd '+(pct>=40?'bg2':pct>=20?'ba2':'br2')+'">'+pct+'%</span><div style="background:var(--bg2);border-radius:20px;height:4px;overflow:hidden;margin-top:3px;width:55px"><div style="height:100%;border-radius:20px;width:'+Math.min(100,pct)+'%;background:'+barColor(pct)+'"></div></div></td>'+
-      '<td>'+(totalNBA?'<span class="bd bp2">'+totalNBA+'</span>':'&#8212;')+'</td></tr>';
-  }
-  document.getElementById('repWkTable').innerHTML=repRows;
-  var allWk3LockedW=hist.reps.every(function(h){return h.wk3!==null;});
-  var allWk4LockedW=hist.reps.every(function(h){return h.wk4!==null;});
-  var weeks=[
-    {label:'Week 1',dates:'Jun 1\u20135',key:'wk1',ck:'wk1c',locked:true},
-    {label:'Week 2',dates:'Jun 8\u201312',key:'wk2',ck:'wk2c',locked:true},
-    {label:'Week 3',dates:'Jun 15\u201319',key:'wk3',ck:'wk3c',locked:true},
-    {label:'Week 4',dates:'Jun 22\u201326',key:'wk4',ck:'wk4c',locked:allWk4LockedW,current:!allWk4LockedW},
-    {label:'Week 5',dates:'Jun 29\u201330',key:'wk5',ck:'wk5c',current:allWk4LockedW}
-  ];
-  var wkCards='';
-  for(var w=0;w<weeks.length;w++){
-    var wk=weeks[w];
-    var total=hist.reps.reduce(function(s,h){return s+(h[wk.key]||0);},0);
-    var totalCalls=hist.reps.reduce(function(s,h){return s+(h[wk.ck]||0);},0);
-    var tiTotal=tiReps.reduce(function(s,h){return s+(h[wk.key]||0);},0);
-    var chTotal=chReps.reduce(function(s,h){return s+(h[wk.key]||0);},0);
-    var tiCalls=tiReps.reduce(function(s,h){return s+(h[wk.ck]||0);},0);
-    var chCalls=chReps.reduce(function(s,h){return s+(h[wk.ck]||0);},0);
-    var wkNBAs=hist.reps.reduce(function(s,h){var l=reps.find(function(r){return r.name===h.name;});return s+(h['nba_'+wk.key]||0)+(wk.current&&l?l.nba:0);},0);
-    var status=wk.locked?'<span class="bd bg2">Final</span>':wk.current?'<span class="bd ba2">Day '+D.meta.dayOfWeek+' of 5</span>':'';
-    if(!wk.locked&&!wk.current&&total===0){wkCards+='<div class="wk-card" style="opacity:.5"><div class="wk-label">'+wk.label+' \u00b7 '+wk.dates+'</div><div style="font-size:13px;color:var(--text2)">Not yet started</div></div>';continue;}
-    var topRep=[].concat(hist.reps).sort(function(a,b){return (b[wk.key]||0)-(a[wk.key]||0);})[0];
-    var topFive=[].concat(hist.reps).sort(function(a,b){return (b[wk.key]||0)-(a[wk.key]||0);}).slice(0,5);
-    var maxGP=topFive[0]?topFive[0][wk.key]||0:1;
-    var miniRows='';
-    for(var j=0;j<topFive.length;j++){
-      var hh=topFive[j],gp=hh[wk.key]||0,calls=hh[wk.ck]||0,bp=Math.round(gp/maxGP*100);
-      var nm=hh.name.split(' ');
-      miniRows+='<div class="rep-wk-row"><span class="rep-wk-name">'+nm[0]+' '+(nm[1]?nm[1][0]+'.':'')+'</span><div class="rep-wk-bar-wrap"><div class="rep-wk-bar" style="width:'+bp+'%;background:'+barColor(Math.round(gp/hh.goal*100))+'"></div></div><span class="rep-wk-gp">'+(gp>0?fmtS(gp):'&#8212;')+'</span><span class="rep-wk-calls">'+(calls>0?calls+'c':'')+'</span><span class="rep-wk-pct">'+(gp>0?Math.round(gp/hh.goal*100)+'%':'')+'</span></div>';
-    }
-    wkCards+='<div class="wk-card" style="'+(wk.current?'border-color:var(--amber);border-width:2px':'')+'">'+
-      '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px"><div class="wk-label">'+wk.label+' \u00b7 '+wk.dates+'</div>'+status+'</div>'+
-      '<div class="wk-big">'+fmtS(total)+'</div>'+
-      '<div class="wk-sub">Total GP \u00b7 '+totalCalls+' outbound'+(wkNBAs?' \u00b7 '+wkNBAs+' NBA'+(wkNBAs>1?'s':''):'')+'</div>'+
-      '<div style="display:flex;gap:8px;margin-bottom:10px">'+
-        '<div style="flex:1;background:var(--gbg);border-radius:8px;padding:7px 9px"><div style="font-size:10px;color:var(--gfg);margin-bottom:1px">Intrusion</div><div style="font-size:13px;font-weight:500;color:var(--gfg)">'+fmtS(tiTotal)+'</div><div style="font-size:10px;color:var(--gfg)">'+tiCalls+' calls</div></div>'+
-        '<div style="flex:1;background:var(--bbg);border-radius:8px;padding:7px 9px"><div style="font-size:10px;color:var(--bfg);margin-bottom:1px">Chamblee</div><div style="font-size:13px;font-weight:500;color:var(--bfg)">'+fmtS(chTotal)+'</div><div style="font-size:10px;color:var(--bfg)">'+chCalls+' calls</div></div>'+
-      '</div>'+
-      '<div style="font-size:10px;color:var(--text2);margin-bottom:5px">Top GP performer</div>'+
-      '<div style="font-size:12px;font-weight:500">'+topRep.name.split(' ')[0]+' \u2014 '+fmtS(topRep[wk.key]||0)+'</div>'+
-      '<div style="margin-top:8px">'+miniRows+'</div></div>';
-  }
-  document.getElementById('wkCards').innerHTML=wkCards;
-}
-
-function go(name,e){document.querySelectorAll('.pg').forEach(function(p){p.classList.remove('on');});document.querySelectorAll('.tab').forEach(function(b){b.classList.remove('on');});document.getElementById('pg-'+name).classList.add('on');if(e&&e.target)e.target.classList.add('on');}
-function slb(w,e){document.getElementById('lb-wk').style.display=w==='wk'?'block':'none';document.getElementById('lb-mo').style.display=w==='mo'?'block':'none';document.querySelectorAll('.stab').forEach(function(b){b.classList.remove('on');});if(e&&e.target)e.target.classList.add('on');}
-load();
-</script>
-</body>
-</html>
