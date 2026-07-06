@@ -8,7 +8,15 @@
     "monthTotalDays": 22,
     "tiGoal": 35000,
     "chGoal": 232000,
-    "weekStartDow": 2
+    "weekStartDow": 2,
+    "curWeek": 1,
+    "weekDates": [
+      "Jun 29 \u2013 Jul 3",
+      "Jul 6\u201310",
+      "Jul 13\u201317",
+      "Jul 20\u201324",
+      "Jul 27\u201331"
+    ]
   },
   "reps": [
     {
