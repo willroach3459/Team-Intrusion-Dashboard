@@ -211,7 +211,31 @@ tr:hover td{background:var(--bg2)}
     </div>
     <div id="pg-pm" class="pg">
       <div class="note-box" id="pmNote"></div>
-      <p class="sec" id="pmTitle">Previous month &mdash; weekly breakdown</p>
+      <p class="sec" id="pmRepTitle">Previous month &mdash; all reps by week</p>
+      <div class="tw"><table>
+        <thead>
+          <tr>
+            <th rowspan="2" style="vertical-align:bottom">Rep</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Jun 1&ndash;5)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Jun 8&ndash;12)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Jun 15&ndash;19)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Jun 22&ndash;26)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Jun 29&ndash;30)</th>
+            <th rowspan="2" style="vertical-align:bottom">June MTD</th>
+            <th rowspan="2" style="vertical-align:bottom">% of goal</th>
+            <th rowspan="2" style="vertical-align:bottom">NBA</th>
+          </tr>
+          <tr>
+            <th class="sub">GP</th><th class="sub">Calls</th>
+            <th class="sub">GP</th><th class="sub">Calls</th>
+            <th class="sub">GP</th><th class="sub">Calls</th>
+            <th class="sub">GP</th><th class="sub">Calls</th>
+            <th class="sub">GP</th><th class="sub">Calls</th>
+          </tr>
+        </thead>
+        <tbody id="pmRepTable"></tbody>
+      </table></div>
+      <p class="sec" id="pmTitle">Weekly breakdown</p>
       <div class="wk-grid" id="pmCards"></div>
     </div>
   </div>
@@ -430,6 +454,25 @@ function renderPrevMonth(){
   var pm=PREV_MONTH; var WD=pm.weekDates;
   document.getElementById('pmTitle').textContent=pm.monthLabel+' \u2014 weekly breakdown';
   document.getElementById('pmNote').textContent=pm.monthLabel+' final weekly numbers. Spencer\u2019s drayage and McClellan\u2019s warehouse settle in bulk at month-end, so those amounts land in the final week (Jun 29\u201330) \u2014 which is why that week runs high for them. Kept here so reps can compare against the current month; rolls forward when a new month starts.';
+  document.getElementById('pmRepTitle').textContent=pm.monthLabel+' \u2014 all reps by week';
+  document.getElementById('pmTitle').textContent=pm.monthLabel+' \u2014 weekly breakdown';
+  var sortedPM=[].concat(pm.reps).sort(function(a,b){return (b.mtd||0)-(a.mtd||0);});
+  var pmRows='';
+  for(var i=0;i<sortedPM.length;i++){
+    var r=sortedPM[i];
+    var pctv=Math.round(r.mtd/r.goal*100);
+    var nbaT=(r.nba_wk1||0)+(r.nba_wk2||0)+(r.nba_wk3||0)+(r.nba_wk4||0)+(r.nba_wk5||0);
+    var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
+    var cells='';
+    for(var w=1;w<=5;w++){
+      var gpv=r['wk'+w], cl=r['wk'+w+'c']||0, nb=r['nba_wk'+w]||0;
+      var gpD=gpv<0?'<span style="color:var(--rfg)">reprice</span>':fmt(gpv);
+      var nbaB=nb?' <span class="bd bp2" style="font-size:9px">'+nb+'</span>':'';
+      cells+='<td class="gp-cell">'+gpD+nbaB+'</td><td class="calls-cell">'+cl+'</td>';
+    }
+    pmRows+='<tr><td><span class="rk '+rC+'" style="margin-right:6px">'+(i+1)+'</span><strong style="font-weight:500">'+r.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+(r.team==='intrusion'?'Intrusion':'Chamblee')+' \u00b7 goal: '+fmtS(r.goal)+'</span></td>'+cells+'<td><strong>'+fmt(r.mtd)+'</strong></td><td><span class="bd '+(pctv>=40?'bg2':pctv>=20?'ba2':'br2')+'">'+pctv+'%</span></td><td>'+(nbaT?'<span class="bd bp2">'+nbaT+'</span>':'&#8212;')+'</td></tr>';
+  }
+  document.getElementById('pmRepTable').innerHTML=pmRows;
   var tiReps=pm.reps.filter(function(h){return h.team==='intrusion';});
   var chReps=pm.reps.filter(function(h){return h.team==='chamblee';});
   var cards='';
