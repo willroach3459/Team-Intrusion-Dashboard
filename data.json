@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 6\u201310, 2026",
     "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "7/9 4pm \u2014 Week 2 day 4 \u00b7 GP + calls \u00b7 NBAs: McClellan (Moderno Porcelain), Luke (Craig Wire)",
+    "lastUpdated": "7/9 final (EOD) \u2014 Week 2 day 4 \u00b7 GP + outbound calls",
     "monthDaysTracked": 6,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -35,7 +35,7 @@
       "calls_d1": 10,
       "calls_d2": 72,
       "calls_d3": 2,
-      "calls_d4": 5,
+      "calls_d4": 6,
       "calls_d5": 0,
       "mtd_override": 1492.98
     },
@@ -55,7 +55,7 @@
       "calls_d1": 78,
       "calls_d2": 86,
       "calls_d3": 72,
-      "calls_d4": 38,
+      "calls_d4": 58,
       "calls_d5": 0,
       "mtd_override": 440.8
     },
@@ -75,7 +75,7 @@
       "calls_d1": 60,
       "calls_d2": 44,
       "calls_d3": 63,
-      "calls_d4": 46,
+      "calls_d4": 62,
       "calls_d5": 0,
       "mtd_override": 3716.66
     },
@@ -95,7 +95,7 @@
       "calls_d1": 41,
       "calls_d2": 79,
       "calls_d3": 103,
-      "calls_d4": 54,
+      "calls_d4": 81,
       "calls_d5": 0,
       "mtd_override": 444.78
     },
@@ -115,7 +115,7 @@
       "calls_d1": 73,
       "calls_d2": 48,
       "calls_d3": 44,
-      "calls_d4": 77,
+      "calls_d4": 86,
       "calls_d5": 0,
       "mtd_override": 1775.0
     },
@@ -130,14 +130,14 @@
       "gp_d1": 944.0,
       "gp_d2": 503.0,
       "gp_d3": 1700.0,
-      "gp_d4": 1000.0,
+      "gp_d4": 400.0,
       "gp_d5": 0,
       "calls_d1": 25,
       "calls_d2": 29,
       "calls_d3": 22,
-      "calls_d4": 23,
+      "calls_d4": 25,
       "calls_d5": 0,
-      "mtd_override": 4647.0
+      "mtd_override": 4047.0
     },
     {
       "name": "Luke Kush",
@@ -175,7 +175,7 @@
       "calls_d1": 31,
       "calls_d2": 0,
       "calls_d3": 0,
-      "calls_d4": 17,
+      "calls_d4": 34,
       "calls_d5": 0,
       "mtd_override": 5275.0
     }
