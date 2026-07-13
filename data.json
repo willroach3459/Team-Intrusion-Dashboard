@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 6\u201310, 2026",
     "dayOfWeek": 5,
     "totalDays": 5,
-    "lastUpdated": "7/10 final + MTD reconciled (7/1\u20137/10 official report)",
+    "lastUpdated": "7/10 \u00b7 Spencer GP corrected to shipped-report actuals (drayage)",
     "monthDaysTracked": 7,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -177,7 +177,7 @@
       "calls_d3": 0,
       "calls_d4": 34,
       "calls_d5": 26,
-      "mtd_override": 11293.4
+      "mtd_override": 15345.35
     }
   ],
   "prevWeek": [
