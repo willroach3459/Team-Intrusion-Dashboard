@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 6\u201310, 2026",
     "dayOfWeek": 5,
     "totalDays": 5,
-    "lastUpdated": "7/10 5pm \u2014 Week 2 day 5 (GP + outbound calls)",
+    "lastUpdated": "7/10 final + MTD reconciled (7/1\u20137/10 official report)",
     "monthDaysTracked": 7,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -36,7 +36,7 @@
       "calls_d2": 72,
       "calls_d3": 2,
       "calls_d4": 6,
-      "calls_d5": 55,
+      "calls_d5": 58,
       "mtd_override": 1821.42
     },
     {
@@ -56,8 +56,8 @@
       "calls_d2": 86,
       "calls_d3": 72,
       "calls_d4": 58,
-      "calls_d5": 68,
-      "mtd_override": 440.8
+      "calls_d5": 78,
+      "mtd_override": 926.7
     },
     {
       "name": "Dalton Martinez",
@@ -76,8 +76,8 @@
       "calls_d2": 44,
       "calls_d3": 63,
       "calls_d4": 62,
-      "calls_d5": 48,
-      "mtd_override": 5017.97
+      "calls_d5": 54,
+      "mtd_override": 4716.37
     },
     {
       "name": "Daryn Hightower",
@@ -96,8 +96,8 @@
       "calls_d2": 79,
       "calls_d3": 103,
       "calls_d4": 81,
-      "calls_d5": 55,
-      "mtd_override": 1164.61
+      "calls_d5": 73,
+      "mtd_override": 1028.3
     },
     {
       "name": "Kieran Logue",
@@ -137,7 +137,7 @@
       "calls_d3": 22,
       "calls_d4": 25,
       "calls_d5": 35,
-      "mtd_override": 4897.0
+      "mtd_override": 5281.0
     },
     {
       "name": "Luke Kush",
@@ -151,13 +151,13 @@
       "gp_d2": 6620.3,
       "gp_d3": 9396.08,
       "gp_d4": 5015.03,
-      "gp_d5": 4876.66,
+      "gp_d5": 4449.67,
       "calls_d1": 36,
       "calls_d2": 12,
       "calls_d3": 42,
       "calls_d4": 37,
       "calls_d5": 0,
-      "mtd_override": 36250.14
+      "mtd_override": 34940.81
     },
     {
       "name": "Spencer Hines",
@@ -177,7 +177,7 @@
       "calls_d3": 0,
       "calls_d4": 34,
       "calls_d5": 26,
-      "mtd_override": 7555.0
+      "mtd_override": 11293.4
     }
   ],
   "prevWeek": [
