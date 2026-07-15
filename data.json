@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 13\u201317, 2026",
     "dayOfWeek": 3,
     "totalDays": 5,
-    "lastUpdated": "7/15 11am \u2014 Week 3 day 3 (GP + outbound calls)",
+    "lastUpdated": "7/15 \u2014 MTD reconciled to official rerated report",
     "monthDaysTracked": 10,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -57,7 +57,7 @@
       "calls_d3": 5,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 1712.23
+      "mtd_override": 1527.23
     },
     {
       "name": "Dalton Martinez",
@@ -77,7 +77,7 @@
       "calls_d3": 15,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 7180.22
+      "mtd_override": 7012.84
     },
     {
       "name": "Daryn Hightower",
@@ -137,7 +137,7 @@
       "calls_d3": 8,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 6903.0
+      "mtd_override": 8228.0
     },
     {
       "name": "Luke Kush",
@@ -157,7 +157,7 @@
       "calls_d3": 2,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 50395.19
+      "mtd_override": 51559.59
     },
     {
       "name": "Spencer Hines",
@@ -177,7 +177,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 16201.02
+      "mtd_override": 18099.25
     }
   ],
   "prevWeek": [
