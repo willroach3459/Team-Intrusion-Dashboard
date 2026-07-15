@@ -271,7 +271,7 @@ function load(){
     .catch(function(e){document.getElementById('loading').style.display='none';document.getElementById('errBox').style.display='block';document.getElementById('errBox').textContent='Could not load data. Try refreshing. '+e.message;});
 }
 
-function fmt(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmt(v){var s='$'+Math.abs(v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});return v<0?'-'+s:s;}
 function fmtS(v){return '$'+Math.round(v).toLocaleString();}
 function pcC(p){return p>=40?'pg2':p>=20?'pa':'pr2';}
 function barColor(p){return p>=40?'var(--green)':p>=20?'var(--amber)':'var(--red)';}
@@ -388,7 +388,7 @@ function render(){
     var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
     var dayCells='';
     for(var d=1;d<=5;d++){
-      if(d<=m.dayOfWeek){var v=r['gp_d'+d]||0;dayCells+='<td>'+(v>0?fmt(v):v<0?'<span style="color:var(--rfg);font-size:10px">reprice</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td>';}
+      if(d<=m.dayOfWeek){var v=r['gp_d'+d]||0;dayCells+='<td>'+(v>0?fmt(v):v<0?'<span style="color:var(--rfg)">'+fmt(v)+'</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td>';}
       else{dayCells+='<td></td>';}
     }
     var projColor=projPct>=100?'var(--green)':projPct>=70?'var(--amber)':'var(--red)';
@@ -466,7 +466,7 @@ function renderPrevMonth(){
     var cells='';
     for(var w=1;w<=5;w++){
       var gpv=r['wk'+w], cl=r['wk'+w+'c']||0, nb=r['nba_wk'+w]||0;
-      var gpD=gpv<0?'<span style="color:var(--rfg)">reprice</span>':fmt(gpv);
+      var gpD=gpv<0?'<span style="color:var(--rfg)">'+fmt(gpv)+'</span>':fmt(gpv);
       var nbaB=nb?' <span class="bd bp2" style="font-size:9px">'+nb+'</span>':'';
       cells+='<td class="gp-cell">'+gpD+nbaB+'</td><td class="calls-cell">'+cl+'</td>';
     }
@@ -522,7 +522,7 @@ function renderPrevWeeks(reps){
   function cellPair(wd){
     if(wd.gp===null||wd.st==='fut') return '<td class="gp-cell"><span style="color:var(--text2)">&#8212;</span></td><td class="calls-cell"><span style="color:var(--text2)">&#8212;</span></td>';
     var nbaB=wd.nba?' <span class="bd bp2" style="font-size:9px">'+wd.nba+' NBA</span>':'';
-    var gpD=wd.gp<0?'<span style="color:var(--rfg)">reprice</span>':fmt(wd.gp);
+    var gpD=wd.gp<0?'<span style="color:var(--rfg)">'+fmt(wd.gp)+'</span>':fmt(wd.gp);
     var prog=wd.st==='cur'?'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/'+D.meta.totalDays+'</span>':'';
     return '<td class="gp-cell">'+gpD+nbaB+prog+'</td><td class="calls-cell">'+(wd.calls||0)+'</td>';
   }
