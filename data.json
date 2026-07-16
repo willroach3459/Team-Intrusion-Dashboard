@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 13\u201317, 2026",
     "dayOfWeek": 3,
     "totalDays": 5,
-    "lastUpdated": "7/15 final (EOD) \u2014 Week 3 day 3 \u00b7 GP + outbound calls",
+    "lastUpdated": "7/16 \u2014 MTD reconciled to settled report (7/1\u20137/15)",
     "monthDaysTracked": 10,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -157,7 +157,7 @@
       "calls_d3": 30,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 51486.83
+      "mtd_override": 53081.63
     },
     {
       "name": "Spencer Hines",
@@ -177,7 +177,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 18589.25
+      "mtd_override": 20423.4
     }
   ],
   "prevWeek": [
