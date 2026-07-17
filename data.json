@@ -1,13 +1,13 @@
 {
   "meta": {
     "weekLabel": "Week of July 13\u201317, 2026",
-    "dayOfWeek": 4,
+    "dayOfWeek": 5,
     "totalDays": 5,
-    "lastUpdated": "7/17 8am \u2014 MTD reconciled to settled report",
-    "monthDaysTracked": 11,
+    "lastUpdated": "7/17 11am \u2014 Week 3 day 5 (GP + calls; AR Aran already in 8am MTD)",
+    "monthDaysTracked": 12,
     "monthTotalDays": 22,
     "tiGoal": 35000,
-    "chGoal": 239000,
+    "chGoal": 281000,
     "weekStartDow": 0,
     "curWeek": 3,
     "weekDates": [
@@ -31,13 +31,13 @@
       "gp_d2": 970.14,
       "gp_d3": 395.67,
       "gp_d4": 450.0,
-      "gp_d5": 0,
+      "gp_d5": 61.05,
       "calls_d1": 14,
       "calls_d2": 21,
       "calls_d3": 25,
       "calls_d4": 37,
-      "calls_d5": 0,
-      "mtd_override": 5515.28
+      "calls_d5": 23,
+      "mtd_override": 5576.33
     },
     {
       "name": "Alex Robinson",
@@ -51,12 +51,12 @@
       "gp_d2": 123.59,
       "gp_d3": 680.83,
       "gp_d4": 0,
-      "gp_d5": 0,
+      "gp_d5": 924.36,
       "calls_d1": 79,
       "calls_d2": 8,
       "calls_d3": 44,
       "calls_d4": 68,
-      "calls_d5": 0,
+      "calls_d5": 13,
       "mtd_override": 2497.42
     },
     {
@@ -71,13 +71,13 @@
       "gp_d2": 1436.4,
       "gp_d3": 408.26,
       "gp_d4": 458.23,
-      "gp_d5": 0,
+      "gp_d5": 545.59,
       "calls_d1": 62,
       "calls_d2": 31,
       "calls_d3": 81,
       "calls_d4": 12,
-      "calls_d5": 0,
-      "mtd_override": 7829.33
+      "calls_d5": 6,
+      "mtd_override": 8374.92
     },
     {
       "name": "Daryn Hightower",
@@ -96,7 +96,7 @@
       "calls_d2": 113,
       "calls_d3": 99,
       "calls_d4": 77,
-      "calls_d5": 0,
+      "calls_d5": 13,
       "mtd_override": 2333.12
     },
     {
@@ -116,13 +116,13 @@
       "calls_d2": 57,
       "calls_d3": 81,
       "calls_d4": 72,
-      "calls_d5": 0,
+      "calls_d5": 22,
       "mtd_override": 4650.0
     },
     {
       "name": "Lee Epling",
       "team": "chamblee",
-      "goal": 11000,
+      "goal": 18000,
       "nba": 0,
       "callTarget": 175,
       "dailyCallTarget": 35,
@@ -131,13 +131,13 @@
       "gp_d2": 1622.0,
       "gp_d3": 1000.0,
       "gp_d4": 150.0,
-      "gp_d5": 0,
+      "gp_d5": 1900.0,
       "calls_d1": 22,
       "calls_d2": 25,
       "calls_d3": 38,
       "calls_d4": 29,
-      "calls_d5": 0,
-      "mtd_override": 11650.0
+      "calls_d5": 8,
+      "mtd_override": 13550.0
     },
     {
       "name": "Luke Kush",
@@ -151,13 +151,13 @@
       "gp_d2": 7218.41,
       "gp_d3": 3961.6,
       "gp_d4": 3426.82,
-      "gp_d5": 0,
+      "gp_d5": 4768.63,
       "calls_d1": 31,
       "calls_d2": 34,
       "calls_d3": 30,
       "calls_d4": 40,
-      "calls_d5": 0,
-      "mtd_override": 60426.53
+      "calls_d5": 12,
+      "mtd_override": 65195.16
     },
     {
       "name": "Spencer Hines",
@@ -171,13 +171,13 @@
       "gp_d2": 0,
       "gp_d3": 1365.0,
       "gp_d4": 1290.0,
-      "gp_d5": 0,
+      "gp_d5": 290.0,
       "calls_d1": 0,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 24392.28
+      "mtd_override": 24682.28
     }
   ],
   "prevWeek": [
