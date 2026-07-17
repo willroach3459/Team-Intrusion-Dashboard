@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 13\u201317, 2026",
     "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "7/16 3:17pm \u2014 MTD reconciled to settled report",
+    "lastUpdated": "7/17 8am \u2014 MTD reconciled to settled report",
     "monthDaysTracked": 11,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -35,9 +35,9 @@
       "calls_d1": 14,
       "calls_d2": 21,
       "calls_d3": 25,
-      "calls_d4": 35,
+      "calls_d4": 37,
       "calls_d5": 0,
-      "mtd_override": 4012.23
+      "mtd_override": 5515.28
     },
     {
       "name": "Alex Robinson",
@@ -55,9 +55,9 @@
       "calls_d1": 79,
       "calls_d2": 8,
       "calls_d3": 44,
-      "calls_d4": 41,
+      "calls_d4": 68,
       "calls_d5": 0,
-      "mtd_override": 1573.06
+      "mtd_override": 2497.42
     },
     {
       "name": "Dalton Martinez",
@@ -75,9 +75,9 @@
       "calls_d1": 62,
       "calls_d2": 31,
       "calls_d3": 81,
-      "calls_d4": 1,
+      "calls_d4": 12,
       "calls_d5": 0,
-      "mtd_override": 7354.33
+      "mtd_override": 7829.33
     },
     {
       "name": "Daryn Hightower",
@@ -95,7 +95,7 @@
       "calls_d1": 78,
       "calls_d2": 113,
       "calls_d3": 99,
-      "calls_d4": 52,
+      "calls_d4": 77,
       "calls_d5": 0,
       "mtd_override": 2333.12
     },
@@ -115,7 +115,7 @@
       "calls_d1": 86,
       "calls_d2": 57,
       "calls_d3": 81,
-      "calls_d4": 51,
+      "calls_d4": 72,
       "calls_d5": 0,
       "mtd_override": 4650.0
     },
@@ -135,9 +135,9 @@
       "calls_d1": 22,
       "calls_d2": 25,
       "calls_d3": 38,
-      "calls_d4": 20,
+      "calls_d4": 29,
       "calls_d5": 0,
-      "mtd_override": 9878.0
+      "mtd_override": 11650.0
     },
     {
       "name": "Luke Kush",
@@ -150,14 +150,14 @@
       "gp_d1": 3029.38,
       "gp_d2": 7218.41,
       "gp_d3": 3961.6,
-      "gp_d4": 3481.82,
+      "gp_d4": 3426.82,
       "gp_d5": 0,
       "calls_d1": 31,
       "calls_d2": 34,
       "calls_d3": 30,
-      "calls_d4": 35,
+      "calls_d4": 40,
       "calls_d5": 0,
-      "mtd_override": 56466.65
+      "mtd_override": 60426.53
     },
     {
       "name": "Spencer Hines",
@@ -170,14 +170,14 @@
       "gp_d1": 1120.67,
       "gp_d2": 0,
       "gp_d3": 1365.0,
-      "gp_d4": 1720.0,
+      "gp_d4": 1290.0,
       "gp_d5": 0,
       "calls_d1": 0,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 22688.4
+      "mtd_override": 24392.28
     }
   ],
   "prevWeek": [
