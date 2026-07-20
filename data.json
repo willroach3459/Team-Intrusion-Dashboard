@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 13\u201317, 2026",
     "dayOfWeek": 5,
     "totalDays": 5,
-    "lastUpdated": "7/17 3:23pm \u2014 MTD reconciled to official (accuracy check)",
+    "lastUpdated": "7/17 final (EOD) \u2014 Week 3 day 5 \u00b7 GP + outbound calls",
     "monthDaysTracked": 12,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -36,7 +36,7 @@
       "calls_d2": 21,
       "calls_d3": 25,
       "calls_d4": 37,
-      "calls_d5": 62,
+      "calls_d5": 73,
       "mtd_override": 6252.56
     },
     {
@@ -56,7 +56,7 @@
       "calls_d2": 8,
       "calls_d3": 44,
       "calls_d4": 68,
-      "calls_d5": 56,
+      "calls_d5": 67,
       "mtd_override": 2531.86
     },
     {
@@ -76,7 +76,7 @@
       "calls_d2": 31,
       "calls_d3": 81,
       "calls_d4": 12,
-      "calls_d5": 49,
+      "calls_d5": 68,
       "mtd_override": 7903.95
     },
     {
@@ -96,7 +96,7 @@
       "calls_d2": 113,
       "calls_d3": 99,
       "calls_d4": 77,
-      "calls_d5": 36,
+      "calls_d5": 60,
       "mtd_override": 2333.12
     },
     {
@@ -116,7 +116,7 @@
       "calls_d2": 57,
       "calls_d3": 81,
       "calls_d4": 72,
-      "calls_d5": 41,
+      "calls_d5": 43,
       "mtd_override": 4650.0
     },
     {
@@ -156,7 +156,7 @@
       "calls_d2": 34,
       "calls_d3": 30,
       "calls_d4": 40,
-      "calls_d5": 42,
+      "calls_d5": 43,
       "mtd_override": 62097.82
     },
     {
@@ -171,13 +171,13 @@
       "gp_d2": 0,
       "gp_d3": 1365.0,
       "gp_d4": 1290.0,
-      "gp_d5": 3635.0,
+      "gp_d5": 3385.0,
       "calls_d1": 0,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 32406.53
+      "mtd_override": 32156.53
     }
   ],
   "prevWeek": [
