@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 20\u201324, 2026",
     "dayOfWeek": 2,
     "totalDays": 5,
-    "lastUpdated": "7/21 11am \u2014 Week 4 day 2 (GP corrected + outbound calls)",
+    "lastUpdated": "7/21 12pm \u2014 Week 4 day 2 (cost-corrected + drayage reconciled to MTD)",
     "monthDaysTracked": 14,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -37,7 +37,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 7188.61
+      "mtd_override": 4336.14
     },
     {
       "name": "Alex Robinson",
@@ -137,7 +137,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 14868.4
+      "mtd_override": 16538.4
     },
     {
       "name": "Luke Kush",
@@ -157,7 +157,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 71513.17
+      "mtd_override": 72596.48
     },
     {
       "name": "Spencer Hines",
@@ -168,7 +168,7 @@
       "dailyCallTarget": 35,
       "callLabel": "35/day",
       "gp_d1": 2360.15,
-      "gp_d2": 850.0,
+      "gp_d2": 250.0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
@@ -177,7 +177,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 35366.68
+      "mtd_override": 41504.31
     }
   ],
   "prevWeek": [
