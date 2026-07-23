@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 20\u201324, 2026",
     "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "7/23 3pm \u2014 Week 4 day 4 (+ Dalton NBA: Contract Flooring)",
+    "lastUpdated": "7/23 4pm \u2014 Week 4 day 4 (calls updated; GP flat)",
     "monthDaysTracked": 16,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -36,7 +36,7 @@
       "calls_d1": 2,
       "calls_d2": 17,
       "calls_d3": 8,
-      "calls_d4": 3,
+      "calls_d4": 4,
       "calls_d5": 0,
       "mtd_override": 7054.24
     },
@@ -56,7 +56,7 @@
       "calls_d1": 73,
       "calls_d2": 59,
       "calls_d3": 60,
-      "calls_d4": 37,
+      "calls_d4": 53,
       "calls_d5": 0,
       "mtd_override": 5115.89
     },
@@ -76,7 +76,7 @@
       "calls_d1": 73,
       "calls_d2": 75,
       "calls_d3": 35,
-      "calls_d4": 1,
+      "calls_d4": 8,
       "calls_d5": 0,
       "mtd_override": 13619.95
     },
@@ -96,7 +96,7 @@
       "calls_d1": 67,
       "calls_d2": 123,
       "calls_d3": 86,
-      "calls_d4": 65,
+      "calls_d4": 80,
       "calls_d5": 0,
       "mtd_override": 6483.12
     },
@@ -116,7 +116,7 @@
       "calls_d1": 83,
       "calls_d2": 78,
       "calls_d3": 74,
-      "calls_d4": 26,
+      "calls_d4": 45,
       "calls_d5": 0,
       "mtd_override": 7000.0
     },
@@ -136,7 +136,7 @@
       "calls_d1": 15,
       "calls_d2": 34,
       "calls_d3": 20,
-      "calls_d4": 9,
+      "calls_d4": 11,
       "calls_d5": 0,
       "mtd_override": 16478.4
     },
@@ -176,7 +176,7 @@
       "calls_d1": 21,
       "calls_d2": 23,
       "calls_d3": 30,
-      "calls_d4": 16,
+      "calls_d4": 30,
       "calls_d5": 0,
       "mtd_override": 52686.48
     }
