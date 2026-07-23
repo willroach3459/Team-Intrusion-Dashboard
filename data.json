@@ -1,10 +1,10 @@
 {
   "meta": {
     "weekLabel": "Week of July 20\u201324, 2026",
-    "dayOfWeek": 3,
+    "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "7/22 EOD \u2014 MTD reconciled to Profitability (drayage added)",
-    "monthDaysTracked": 15,
+    "lastUpdated": "7/23 3pm \u2014 Week 4 day 4 (calls + GP)",
+    "monthDaysTracked": 16,
     "monthTotalDays": 22,
     "tiGoal": 35000,
     "chGoal": 281000,
@@ -27,17 +27,17 @@
       "callTarget": 80,
       "dailyCallTarget": 16,
       "callLabel": "80/wk",
-      "gp_d1": 61.05,
+      "gp_d1": 774.95,
       "gp_d2": 875.0,
       "gp_d3": 1700.0,
-      "gp_d4": 0,
+      "gp_d4": 0.0,
       "gp_d5": 0,
       "calls_d1": 2,
       "calls_d2": 17,
       "calls_d3": 8,
-      "calls_d4": 0,
+      "calls_d4": 3,
       "calls_d5": 0,
-      "mtd_override": 6036.14
+      "mtd_override": 7054.24
     },
     {
       "name": "Alex Robinson",
@@ -50,14 +50,14 @@
       "gp_d1": 310.0,
       "gp_d2": 1000.0,
       "gp_d3": 1139.78,
-      "gp_d4": 0,
+      "gp_d4": 134.25,
       "gp_d5": 0,
       "calls_d1": 73,
       "calls_d2": 59,
       "calls_d3": 60,
-      "calls_d4": 0,
+      "calls_d4": 37,
       "calls_d5": 0,
-      "mtd_override": 4981.64
+      "mtd_override": 5115.89
     },
     {
       "name": "Dalton Martinez",
@@ -70,14 +70,14 @@
       "gp_d1": 635.0,
       "gp_d2": 808.62,
       "gp_d3": 2466.06,
-      "gp_d4": 0,
+      "gp_d4": 1736.23,
       "gp_d5": 0,
       "calls_d1": 73,
       "calls_d2": 75,
       "calls_d3": 35,
-      "calls_d4": 0,
+      "calls_d4": 1,
       "calls_d5": 0,
-      "mtd_override": 11938.13
+      "mtd_override": 13619.95
     },
     {
       "name": "Daryn Hightower",
@@ -90,14 +90,14 @@
       "gp_d1": 0.0,
       "gp_d2": 1100.0,
       "gp_d3": 2750.0,
-      "gp_d4": 0,
+      "gp_d4": 300.0,
       "gp_d5": 0,
       "calls_d1": 67,
       "calls_d2": 123,
       "calls_d3": 86,
-      "calls_d4": 0,
+      "calls_d4": 65,
       "calls_d5": 0,
-      "mtd_override": 6183.12
+      "mtd_override": 6483.12
     },
     {
       "name": "Kieran Logue",
@@ -110,14 +110,14 @@
       "gp_d1": 125.0,
       "gp_d2": 0.0,
       "gp_d3": 600.0,
-      "gp_d4": 0,
+      "gp_d4": 1625.0,
       "gp_d5": 0,
       "calls_d1": 83,
       "calls_d2": 78,
       "calls_d3": 74,
-      "calls_d4": 0,
+      "calls_d4": 26,
       "calls_d5": 0,
-      "mtd_override": 5375.0
+      "mtd_override": 7000.0
     },
     {
       "name": "Lee Epling",
@@ -130,12 +130,12 @@
       "gp_d1": 1580.4,
       "gp_d2": 1510.0,
       "gp_d3": 0.0,
-      "gp_d4": 0,
+      "gp_d4": 0.0,
       "gp_d5": 0,
       "calls_d1": 15,
       "calls_d2": 34,
       "calls_d3": 20,
-      "calls_d4": 0,
+      "calls_d4": 9,
       "calls_d5": 0,
       "mtd_override": 16478.4
     },
@@ -150,14 +150,14 @@
       "gp_d1": 3746.56,
       "gp_d2": 6516.97,
       "gp_d3": 7868.98,
-      "gp_d4": 0,
+      "gp_d4": 6562.86,
       "gp_d5": 0,
       "calls_d1": 32,
       "calls_d2": 37,
       "calls_d3": 26,
-      "calls_d4": 0,
+      "calls_d4": 16,
       "calls_d5": 0,
-      "mtd_override": 81185.46
+      "mtd_override": 87748.32
     },
     {
       "name": "Spencer Hines",
@@ -170,14 +170,14 @@
       "gp_d1": 2360.15,
       "gp_d2": 850.0,
       "gp_d3": 900.0,
-      "gp_d4": 0,
+      "gp_d4": 0.0,
       "gp_d5": 0,
       "calls_d1": 21,
       "calls_d2": 23,
       "calls_d3": 30,
-      "calls_d4": 0,
+      "calls_d4": 16,
       "calls_d5": 0,
-      "mtd_override": 52672.69
+      "mtd_override": 52686.48
     }
   ],
   "prevWeek": [
