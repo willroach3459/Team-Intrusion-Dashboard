@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 20\u201324, 2026",
     "dayOfWeek": 3,
     "totalDays": 5,
-    "lastUpdated": "7/22 EOD \u2014 Week 4 day 3 FINAL (calls + GP; Luke NBA Phasestor)",
+    "lastUpdated": "7/22 EOD \u2014 MTD reconciled to Profitability (drayage added)",
     "monthDaysTracked": 15,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -77,7 +77,7 @@
       "calls_d3": 35,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 11923.63
+      "mtd_override": 11938.13
     },
     {
       "name": "Daryn Hightower",
@@ -137,7 +137,7 @@
       "calls_d3": 20,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 16538.4
+      "mtd_override": 16478.4
     },
     {
       "name": "Luke Kush",
@@ -157,7 +157,7 @@
       "calls_d3": 26,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 81212.98
+      "mtd_override": 81185.46
     },
     {
       "name": "Spencer Hines",
@@ -168,7 +168,7 @@
       "dailyCallTarget": 35,
       "callLabel": "35/day",
       "gp_d1": 2360.15,
-      "gp_d2": 250.0,
+      "gp_d2": 850.0,
       "gp_d3": 900.0,
       "gp_d4": 0,
       "gp_d5": 0,
@@ -177,7 +177,7 @@
       "calls_d3": 30,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 42671.31
+      "mtd_override": 52672.69
     }
   ],
   "prevWeek": [
