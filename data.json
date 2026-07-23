@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 20\u201324, 2026",
     "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "7/23 4pm \u2014 Week 4 day 4 (calls updated; GP flat)",
+    "lastUpdated": "7/23 4pm \u2014 MTD reconciled to Profitability (Spencer drayage moved)",
     "monthDaysTracked": 16,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -58,7 +58,7 @@
       "calls_d3": 60,
       "calls_d4": 53,
       "calls_d5": 0,
-      "mtd_override": 5115.89
+      "mtd_override": 5008.51
     },
     {
       "name": "Dalton Martinez",
@@ -138,7 +138,7 @@
       "calls_d3": 20,
       "calls_d4": 11,
       "calls_d5": 0,
-      "mtd_override": 16478.4
+      "mtd_override": 16628.4
     },
     {
       "name": "Luke Kush",
@@ -158,7 +158,7 @@
       "calls_d3": 26,
       "calls_d4": 16,
       "calls_d5": 0,
-      "mtd_override": 87748.32
+      "mtd_override": 87685.48
     },
     {
       "name": "Spencer Hines",
@@ -178,7 +178,7 @@
       "calls_d3": 30,
       "calls_d4": 30,
       "calls_d5": 0,
-      "mtd_override": 52686.48
+      "mtd_override": 54779.98
     }
   ],
   "prevWeek": [
