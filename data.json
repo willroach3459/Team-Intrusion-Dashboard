@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 20\u201324, 2026",
     "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "7/23 3pm \u2014 Week 4 day 4 (calls + GP)",
+    "lastUpdated": "7/23 3pm \u2014 Week 4 day 4 (+ Dalton NBA: Contract Flooring)",
     "monthDaysTracked": 16,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -16,7 +16,8 @@
       "Jul 13\u201317",
       "Jul 20\u201324",
       "Jul 27\u201331"
-    ]
+    ],
+    "tiDirect": 2998.13
   },
   "reps": [
     {
@@ -63,7 +64,7 @@
       "name": "Dalton Martinez",
       "team": "intrusion",
       "goal": 11000,
-      "nba": 0,
+      "nba": 1,
       "callTarget": 300,
       "dailyCallTarget": 60,
       "callLabel": "60/day",
