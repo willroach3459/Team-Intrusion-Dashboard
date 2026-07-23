@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 20\u201324, 2026",
     "dayOfWeek": 3,
     "totalDays": 5,
-    "lastUpdated": "7/22 12pm \u2014 Week 4 day 3 (noon calls + GP)",
+    "lastUpdated": "7/22 EOD \u2014 Week 4 day 3 FINAL (calls + GP; Luke NBA Phasestor)",
     "monthDaysTracked": 15,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -34,7 +34,7 @@
       "gp_d5": 0,
       "calls_d1": 2,
       "calls_d2": 17,
-      "calls_d3": 4,
+      "calls_d3": 8,
       "calls_d4": 0,
       "calls_d5": 0,
       "mtd_override": 6036.14
@@ -49,15 +49,15 @@
       "callLabel": "80/day",
       "gp_d1": 310.0,
       "gp_d2": 1000.0,
-      "gp_d3": 1000.0,
+      "gp_d3": 1139.78,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 73,
       "calls_d2": 59,
-      "calls_d3": 24,
+      "calls_d3": 60,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 4841.86
+      "mtd_override": 4981.64
     },
     {
       "name": "Dalton Martinez",
@@ -69,15 +69,15 @@
       "callLabel": "60/day",
       "gp_d1": 635.0,
       "gp_d2": 808.62,
-      "gp_d3": 2118.5,
+      "gp_d3": 2466.06,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 73,
       "calls_d2": 75,
-      "calls_d3": 13,
+      "calls_d3": 35,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 11576.07
+      "mtd_override": 11923.63
     },
     {
       "name": "Daryn Hightower",
@@ -94,7 +94,7 @@
       "gp_d5": 0,
       "calls_d1": 67,
       "calls_d2": 123,
-      "calls_d3": 20,
+      "calls_d3": 86,
       "calls_d4": 0,
       "calls_d5": 0,
       "mtd_override": 6183.12
@@ -114,7 +114,7 @@
       "gp_d5": 0,
       "calls_d1": 83,
       "calls_d2": 78,
-      "calls_d3": 29,
+      "calls_d3": 74,
       "calls_d4": 0,
       "calls_d5": 0,
       "mtd_override": 5375.0
@@ -134,7 +134,7 @@
       "gp_d5": 0,
       "calls_d1": 15,
       "calls_d2": 34,
-      "calls_d3": 12,
+      "calls_d3": 20,
       "calls_d4": 0,
       "calls_d5": 0,
       "mtd_override": 16538.4
@@ -143,21 +143,21 @@
       "name": "Luke Kush",
       "team": "chamblee",
       "goal": 113000,
-      "nba": 0,
+      "nba": 1,
       "callTarget": 175,
       "dailyCallTarget": 35,
       "callLabel": "35/day",
       "gp_d1": 3746.56,
       "gp_d2": 6516.97,
-      "gp_d3": 6072.14,
+      "gp_d3": 7868.98,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 32,
       "calls_d2": 37,
-      "calls_d3": 16,
+      "calls_d3": 26,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 79416.14
+      "mtd_override": 81212.98
     },
     {
       "name": "Spencer Hines",
@@ -174,7 +174,7 @@
       "gp_d5": 0,
       "calls_d1": 21,
       "calls_d2": 23,
-      "calls_d3": 13,
+      "calls_d3": 30,
       "calls_d4": 0,
       "calls_d5": 0,
       "mtd_override": 42671.31
