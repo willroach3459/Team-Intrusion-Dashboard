@@ -253,14 +253,14 @@ var DAY_LABELS = ['Mon','Tue','Wed','Thu','Fri'];
 
 var JUNE_HISTORY = {
   reps: [
-    {name:'Alex McClellan', team:'intrusion', goal:6000,   wk1:66.76,wk1c:1,wk2:1178.44,wk2c:148,wk3:2154.89,wk3c:170,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:1,nba_wk3:1,nba_wk4:0},
+    {name:'Alex McClellan', team:'intrusion', goal:6000,   wk1:66.76,wk1c:1,wk2:1482.64,wk2c:148,wk3:2154.89,wk3c:170,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:1,nba_wk3:1,nba_wk4:0},
     {name:'Alex Robinson',  team:'intrusion', goal:6000,   wk1:125.0,wk1c:23,wk2:801.7,wk2c:372,wk3:1605.16,wk3c:266,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:1,nba_wk4:0},
     {name:'Dalton Martinez',team:'intrusion', goal:11000,  wk1:1010.5,wk1c:71,wk2:3705.87,wk2c:283,wk3:3297.58,wk3c:254,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:1,nba_wk2:0,nba_wk3:0,nba_wk4:0},
     {name:'Daryn Hightower',team:'intrusion', goal:6000,   wk1:91.99,wk1c:121,wk2:936.31,wk2c:377,wk3:1304.82,wk3c:427,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
     {name:'Kieran Logue',   team:'intrusion', goal:6000,   wk1:645.0,wk1c:134,wk2:1680.0,wk2c:331,wk3:2325.0,wk3c:339,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
     {name:'Lee Epling',     team:'chamblee',  goal:11000,  wk1:500.0,wk1c:42,wk2:4781.0,wk2c:136,wk3:6497.0,wk3c:135,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
     {name:'Luke Kush',      team:'chamblee',  goal:113000, wk1:7717.31,wk1c:34,wk2:27223.5,wk2c:127,wk3:27056.35,wk3c:178,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:1,nba_wk2:1,nba_wk3:0,nba_wk4:0},
-    {name:'Spencer Hines',  team:'chamblee',  goal:115000, wk1:9197.8,wk1c:64,wk2:18464.44,wk2c:91,wk3:11498.92,wk3c:0,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0}
+    {name:'Spencer Hines',  team:'chamblee',  goal:115000, wk1:11486.05,wk1c:64,wk2:23637.84,wk2c:91,wk3:13438.65,wk3c:0,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0}
   ]
 };
 
@@ -356,7 +356,7 @@ function render(){
     :'No NBAs yet this week. Check Previous Weeks for month totals.';
 
   var ti=reps.filter(function(r){return r.team==='intrusion';}),ch=reps.filter(function(r){return r.team==='chamblee';});
-  function setTeam(pI,dI,bI,bkI,repsArr,goal){
+  function setTeam(pI,dI,bI,bkI,repsArr,goal,direct){
     var histPrev=JUNE_HISTORY.reps.filter(function(h){return repsArr.find(function(r){return r.name===h.name;});});
     var wk1t=histPrev.reduce(function(s,h){return s+(h.wk1||0);},0);
     var wk2t=histPrev.reduce(function(s,h){return s+(h.wk2||0);},0);
@@ -364,18 +364,18 @@ function render(){
     var wk4t=repsArr.reduce(function(s,r){return s+wkGP(r);},0);
     // Use mtd_override sum if available — definitive reconciled MTD
     var hasMtdOverride=repsArr.every(function(r){return r.mtd_override;});
-    var total=hasMtdOverride?repsArr.reduce(function(s,r){return s+(r.mtd_override||0);},0):wk1t+wk2t+wk3t+wk4t;
+    var total=(hasMtdOverride?repsArr.reduce(function(s,r){return s+(r.mtd_override||0);},0):wk1t+wk2t+wk3t+wk4t)+(direct||0);
     var pct=Math.round(total/goal*100);
     var remaining=D.meta.monthTotalDays-D.meta.monthDaysTracked;
     var dailyNeeded=goal/D.meta.monthTotalDays;
     var proj=Math.round(total+(dailyNeeded*remaining));
     document.getElementById(pI).textContent=pct+'%';
     document.getElementById(dI).textContent=fmtS(total)+' of '+fmtS(goal)+' goal \u00b7 proj '+fmtS(proj);
-    document.getElementById(bkI).textContent='Wk1: '+fmtS(wk1t)+' \u00b7 Wk2: '+fmtS(wk2t)+' \u00b7 Wk3: '+fmtS(wk3t)+' \u00b7 '+remaining+' days left';
+    document.getElementById(bkI).textContent='Wk1: '+fmtS(wk1t)+' \u00b7 Wk2: '+fmtS(wk2t)+' \u00b7 Wk3: '+fmtS(wk3t)+' \u00b7 '+remaining+' days left'+(direct?' \u00b7 incl '+fmtS(direct)+' direct':'');
     var b=document.getElementById(bI);b.style.width=Math.min(100,pct)+'%';b.className='pb '+pcC(pct);
   }
-  setTeam('ti-p','ti-d','ti-b','ti-bk',ti,m.tiGoal);
-  setTeam('ch-p','ch-d','ch-b','ch-bk',reps,m.chGoal);
+  setTeam('ti-p','ti-d','ti-b','ti-bk',ti,m.tiGoal,m.tiDirect||0);
+  setTeam('ch-p','ch-d','ch-b','ch-bk',reps,m.chGoal,m.tiDirect||0);
 
   // Weekly highlights table
   var ws=[].concat(reps).sort(function(a,b){return wkGP(b)-wkGP(a);});
