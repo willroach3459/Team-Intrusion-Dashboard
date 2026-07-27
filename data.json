@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 27\u201331, 2026",
     "dayOfWeek": 1,
     "totalDays": 5,
-    "lastUpdated": "7/27 2pm \u2014 Week 5 day 1 (Luke +750, calls to 2pm)",
+    "lastUpdated": "7/27 2pm \u2014 past-load GP update (SR28): Lee/Luke/Spencer weeks",
     "monthDaysTracked": 18,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -137,7 +137,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 17178.4
+      "mtd_override": 18789.4
     },
     {
       "name": "Luke Kush",
@@ -157,7 +157,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 100348.75
+      "mtd_override": 101018.91
     },
     {
       "name": "Spencer Hines",
@@ -177,7 +177,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 67777.11
+      "mtd_override": 69298.02
     }
   ],
   "prevWeek": [
