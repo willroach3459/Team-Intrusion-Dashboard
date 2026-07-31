@@ -1,10 +1,10 @@
 {
   "meta": {
     "weekLabel": "Week of July 27\u201331, 2026",
-    "dayOfWeek": 4,
+    "dayOfWeek": 5,
     "totalDays": 5,
-    "lastUpdated": "7/31 \u2014 past-load GP update (SR37): Spencer wk4 drayage; office over goal",
-    "monthDaysTracked": 21,
+    "lastUpdated": "7/31 2pm \u2014 Week 5 day 5 (final day; calls + GP)",
+    "monthDaysTracked": 22,
     "monthTotalDays": 22,
     "tiGoal": 35000,
     "chGoal": 281000,
@@ -31,12 +31,12 @@
       "gp_d2": 0.0,
       "gp_d3": 11.76,
       "gp_d4": 2300.0,
-      "gp_d5": 0,
+      "gp_d5": 0.0,
       "calls_d1": 9,
       "calls_d2": 8,
       "calls_d3": 4,
       "calls_d4": 8,
-      "calls_d5": 0,
+      "calls_d5": 28,
       "mtd_override": 9378.73
     },
     {
@@ -51,12 +51,12 @@
       "gp_d2": 439.15,
       "gp_d3": 123.19,
       "gp_d4": 96.38,
-      "gp_d5": 0,
+      "gp_d5": 0.0,
       "calls_d1": 3,
       "calls_d2": 69,
       "calls_d3": 46,
       "calls_d4": 33,
-      "calls_d5": 0,
+      "calls_d5": 32,
       "mtd_override": 6199.96
     },
     {
@@ -71,13 +71,13 @@
       "gp_d2": 860.82,
       "gp_d3": 2426.78,
       "gp_d4": 630.0,
-      "gp_d5": 0,
+      "gp_d5": 112.06,
       "calls_d1": 30,
       "calls_d2": 16,
       "calls_d3": 15,
       "calls_d4": 8,
       "calls_d5": 0,
-      "mtd_override": 20267.13
+      "mtd_override": 20379.19
     },
     {
       "name": "Daryn Hightower",
@@ -91,13 +91,13 @@
       "gp_d2": 90.2,
       "gp_d3": 0.0,
       "gp_d4": 0.0,
-      "gp_d5": 0,
+      "gp_d5": 700.0,
       "calls_d1": 124,
       "calls_d2": 59,
       "calls_d3": 39,
       "calls_d4": 55,
       "calls_d5": 0,
-      "mtd_override": 6723.32
+      "mtd_override": 7423.32
     },
     {
       "name": "Kieran Logue",
@@ -111,13 +111,13 @@
       "gp_d2": 1125.0,
       "gp_d3": 750.0,
       "gp_d4": 750.38,
-      "gp_d5": 0,
+      "gp_d5": 700.0,
       "calls_d1": 71,
       "calls_d2": 47,
       "calls_d3": 53,
       "calls_d4": 39,
-      "calls_d5": 0,
-      "mtd_override": 10225.38
+      "calls_d5": 29,
+      "mtd_override": 10925.38
     },
     {
       "name": "Lee Epling",
@@ -131,13 +131,13 @@
       "gp_d2": 0.0,
       "gp_d3": 1744.0,
       "gp_d4": 0.0,
-      "gp_d5": 0,
+      "gp_d5": 550.0,
       "calls_d1": 24,
       "calls_d2": 31,
       "calls_d3": 33,
       "calls_d4": 28,
-      "calls_d5": 0,
-      "mtd_override": 21008.4
+      "calls_d5": 18,
+      "mtd_override": 21558.4
     },
     {
       "name": "Luke Kush",
@@ -151,13 +151,13 @@
       "gp_d2": 8300.82,
       "gp_d3": 5629.12,
       "gp_d4": 6107.05,
-      "gp_d5": 0,
+      "gp_d5": 7068.43,
       "calls_d1": 42,
       "calls_d2": 22,
       "calls_d3": 24,
       "calls_d4": 33,
       "calls_d5": 0,
-      "mtd_override": 121049.21
+      "mtd_override": 128117.64
     },
     {
       "name": "Spencer Hines",
@@ -171,13 +171,13 @@
       "gp_d2": 975.0,
       "gp_d3": 805.0,
       "gp_d4": 50.0,
-      "gp_d5": 0,
+      "gp_d5": 800.0,
       "calls_d1": 36,
       "calls_d2": 25,
       "calls_d3": 19,
       "calls_d4": 30,
       "calls_d5": 0,
-      "mtd_override": 87487.98
+      "mtd_override": 88287.98
     }
   ],
   "prevWeek": [
