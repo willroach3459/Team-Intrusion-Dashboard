@@ -3,7 +3,7 @@
     "weekLabel": "Week of July 27\u201331, 2026",
     "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "7/30 EOD \u2014 past-load GP update (SR35): minor drayage/cost settle",
+    "lastUpdated": "7/31 \u2014 past-load GP update (SR37): Spencer wk4 drayage; office over goal",
     "monthDaysTracked": 21,
     "monthTotalDays": 22,
     "tiGoal": 35000,
@@ -177,7 +177,7 @@
       "calls_d3": 19,
       "calls_d4": 30,
       "calls_d5": 0,
-      "mtd_override": 85295.88
+      "mtd_override": 87487.98
     }
   ],
   "prevWeek": [
