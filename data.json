@@ -6,8 +6,8 @@
     "lastUpdated": "8/4 12pm — August Week 1 day 2",
     "monthDaysTracked": 2,
     "monthTotalDays": 21,
-    "tiGoal": 34000,
-    "chGoal": 281500,
+    "tiGoal": 41000,
+    "chGoal": 288500,
     "weekStartDow": 0,
     "curWeek": 1,
     "weekDates": [
@@ -42,7 +42,7 @@
     {
       "name": "Dalton Martinez",
       "team": "intrusion",
-      "goal": 13000,
+      "goal": 16000,
       "nba": 0,
       "callTarget": 300,
       "dailyCallTarget": 60,
@@ -62,7 +62,7 @@
     {
       "name": "Daryn Hightower",
       "team": "intrusion",
-      "goal": 7000,
+      "goal": 9000,
       "nba": 0,
       "callTarget": 400,
       "dailyCallTarget": 80,
@@ -82,7 +82,7 @@
     {
       "name": "Kieran Logue",
       "team": "intrusion",
-      "goal": 7000,
+      "goal": 9000,
       "nba": 0,
       "callTarget": 400,
       "dailyCallTarget": 80,
