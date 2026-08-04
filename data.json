@@ -1,10 +1,10 @@
 {
   "meta": {
     "weekLabel": "Week of Aug 3–7, 2026",
-    "dayOfWeek": 1,
+    "dayOfWeek": 2,
     "totalDays": 5,
-    "lastUpdated": "8/3 12pm — August Week 1 day 1 (month roll from July)",
-    "monthDaysTracked": 1,
+    "lastUpdated": "8/4 12pm — August Week 1 day 2",
+    "monthDaysTracked": 2,
     "monthTotalDays": 21,
     "tiGoal": 34000,
     "chGoal": 281500,
@@ -28,12 +28,12 @@
       "dailyCallTarget": 16,
       "callLabel": "80/wk",
       "gp_d1": 0.0,
-      "gp_d2": 0,
+      "gp_d2": 0.0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 47,
-      "calls_d2": 0,
+      "calls_d2": 7,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
@@ -48,16 +48,16 @@
       "dailyCallTarget": 60,
       "callLabel": "60/day",
       "gp_d1": 1244.87,
-      "gp_d2": 0,
+      "gp_d2": 513.31,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 55,
-      "calls_d2": 0,
+      "calls_d2": 18,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 1244.87
+      "mtd_override": 1758.18
     },
     {
       "name": "Daryn Hightower",
@@ -68,16 +68,16 @@
       "dailyCallTarget": 80,
       "callLabel": "80/day",
       "gp_d1": 0.0,
-      "gp_d2": 0,
+      "gp_d2": 1100.0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 84,
-      "calls_d2": 0,
+      "calls_d2": 30,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0.0
+      "mtd_override": 1100.0
     },
     {
       "name": "Kieran Logue",
@@ -88,16 +88,16 @@
       "dailyCallTarget": 80,
       "callLabel": "80/day",
       "gp_d1": 500.0,
-      "gp_d2": 0,
+      "gp_d2": 240.0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 66,
-      "calls_d2": 0,
+      "calls_d2": 19,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 500.0
+      "mtd_override": 740.0
     },
     {
       "name": "Lee Epling",
@@ -108,16 +108,16 @@
       "dailyCallTarget": 35,
       "callLabel": "35/day",
       "gp_d1": 200.0,
-      "gp_d2": 0,
+      "gp_d2": 200.0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 18,
-      "calls_d2": 0,
+      "calls_d2": 24,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 200.0
+      "mtd_override": 400.0
     },
     {
       "name": "Luke Kush",
@@ -128,7 +128,7 @@
       "dailyCallTarget": 35,
       "callLabel": "35/day",
       "gp_d1": 3979.65,
-      "gp_d2": 0,
+      "gp_d2": 6352.41,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
@@ -137,7 +137,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 3979.65
+      "mtd_override": 10332.06
     },
     {
       "name": "Spencer Hines",
@@ -148,16 +148,16 @@
       "dailyCallTarget": 35,
       "callLabel": "35/day",
       "gp_d1": 0.0,
-      "gp_d2": 0,
+      "gp_d2": 600.0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 32,
-      "calls_d2": 0,
+      "calls_d2": 19,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 0.0
+      "mtd_override": 600.0
     }
   ],
   "prevWeek": [
