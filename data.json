@@ -3,7 +3,7 @@
     "weekLabel": "Week of Aug 3–7, 2026",
     "dayOfWeek": 2,
     "totalDays": 5,
-    "lastUpdated": "8/4 3pm — August Week 1 day 2",
+    "lastUpdated": "8/5 9am — day 2 (8/4) MTD reconciled to source-of-truth report",
     "monthDaysTracked": 2,
     "monthTotalDays": 21,
     "tiGoal": 41000,
@@ -48,7 +48,7 @@
       "dailyCallTarget": 60,
       "callLabel": "60/day",
       "gp_d1": 1244.87,
-      "gp_d2": 513.31,
+      "gp_d2": 232.97,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
@@ -57,7 +57,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 1758.18
+      "mtd_override": 1477.84
     },
     {
       "name": "Daryn Hightower",
@@ -128,7 +128,7 @@
       "dailyCallTarget": 35,
       "callLabel": "35/day",
       "gp_d1": 3979.65,
-      "gp_d2": 7977.55,
+      "gp_d2": 7642.23,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
@@ -137,7 +137,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 11957.2
+      "mtd_override": 11621.88
     },
     {
       "name": "Spencer Hines",
@@ -148,7 +148,7 @@
       "dailyCallTarget": 35,
       "callLabel": "35/day",
       "gp_d1": 0.0,
-      "gp_d2": 600.0,
+      "gp_d2": 1107.75,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
@@ -157,7 +157,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 600.0
+      "mtd_override": 1107.75
     }
   ],
   "prevWeek": [
