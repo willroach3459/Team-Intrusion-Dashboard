@@ -3,7 +3,7 @@
     "weekLabel": "Week of Aug 3–7, 2026",
     "dayOfWeek": 3,
     "totalDays": 5,
-    "lastUpdated": "8/5 EOD — day 3 (Altex $525 -> Kieran; Aran $112.94 -> Dalton)",
+    "lastUpdated": "8/5 EOD — rebuilt on pickup basis from ShippedReport 50 (Altex/Aran double-counts reversed)",
     "monthDaysTracked": 3,
     "monthTotalDays": 21,
     "tiGoal": 41000,
@@ -47,9 +47,9 @@
       "callTarget": 300,
       "dailyCallTarget": 60,
       "callLabel": "60/day",
-      "gp_d1": 1244.87,
-      "gp_d2": 232.97,
-      "gp_d3": 1739.25,
+      "gp_d1": 1104.7,
+      "gp_d2": 373.14,
+      "gp_d3": 1626.31,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 55,
@@ -57,7 +57,7 @@
       "calls_d3": 41,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 3217.09
+      "mtd_override": 3104.15
     },
     {
       "name": "Daryn Hightower",
@@ -89,7 +89,7 @@
       "callLabel": "80/day",
       "gp_d1": 500.0,
       "gp_d2": 240.0,
-      "gp_d3": 1075.0,
+      "gp_d3": 550.0,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 66,
@@ -97,7 +97,7 @@
       "calls_d3": 82,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 1815.0
+      "mtd_override": 1290.0
     },
     {
       "name": "Lee Epling",
@@ -127,9 +127,9 @@
       "callTarget": 175,
       "dailyCallTarget": 35,
       "callLabel": "35/day",
-      "gp_d1": 3979.65,
-      "gp_d2": 7642.23,
-      "gp_d3": 2565.91,
+      "gp_d1": 3934.63,
+      "gp_d2": 7741.3,
+      "gp_d3": 2265.91,
       "gp_d4": 0,
       "gp_d5": 0,
       "calls_d1": 1,
@@ -137,7 +137,7 @@
       "calls_d3": 34,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 14187.79
+      "mtd_override": 13941.84
     },
     {
       "name": "Spencer Hines",
@@ -147,8 +147,8 @@
       "callTarget": 175,
       "dailyCallTarget": 35,
       "callLabel": "35/day",
-      "gp_d1": 0.0,
-      "gp_d2": 1107.75,
+      "gp_d1": 507.75,
+      "gp_d2": 1165.5,
       "gp_d3": 0.0,
       "gp_d4": 0,
       "gp_d5": 0,
@@ -157,7 +157,7 @@
       "calls_d3": 25,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 1107.75
+      "mtd_override": 1673.25
     }
   ],
   "prevWeek": [
