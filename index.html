@@ -112,12 +112,12 @@ tr:hover td{background:var(--bg2)}
         <div class="tb"><div style="font-size:12px;color:var(--text2);margin-bottom:5px">Team Intrusion</div><div class="tbig" id="ti-p"></div><div style="font-size:11px;color:var(--text2);margin-top:2px" id="ti-d"></div><div class="pw"><div class="pb" id="ti-b"></div></div><div style="font-size:10px;color:var(--text2);margin-top:4px" id="ti-bk"></div></div>
         <div class="tb"><div style="font-size:12px;color:var(--text2);margin-bottom:5px">Chamblee</div><div class="tbig" id="ch-p"></div><div style="font-size:11px;color:var(--text2);margin-top:2px" id="ch-d"></div><div class="pw"><div class="pb" id="ch-b"></div></div><div style="font-size:10px;color:var(--text2);margin-top:4px" id="ch-bk"></div></div>
       </div>
-      <p class="sec">Individual GP &mdash; this week so far</p>
+      <p class="sec">Individual GP, loads &amp; calls &mdash; this week so far</p>
       <div class="tw"><table>
         <thead><tr>
           <th>#</th><th>Rep</th>
           <th id="h1"></th><th id="h2"></th><th id="h3"></th><th id="h4"></th><th id="h5"></th>
-          <th>Week total</th><th>GP on track</th><th>Proj month-end</th><th>Calls</th><th>NBA</th>
+          <th>Week total<br><span style="font-size:9px;font-weight:400;color:var(--text2)">GP · loads · calls</span></th><th>Velocity</th><th>Proj month-end</th><th>NBA</th>
         </tr></thead>
         <tbody id="wkBody"></tbody>
       </table></div>
@@ -154,7 +154,7 @@ tr:hover td{background:var(--bg2)}
       <div class="month-header">
         <div>
           <div style="font-size:16px;font-weight:600">August 2026 &mdash; Week by Week</div>
-          <div style="font-size:12px;color:var(--text2);margin-top:3px">GP &amp; calls by week &middot; Resets each new month</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:3px">GP, loads &amp; calls by week &middot; Resets each new month</div>
         </div>
         <div id="moNBABadge"></div>
       </div>
@@ -182,7 +182,7 @@ tr:hover td{background:var(--bg2)}
         </thead>
         <tbody id="teamWkTable"></tbody>
       </table></div>
-      <p class="sec">Individual GP &amp; calls by week</p>
+      <p class="sec">Individual GP, loads &amp; calls by week</p>
       <div class="tw"><table>
         <thead>
           <tr>
@@ -253,13 +253,13 @@ var DAY_LABELS = ['Mon','Tue','Wed','Thu','Fri'];
 
 var JUNE_HISTORY = {
   reps: [
-    {name:'Alex McClellan', team:'intrusion', goal:7000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Dalton Martinez', team:'intrusion', goal:16000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Daryn Hightower', team:'intrusion', goal:9000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Kieran Logue', team:'intrusion', goal:9000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Lee Epling', team:'chamblee', goal:22500, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Luke Kush', team:'chamblee', goal:125000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Spencer Hines', team:'chamblee', goal:100000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0}
+    {name:'Alex McClellan', team:'intrusion', goal:7000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Dalton Martinez', team:'intrusion', goal:16000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Daryn Hightower', team:'intrusion', goal:9000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Kieran Logue', team:'intrusion', goal:9000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Lee Epling', team:'chamblee', goal:22500, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Luke Kush', team:'chamblee', goal:125000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Spencer Hines', team:'chamblee', goal:100000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0}
   ]
 };
 
@@ -279,6 +279,9 @@ function bdC(p){return p>=40?'bg2':p>=20?'ba2':'br2';}
 
 function wkGP(r){var t=0;for(var d=1;d<=D.meta.dayOfWeek;d++){t+=(r['gp_d'+d]||0);}return t;}
 function wkCalls(r){var t=0;for(var d=1;d<=D.meta.dayOfWeek;d++){t+=(r['calls_d'+d]||0);}return t;}
+function wkLoads(r){var t=0;for(var d=1;d<=D.meta.dayOfWeek;d++){t+=(r['loads_d'+d]||0);}return t;}
+function velocity(r){return r.velBase?projMonthEnd(r)/r.velBase:0;}
+function velC(v){return v>=1?'var(--green)':v>=0.7?'var(--amber)':'var(--red)';}
 function pv(name){return D.prevWeek.find(function(x){return x.name===name;})||{};}
 function moNBA(r){
   var h=JUNE_HISTORY.reps.find(function(x){return x.name===r.name;});
@@ -387,17 +390,20 @@ function render(){
     var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
     var dayCells='';
     for(var d=1;d<=5;d++){
-      if(d<=m.dayOfWeek){var v=r['gp_d'+d]||0;dayCells+='<td>'+(v>0?fmt(v):v<0?'<span style="color:var(--rfg)">'+fmt(v)+'</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td>';}
-      else{dayCells+='<td></td>';}
+      if(d<=m.dayOfWeek){
+        var v=r['gp_d'+d]||0,ld=r['loads_d'+d]||0,ca=r['calls_d'+d]||0;
+        var gpS=v>0?fmt(v):v<0?'<span style="color:var(--rfg)">'+fmt(v)+'</span>':'<span style="color:var(--text2)">&#8212;</span>';
+        dayCells+='<td style="text-align:center"><div style="font-weight:600">'+gpS+'</div><div style="font-size:9px;color:var(--text2);margin-top:1px">'+ld+' ld \u00b7 '+ca+' ca</div></td>';
+      } else {dayCells+='<td></td>';}
     }
     var projColor=projPct>=100?'var(--green)':projPct>=70?'var(--amber)':'var(--red)';
+    var vel=velocity(r);
     wkRows+='<tr><td><span class="rk '+rC+'">'+(i+1)+'</span></td>'+
       '<td><strong style="font-weight:500">'+r.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+(r.team==='intrusion'?'Intrusion':'Chamblee')+'</span></td>'+
       dayCells+
-      '<td><strong>'+fmt(wkGP(r))+'</strong></td>'+
-      '<td>'+pill(otPct,otPct+'%')+'<div class="ppw"><div class="ppb '+pcC(otPct)+'" style="width:'+Math.min(100,otPct)+'%"></div></div><div style="font-size:10px;color:var(--text2);margin-top:2px">'+fmt(moGPTotal(r))+' MTD</div></td>'+
+      '<td style="text-align:center"><strong>'+fmt(wkGP(r))+'</strong><div style="font-size:10px;color:var(--text2);margin-top:1px">'+wkLoads(r)+' ld \u00b7 '+wkCalls(r)+' ca</div><div style="font-size:9px;color:var(--text2)">'+fmt(moGPTotal(r))+' MTD</div></td>'+
+      '<td style="text-align:center"><span style="font-size:15px;font-weight:700;color:'+velC(vel)+'">'+vel.toFixed(2)+'x</span><br><span style="font-size:9px;color:var(--text2)">of baseline</span></td>'+
       '<td><span style="font-size:13px;font-weight:600;color:'+projColor+'">'+fmtS(proj)+'</span><br><span style="font-size:10px;color:var(--text2)">'+projPct+'% of goal \u00b7 '+fmt(dailyGPGoal(r))+'/day needed</span></td>'+
-      '<td>'+pill(cPct,cPct+'%')+'<div style="font-size:10px;color:var(--text2);margin-top:2px">'+wkCalls(r)+'/'+tgt+' \u00b7 '+r.callLabel+'</div></td>'+
       '<td>'+(r.nba?'<span class="bd bp2">&#9733;</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td></tr>';
   }
   document.getElementById('wkBody').innerHTML=wkRows;
@@ -464,10 +470,11 @@ function renderPrevMonth(){
     var rC=i===0?'rk1':i===1?'rk2':i===2?'rk3':'rko';
     var cells='';
     for(var w=1;w<=5;w++){
-      var gpv=r['wk'+w], cl=r['wk'+w+'c']||0, nb=r['nba_wk'+w]||0;
+      var gpv=r['wk'+w], cl=r['wk'+w+'c']||0, nb=r['nba_wk'+w]||0, ld=r['wk'+w+'l'];
       var gpD=gpv<0?'<span style="color:var(--rfg)">'+fmt(gpv)+'</span>':fmt(gpv);
       var nbaB=nb?' <span class="bd bp2" style="font-size:9px">'+nb+'</span>':'';
-      cells+='<td class="gp-cell">'+gpD+nbaB+'</td><td class="calls-cell">'+cl+'</td>';
+      var ldS=(ld!=null)?'<br><span style="font-size:9px;color:var(--text2)">'+ld+' ld</span>':'';
+      cells+='<td class="gp-cell">'+gpD+nbaB+ldS+'</td><td class="calls-cell">'+cl+'</td>';
     }
     pmRows+='<tr><td><span class="rk '+rC+'" style="margin-right:6px">'+(i+1)+'</span><strong style="font-weight:500">'+r.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+(r.team==='intrusion'?'Intrusion':'Chamblee')+' \u00b7 goal: '+fmtS(r.goal)+'</span></td>'+cells+'<td><strong>'+fmt(r.mtd)+'</strong></td><td><span class="bd '+(pctv>=40?'bg2':pctv>=20?'ba2':'br2')+'">'+pctv+'%</span></td><td>'+(nbaT?'<span class="bd bp2">'+nbaT+'</span>':'&#8212;')+'</td></tr>';
   }
@@ -513,7 +520,7 @@ function renderPrevWeeks(reps){
   var WD=D.meta.weekDates||['Jun 29 \u2013 Jul 3','Jul 6\u201310','Jul 13\u201317','Jul 20\u201324','Jul 27\u201331'];
   hist.reps.forEach(function(h){
     var live=reps.find(function(r){return r.name===h.name;});
-    if(live){ h['wk'+cw]=wkGP(live); h['wk'+cw+'c']=wkCalls(live); }
+    if(live){ h['wk'+cw]=wkGP(live); h['wk'+cw+'c']=wkCalls(live); h['wk'+cw+'l']=wkLoads(live); }
   });
   var totalMonthNBAs=hist.reps.reduce(function(s,h){var l=reps.find(function(r){return r.name===h.name;});return s+(h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(h.nba_wk4||0)+(l?l.nba:0);},0);
   document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in August</span>';
@@ -523,12 +530,13 @@ function renderPrevWeeks(reps){
     var nbaB=wd.nba?' <span class="bd bp2" style="font-size:9px">'+wd.nba+' NBA</span>':'';
     var gpD=wd.gp<0?'<span style="color:var(--rfg)">'+fmt(wd.gp)+'</span>':fmt(wd.gp);
     var prog=wd.st==='cur'?'<br><span style="font-size:10px;color:var(--text2)">day '+D.meta.dayOfWeek+'/'+D.meta.totalDays+'</span>':'';
-    return '<td class="gp-cell">'+gpD+nbaB+prog+'</td><td class="calls-cell">'+(wd.calls||0)+'</td>';
+    var ldS=(wd.loads!=null)?'<br><span style="font-size:9px;color:var(--text2)">'+wd.loads+' ld</span>':'';
+    return '<td class="gp-cell">'+gpD+nbaB+ldS+prog+'</td><td class="calls-cell">'+(wd.calls||0)+'</td>';
   }
   function repWeek(h,live,w){
-    if(w<cw) return {gp:(h['wk'+w]!=null?h['wk'+w]:null), calls:h['wk'+w+'c'], nba:h['nba_wk'+w]||0, st:'lock'};
-    if(w===cw) return {gp:live?wkGP(live):0, calls:live?wkCalls(live):0, nba:live?live.nba:0, st:'cur'};
-    return {gp:null, calls:null, nba:0, st:'fut'};
+    if(w<cw) return {gp:(h['wk'+w]!=null?h['wk'+w]:null), calls:h['wk'+w+'c'], loads:(h['wk'+w+'l']!=null?h['wk'+w+'l']:null), nba:h['nba_wk'+w]||0, st:'lock'};
+    if(w===cw) return {gp:live?wkGP(live):0, calls:live?wkCalls(live):0, loads:live?wkLoads(live):0, nba:live?live.nba:0, st:'cur'};
+    return {gp:null, calls:null, loads:null, nba:0, st:'fut'};
   }
   var tiReps=hist.reps.filter(function(h){return h.team==='intrusion';});
   var chReps=hist.reps.filter(function(h){return h.team==='chamblee';});
@@ -538,9 +546,9 @@ function renderPrevWeeks(reps){
     var cells='';
     for(var w=1;w<=5;w++){
       var wd;
-      if(w<cw) wd={gp:repsArr.reduce(function(s,h){return s+(h['wk'+w]||0);},0), calls:repsArr.reduce(function(s,h){return s+(h['wk'+w+'c']||0);},0), st:'lock', nba:0};
-      else if(w===cw) wd={gp:liveReps.reduce(function(s,r){return s+wkGP(r);},0), calls:liveReps.reduce(function(s,r){return s+wkCalls(r);},0), st:'cur', nba:0};
-      else wd={gp:null,calls:null,st:'fut',nba:0};
+      if(w<cw) wd={gp:repsArr.reduce(function(s,h){return s+(h['wk'+w]||0);},0), calls:repsArr.reduce(function(s,h){return s+(h['wk'+w+'c']||0);},0), loads:repsArr.reduce(function(s,h){return s+(h['wk'+w+'l']||0);},0), st:'lock', nba:0};
+      else if(w===cw) wd={gp:liveReps.reduce(function(s,r){return s+wkGP(r);},0), calls:liveReps.reduce(function(s,r){return s+wkCalls(r);},0), loads:liveReps.reduce(function(s,r){return s+wkLoads(r);},0), st:'cur', nba:0};
+      else wd={gp:null,calls:null,loads:null,st:'fut',nba:0};
       cells+=cellPair(wd);
     }
     var total=liveReps.reduce(function(s,r){return s+(r.mtd_override||0);},0);
