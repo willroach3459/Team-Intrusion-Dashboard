@@ -280,8 +280,9 @@ function bdC(p){return p>=40?'bg2':p>=20?'ba2':'br2';}
 function wkGP(r){var t=0;for(var d=1;d<=D.meta.dayOfWeek;d++){t+=(r['gp_d'+d]||0);}return t;}
 function wkCalls(r){var t=0;for(var d=1;d<=D.meta.dayOfWeek;d++){t+=(r['calls_d'+d]||0);}return t;}
 function wkLoads(r){var t=0;for(var d=1;d<=D.meta.dayOfWeek;d++){t+=(r['loads_d'+d]||0);}return t;}
-function velocity(r){return r.velBase?projMonthEnd(r)/r.velBase:0;}
-function velC(v){return v>=1?'var(--green)':v>=0.7?'var(--amber)':'var(--red)';}
+function velocity(r){return r.velBase?moGPTotal(r)/r.velBase:0;}
+function velExpPace(){return D.meta.monthTotalDays?(D.meta.monthDaysTracked/D.meta.monthTotalDays):1;}
+function velC(r){var e=velExpPace(),pace=e>0?velocity(r)/e:0;return pace>=1?'var(--green)':pace>=0.7?'var(--amber)':'var(--red)';}
 function pv(name){return D.prevWeek.find(function(x){return x.name===name;})||{};}
 function moNBA(r){
   var h=JUNE_HISTORY.reps.find(function(x){return x.name===r.name;});
@@ -402,7 +403,7 @@ function render(){
       '<td><strong style="font-weight:500">'+r.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+(r.team==='intrusion'?'Intrusion':'Chamblee')+'</span></td>'+
       dayCells+
       '<td style="text-align:center"><strong>'+fmt(wkGP(r))+'</strong><div style="font-size:10px;color:var(--text2);margin-top:1px">'+wkLoads(r)+' ld \u00b7 '+wkCalls(r)+' ca</div><div style="font-size:9px;color:var(--text2)">'+fmt(moGPTotal(r))+' MTD</div></td>'+
-      '<td style="text-align:center"><span style="font-size:15px;font-weight:700;color:'+velC(vel)+'">'+vel.toFixed(2)+'x</span><br><span style="font-size:9px;color:var(--text2)">of baseline</span></td>'+
+      '<td style="text-align:center"><span style="font-size:15px;font-weight:700;color:'+velC(r)+'">'+vel.toFixed(2)+'x</span><br><span style="font-size:9px;color:var(--text2)">1.0 = on pace</span></td>'+
       '<td><span style="font-size:13px;font-weight:600;color:'+projColor+'">'+fmtS(proj)+'</span><br><span style="font-size:10px;color:var(--text2)">'+projPct+'% of goal \u00b7 '+fmt(dailyGPGoal(r))+'/day needed</span></td>'+
       '<td>'+(r.nba?'<span class="bd bp2">&#9733;</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td></tr>';
   }
