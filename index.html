@@ -117,7 +117,7 @@ tr:hover td{background:var(--bg2)}
         <thead><tr>
           <th>#</th><th>Rep</th>
           <th id="h1"></th><th id="h2"></th><th id="h3"></th><th id="h4"></th><th id="h5"></th>
-          <th>Week total<br><span style="font-size:9px;font-weight:400;color:var(--text2)">GP · loads · calls</span></th><th>Velocity</th><th>Proj month-end</th><th>NBA</th>
+          <th>Week total<br><span style="font-size:9px;font-weight:400;color:var(--text2)">GP · loads · calls</span></th><th>Proj month-end</th><th>NBA</th>
         </tr></thead>
         <tbody id="wkBody"></tbody>
       </table></div>
@@ -398,12 +398,11 @@ function render(){
       } else {dayCells+='<td></td>';}
     }
     var projColor=projPct>=100?'var(--green)':projPct>=70?'var(--amber)':'var(--red)';
-    var vel=velocity(r);
     wkRows+='<tr><td><span class="rk '+rC+'">'+(i+1)+'</span></td>'+
       '<td><strong style="font-weight:500">'+r.name+'</strong><br><span style="font-size:10px;color:var(--text2)">'+(r.team==='intrusion'?'Intrusion':'Chamblee')+'</span></td>'+
       dayCells+
       '<td style="text-align:center"><strong>'+fmt(wkGP(r))+'</strong><div style="font-size:10px;color:var(--text2);margin-top:1px">'+wkLoads(r)+' ld \u00b7 '+wkCalls(r)+' ca</div><div style="font-size:9px;color:var(--text2)">'+fmt(moGPTotal(r))+' MTD</div></td>'+
-      '<td style="text-align:center"><span style="font-size:15px;font-weight:700;color:'+velC(r)+'">'+vel.toFixed(2)+'x</span><br><span style="font-size:9px;color:var(--text2)">1.0 = on pace</span></td>'+
+      
       '<td><span style="font-size:13px;font-weight:600;color:'+projColor+'">'+fmtS(proj)+'</span><br><span style="font-size:10px;color:var(--text2)">'+projPct+'% of goal \u00b7 '+fmt(dailyGPGoal(r))+'/day needed</span></td>'+
       '<td>'+(r.nba?'<span class="bd bp2">&#9733;</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td></tr>';
   }
