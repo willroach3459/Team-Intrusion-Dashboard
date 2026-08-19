@@ -3,7 +3,7 @@
     "weekLabel": "Week of Aug 17–21, 2026",
     "dayOfWeek": 2,
     "totalDays": 5,
-    "lastUpdated": "8/18 — Week 3 pickup reconcile (ShippedReport 65)",
+    "lastUpdated": "8/18 — +Alex M warehouse GP (wk1 6805.59, wk2 1926.60)",
     "monthDaysTracked": 12,
     "monthTotalDays": 21,
     "tiGoal": 41000,
@@ -16,7 +16,13 @@
       "Aug 17–21",
       "Aug 24–28",
       "Aug 31"
-    ]
+    ],
+    "warehouse": {
+      "Alex McClellan": {
+        "wk1": 6805.59,
+        "wk2": 1926.6
+      }
+    }
   },
   "reps": [
     {
@@ -37,7 +43,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 1811.56,
+      "mtd_override": 10543.75,
       "loads_d1": 1,
       "loads_d2": 1,
       "loads_d3": 0,
