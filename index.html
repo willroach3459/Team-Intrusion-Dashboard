@@ -116,7 +116,7 @@ tr:hover td{background:var(--bg2)}
         <thead><tr>
           <th>#</th><th>Rep</th>
           <th id="h1" style="text-align:center"></th><th id="h2" style="text-align:center"></th><th id="h3" style="text-align:center"></th><th id="h4" style="text-align:center"></th><th id="h5" style="text-align:center"></th>
-          <th style="text-align:center">Week total<br><span style="font-size:9px;font-weight:400;color:var(--text2)">GP / loads / calls</span></th><th style="text-align:center">GP on track</th><th>Proj month-end</th><th>NBA</th>
+          <th style="text-align:center">Week total<br><span style="font-size:9px;font-weight:400;color:var(--text2)">GP / loads / calls</span></th><th style="text-align:center">GP pace<br><span style="font-size:9px;font-weight:400;color:var(--text2)">pace / % to goal</span></th><th>Proj month-end</th><th>NBA</th>
         </tr></thead>
         <tbody id="wkBody"></tbody>
       </table></div>
@@ -361,7 +361,7 @@ function render(){
   document.getElementById('chips').innerHTML=
     '<div class="chip"><div class="cl">Most GP this week</div><div class="cv">'+byWk.name.split(' ')[0]+'</div><div class="cs">'+fmt(wkGP(byWk))+'</div></div>'+
     '<div class="chip"><div class="cl">Best % to goal</div><div class="cv">'+byMo.name.split(' ')[0]+'</div><div class="cs">'+moPct(byMo)+'% of goal</div></div>'+
-    '<div class="chip"><div class="cl">GP on track</div><div class="cv">'+onGP+' of '+reps.length+'</div><div class="cs">at or above daily pace</div></div>'+
+    '<div class="chip"><div class="cl">GP on pace</div><div class="cv">'+onGP+' of '+reps.length+'</div><div class="cs">at or above daily pace</div></div>'+
     '<div class="chip"><div class="cl">NBA this week</div><div class="cv">'+(nbas.length?nbas.map(function(r){return r.name.split(' ')[0];}).join(', '):'None yet')+'</div><div class="cs">'+nbas.length+' account'+(nbas.length!==1?'s':'')+'</div></div>';
   document.getElementById('nbaText').textContent=nbas.length
     ?'This week: '+nbas.map(function(r){return r.name;}).join(', ')+'. See Previous Weeks tab for full month NBA totals.'
@@ -410,7 +410,10 @@ function render(){
       dayCells+
       '<td style="text-align:center"><strong>'+fmt(wkGP(r))+'</strong><div style="font-size:9px;color:var(--text2);margin-top:2px">'+wkLoads(r)+' loads</div><div style="font-size:9px;color:var(--text2)">'+wkCalls(r)+' calls</div><div style="font-size:9px;color:var(--text2);margin-top:3px">'+fmt(moGPTotal(r))+' MTD</div></td>'+
 
-      '<td style="text-align:center">'+pill(otPct,otPct+'%')+'<div class="ppw" style="margin:4px auto 0"><div class="ppb '+pcC(otPct)+'" style="width:'+Math.min(100,otPct)+'%"></div></div></td>'+
+      '<td style="text-align:center"><div style="display:flex;gap:10px;justify-content:center;align-items:flex-start">'+
+        '<div>'+pill(otPct,otPct+'%')+'<div style="font-size:8px;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-top:3px">pace</div></div>'+
+        '<div><span style="font-size:13px;font-weight:700">'+moPct(r)+'%</span><div style="font-size:8px;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-top:3px">of goal</div></div>'+
+      '</div><div class="ppw" style="margin:5px auto 0"><div class="ppb '+pcC(moPct(r))+'" style="width:'+Math.min(100,moPct(r))+'%"></div></div></td>'+
       '<td><span style="font-size:13px;font-weight:600;color:'+projColor+'">'+fmtS(proj)+'</span><br><span style="font-size:10px;color:var(--text2)">'+projPct+'% of goal · '+fmt(dailyGPGoal(r))+'/day needed</span></td>'+
       '<td>'+(r.nba?'<span class="bd bp2">&#9733;</span>':'<span style="color:var(--text2)">&#8212;</span>')+'</td></tr>';
   }
