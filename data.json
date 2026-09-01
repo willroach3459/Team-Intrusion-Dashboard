@@ -1,27 +1,24 @@
 {
   "meta": {
-    "weekLabel": "Week of Aug 31",
+    "weekLabel": "Week of Sep 1",
     "dayOfWeek": 1,
-    "totalDays": 1,
-    "lastUpdated": "8/31 — Week 5 day 1 Monday (1600) · month close",
-    "monthDaysTracked": 21,
+    "totalDays": 4,
+    "lastUpdated": "9/1 — Week 1 day 1 Tuesday (10:15am) · September",
+    "monthDaysTracked": 1,
     "monthTotalDays": 21,
     "tiGoal": 41000,
-    "chGoal": 288500,
-    "weekStartDow": 0,
-    "curWeek": 5,
+    "chGoal": 225000,
+    "weekStartDow": 1,
+    "curWeek": 1,
     "weekDates": [
-      "Aug 3–7",
-      "Aug 10–14",
-      "Aug 17–21",
-      "Aug 24–28",
-      "Aug 31"
+      "Sep 1–4",
+      "Sep 7–11",
+      "Sep 14–18",
+      "Sep 21–25",
+      "Sep 28–30"
     ],
     "warehouse": {
-      "Alex McClellan": {
-        "wk1": 6805.59,
-        "wk2": 1926.6
-      }
+      "Alex McClellan": {}
     }
   },
   "reps": [
@@ -38,44 +35,46 @@
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 23,
+      "calls_d1": 2,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 12443.75,
+      "mtd_override": 0.0,
       "loads_d1": 0,
       "loads_d2": 0,
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 7000
+      "velBase": 8000,
+      "velPrior": 1.778
     },
     {
       "name": "Dalton Martinez",
       "team": "intrusion",
       "goal": 16000,
-      "nba": 0,
+      "nba": 1,
       "callTarget": 300,
       "dailyCallTarget": 60,
       "callLabel": "60/day",
-      "gp_d1": 1465.53,
+      "gp_d1": 0.0,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 24,
+      "calls_d1": 8,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 31247.46,
-      "loads_d1": 7,
+      "mtd_override": 0.0,
+      "loads_d1": 0,
       "loads_d2": 0,
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 12000
+      "velBase": 17000,
+      "velPrior": 2.604
     },
     {
       "name": "Daryn Hightower",
@@ -85,23 +84,24 @@
       "callTarget": 400,
       "dailyCallTarget": 80,
       "callLabel": "80/day",
-      "gp_d1": 59.82,
+      "gp_d1": 434.0,
       "gp_d2": 0,
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 99,
+      "calls_d1": 4,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 7483.13,
+      "mtd_override": 434.0,
       "loads_d1": 2,
       "loads_d2": 0,
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 7000
+      "velBase": 10000,
+      "velPrior": 1.069
     },
     {
       "name": "Kieran Logue",
@@ -116,23 +116,51 @@
       "gp_d3": 0,
       "gp_d4": 0,
       "gp_d5": 0,
-      "calls_d1": 78,
+      "calls_d1": 13,
       "calls_d2": 0,
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 6739.63,
+      "mtd_override": 0.0,
       "loads_d1": 0,
       "loads_d2": 0,
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 7000
+      "velBase": 10000,
+      "velPrior": 0.963
     },
     {
-      "name": "Lee Epling",
+      "name": "Luke Kush",
       "team": "chamblee",
-      "goal": 22500,
+      "goal": 125000,
+      "nba": 0,
+      "callTarget": 175,
+      "dailyCallTarget": 35,
+      "callLabel": "35/day",
+      "gp_d1": 7227.0,
+      "gp_d2": 0,
+      "gp_d3": 0,
+      "gp_d4": 0,
+      "gp_d5": 0,
+      "calls_d1": 0,
+      "calls_d2": 0,
+      "calls_d3": 0,
+      "calls_d4": 0,
+      "calls_d5": 0,
+      "mtd_override": 7227.0,
+      "loads_d1": 18,
+      "loads_d2": 0,
+      "loads_d3": 0,
+      "loads_d4": 0,
+      "loads_d5": 0,
+      "velBase": 119937.54,
+      "velPrior": 0.921
+    },
+    {
+      "name": "Spencer Hines",
+      "team": "chamblee",
+      "goal": 100000,
       "nba": 0,
       "callTarget": 175,
       "dailyCallTarget": 35,
@@ -147,106 +175,45 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 9900.0,
+      "mtd_override": 0.0,
       "loads_d1": 0,
       "loads_d2": 0,
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 22558.4
-    },
-    {
-      "name": "Luke Kush",
-      "team": "chamblee",
-      "goal": 125000,
-      "nba": 0,
-      "callTarget": 175,
-      "dailyCallTarget": 35,
-      "callLabel": "35/day",
-      "gp_d1": 10818.31,
-      "gp_d2": 0,
-      "gp_d3": 0,
-      "gp_d4": 0,
-      "gp_d5": 0,
-      "calls_d1": 40,
-      "calls_d2": 0,
-      "calls_d3": 0,
-      "calls_d4": 0,
-      "calls_d5": 0,
-      "mtd_override": 118937.54,
-      "loads_d1": 25,
-      "loads_d2": 0,
-      "loads_d3": 0,
-      "loads_d4": 0,
-      "loads_d5": 0,
-      "velBase": 129117.64
-    },
-    {
-      "name": "Spencer Hines",
-      "team": "chamblee",
-      "goal": 100000,
-      "nba": 0,
-      "callTarget": 175,
-      "dailyCallTarget": 35,
-      "callLabel": "35/day",
-      "gp_d1": 735.0,
-      "gp_d2": 0,
-      "gp_d3": 0,
-      "gp_d4": 0,
-      "gp_d5": 0,
-      "calls_d1": 23,
-      "calls_d2": 0,
-      "calls_d3": 0,
-      "calls_d4": 0,
-      "calls_d5": 0,
-      "mtd_override": 93174.46,
-      "loads_d1": 3,
-      "loads_d2": 0,
-      "loads_d3": 0,
-      "loads_d4": 0,
-      "loads_d5": 0,
-      "velBase": 89287.98
+      "velBase": 94174.46,
+      "velPrior": 1.044
     }
   ],
   "prevWeek": [
     {
       "name": "Alex McClellan",
-      "gp": 9378.73,
-      "nba": 2
-    },
-    {
-      "name": "Alex Robinson",
-      "gp": 6199.96,
-      "nba": 2
+      "gp": 12443.75,
+      "nba": 1
     },
     {
       "name": "Dalton Martinez",
-      "gp": 20379.19,
-      "nba": 3
+      "gp": 31247.46,
+      "nba": 1
     },
     {
       "name": "Daryn Hightower",
-      "gp": 7423.32,
-      "nba": 0
+      "gp": 7483.13,
+      "nba": 1
     },
     {
       "name": "Kieran Logue",
-      "gp": 10925.38,
-      "nba": 0
-    },
-    {
-      "name": "Lee Epling",
-      "gp": 21558.4,
+      "gp": 6739.63,
       "nba": 1
     },
     {
       "name": "Luke Kush",
-      "gp": 128117.64,
-      "nba": 3
+      "gp": 118937.54,
+      "nba": 2
     },
     {
       "name": "Spencer Hines",
-      "gp": 88287.98,
+      "gp": 93174.46,
       "nba": 0
     }
   ]
