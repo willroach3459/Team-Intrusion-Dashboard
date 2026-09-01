@@ -19,6 +19,42 @@
     ],
     "warehouse": {
       "Alex McClellan": {}
+    },
+    "prevDay": {
+      "label": "Mon 8/31 · last working day of August (prior-day baseline)",
+      "date": "2026-08-31",
+      "reps": {
+        "Alex McClellan": {
+          "gp": 0.0,
+          "calls": 23,
+          "loads": 0
+        },
+        "Dalton Martinez": {
+          "gp": 1465.53,
+          "calls": 24,
+          "loads": 7
+        },
+        "Daryn Hightower": {
+          "gp": 59.82,
+          "calls": 99,
+          "loads": 2
+        },
+        "Kieran Logue": {
+          "gp": 0.0,
+          "calls": 78,
+          "loads": 0
+        },
+        "Luke Kush": {
+          "gp": 10818.31,
+          "calls": 40,
+          "loads": 25
+        },
+        "Spencer Hines": {
+          "gp": 735.0,
+          "calls": 23,
+          "loads": 3
+        }
+      }
     }
   },
   "reps": [
