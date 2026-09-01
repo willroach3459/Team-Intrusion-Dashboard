@@ -6,8 +6,8 @@
     "lastUpdated": "9/1 — Week 1 day 1 Tuesday (1400) · September",
     "monthDaysTracked": 1,
     "monthTotalDays": 21,
-    "tiGoal": 41000,
-    "chGoal": 225000,
+    "tiGoal": 58000,
+    "chGoal": 240000,
     "weekStartDow": 1,
     "curWeek": 1,
     "weekDates": [
@@ -61,7 +61,7 @@
     {
       "name": "Alex McClellan",
       "team": "intrusion",
-      "goal": 7000,
+      "goal": 8000,
       "nba": 0,
       "callTarget": 80,
       "dailyCallTarget": 16,
@@ -88,7 +88,7 @@
     {
       "name": "Dalton Martinez",
       "team": "intrusion",
-      "goal": 16000,
+      "goal": 30000,
       "nba": 1,
       "callTarget": 300,
       "dailyCallTarget": 60,
@@ -115,7 +115,7 @@
     {
       "name": "Daryn Hightower",
       "team": "intrusion",
-      "goal": 9000,
+      "goal": 10000,
       "nba": 0,
       "callTarget": 400,
       "dailyCallTarget": 80,
@@ -142,7 +142,7 @@
     {
       "name": "Kieran Logue",
       "team": "intrusion",
-      "goal": 9000,
+      "goal": 10000,
       "nba": 0,
       "callTarget": 400,
       "dailyCallTarget": 80,
@@ -169,7 +169,7 @@
     {
       "name": "Luke Kush",
       "team": "chamblee",
-      "goal": 125000,
+      "goal": 130000,
       "nba": 0,
       "callTarget": 175,
       "dailyCallTarget": 35,
@@ -196,7 +196,7 @@
     {
       "name": "Spencer Hines",
       "team": "chamblee",
-      "goal": 100000,
+      "goal": 110000,
       "nba": 0,
       "callTarget": 175,
       "dailyCallTarget": 35,
