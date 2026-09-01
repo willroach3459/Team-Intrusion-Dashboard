@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Team Dashboard — August 2026</title>
+<title>Team Dashboard — September 2026</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
 <style>
 :root{--bg:#fff;--bg2:#f7f7f5;--border:#e0ddd6;--text:#1a1a18;--text2:#6b6a65;--green:#639922;--amber:#EF9F27;--red:#E24B4A;--gbg:#EAF3DE;--gfg:#27500A;--abg:#FAEEDA;--afg:#633806;--rbg:#FCEBEB;--rfg:#791F1F;--bbg:#E6F1FB;--bfg:#0C447C;--pbg:#EEEDFE;--pfg:#3C3489;--r:10px;--sh:0 1px 4px rgba(0,0,0,.07)}
@@ -80,7 +80,7 @@ tr:hover td{background:var(--bg2)}
 </head>
 <body>
 <header>
-  <div class="logo"><div class="dot"></div>Team Dashboard &mdash; August 2026</div>
+  <div class="logo"><div class="dot"></div>Team Dashboard &mdash; September 2026</div>
   <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
     <span class="live"><span class="ldot"></span><span id="lbl">Loading...</span></span>
     <span class="hmeta" id="wkLabel"></span>
@@ -106,7 +106,7 @@ tr:hover td{background:var(--bg2)}
           <div style="font-size:12px" id="nbaText"></div>
         </div>
       </div>
-      <p class="sec">August running total &mdash; % to goal</p>
+      <p class="sec">September running total &mdash; % to goal</p>
       <div class="tg">
         <div class="tb"><div style="font-size:12px;color:var(--text2);margin-bottom:5px">Team Intrusion</div><div class="tbig" id="ti-p"></div><div style="font-size:11px;color:var(--text2);margin-top:2px" id="ti-d"></div><div class="pw"><div class="pb" id="ti-b"></div></div><div style="font-size:10px;color:var(--text2);margin-top:4px" id="ti-bk"></div></div>
         <div class="tb"><div style="font-size:12px;color:var(--text2);margin-bottom:5px">Chamblee</div><div class="tbig" id="ch-p"></div><div style="font-size:11px;color:var(--text2);margin-top:2px" id="ch-d"></div><div class="pw"><div class="pb" id="ch-b"></div></div><div style="font-size:10px;color:var(--text2);margin-top:4px" id="ch-bk"></div></div>
@@ -133,7 +133,7 @@ tr:hover td{background:var(--bg2)}
       </div>
       <div class="stabs">
         <button class="stab on" onclick="slb('wk',event)">This week</button>
-        <button class="stab" onclick="slb('mo',event)">August monthly</button>
+        <button class="stab" onclick="slb('mo',event)">September monthly</button>
       </div>
       <div id="lb-wk">
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;margin-bottom:16px;font-size:12px;line-height:1.7">
@@ -158,7 +158,7 @@ tr:hover td{background:var(--bg2)}
     <div id="pg-pw" class="pg">
       <div class="month-header">
         <div>
-          <div style="font-size:16px;font-weight:600">August 2026 &mdash; Week by Week</div>
+          <div style="font-size:16px;font-weight:600">September 2026 &mdash; Week by Week</div>
           <div style="font-size:12px;color:var(--text2);margin-top:3px">GP, loads &amp; calls by week &middot; Resets each new month</div>
         </div>
         <div id="moNBABadge"></div>
@@ -174,7 +174,7 @@ tr:hover td{background:var(--bg2)}
             <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Aug 17&ndash;21)</th>
             <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Aug 24&ndash;28)</th>
             <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Aug 31)</th>
-            <th rowspan="2" style="vertical-align:bottom">August MTD</th>
+            <th rowspan="2" style="vertical-align:bottom">September MTD</th>
             <th rowspan="2" style="vertical-align:bottom">% of goal</th>
           </tr>
           <tr>
@@ -197,7 +197,7 @@ tr:hover td{background:var(--bg2)}
             <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Aug 17&ndash;21)</th>
             <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Aug 24&ndash;28)</th>
             <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Aug 31)</th>
-            <th rowspan="2" style="vertical-align:bottom">August MTD</th>
+            <th rowspan="2" style="vertical-align:bottom">September MTD</th>
             <th rowspan="2" style="vertical-align:bottom">% of goal</th>
             <th rowspan="2" style="vertical-align:bottom">NBA</th>
           </tr>
@@ -249,19 +249,18 @@ tr:hover td{background:var(--bg2)}
 var DATA_URL = 'data.json';
 var D = null;
 var DAY_LABELS = ['Mon','Tue','Wed','Thu','Fri'];
-// August 2026: 21 working days
+// September 2026: 21 working days (22 M-F minus Labor Day 9/7)
 // Days tracked so far comes from data.json monthDaysTracked
 // Remaining days = 20 - monthDaysTracked
 // Daily GP goal per rep = goal / 20
 var JUNE_HISTORY = {
   reps: [
-    {name:'Alex McClellan', team:'intrusion', goal:7000, wk1:336.56,wk1c:140,wk2:1175.0,wk2c:59,wk3:1200.0,wk3c:99,wk4:1000.0,wk4c:61,wk5:null,wk5c:null,wk1l:3,wk2l:4,wk3l:4,wk4l:2,wk5l:null,nba_wk1:0,nba_wk2:1,nba_wk3:0,nba_wk4:0},
-    {name:'Dalton Martinez', team:'intrusion', goal:16000, wk1:6502.52,wk1c:178,wk2:11019.23,wk2c:89,wk3:7955.83,wk3c:212,wk4:4304.35,wk4c:210,wk5:null,wk5c:null,wk1l:44,wk2l:28,wk3l:32,wk4l:22,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:1,nba_wk4:0},
-    {name:'Daryn Hightower', team:'intrusion', goal:9000, wk1:2140.06,wk1c:432,wk2:2629.78,wk2c:183,wk3:1998.05,wk3c:286,wk4:655.42,wk4c:327,wk5:null,wk5c:null,wk1l:6,wk2l:6,wk3l:13,wk4l:12,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:1,nba_wk4:0},
-    {name:'Kieran Logue', team:'intrusion', goal:9000, wk1:4011.95,wk1c:243,wk2:2629.65,wk2c:217,wk3:-1523.01,wk3c:410,wk4:1621.04,wk4c:324,wk5:null,wk5c:null,wk1l:15,wk2l:9,wk3l:5,wk4l:7,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:1,nba_wk4:0},
-    {name:'Lee Epling', team:'chamblee', goal:22500, wk1:2299.0,wk1c:173,wk2:5201.0,wk2c:94,wk3:2000.0,wk3c:59,wk4:400.0,wk4c:0,wk5:null,wk5c:null,wk1l:12,wk2l:18,wk3l:9,wk4l:2,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
-    {name:'Luke Kush', team:'chamblee', goal:125000, wk1:22251.81,wk1c:93,wk2:23779.64,wk2c:103,wk3:25371.38,wk3c:117,wk4:36716.4,wk4c:139,wk5:null,wk5c:null,wk1l:89,wk2l:83,wk3l:92,wk4l:119,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:1,nba_wk4:1},
-    {name:'Spencer Hines', team:'chamblee', goal:100000, wk1:24638.19,wk1c:148,wk2:35347.16,wk2c:130,wk3:22061.96,wk3c:111,wk4:10392.15,wk4c:57,wk5:null,wk5c:null,wk1l:67,wk2l:62,wk3l:15,wk4l:11,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0}
+    {name:'Alex McClellan', team:'intrusion', goal:7000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Dalton Martinez', team:'intrusion', goal:16000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Daryn Hightower', team:'intrusion', goal:9000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Kieran Logue', team:'intrusion', goal:9000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Luke Kush', team:'chamblee', goal:125000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0},
+    {name:'Spencer Hines', team:'chamblee', goal:100000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0}
   ]
 };
 function load(){
@@ -322,7 +321,7 @@ function moGPTotal(r){
   return (h?((h.wk1||0)+(h.wk2||0)+(h.wk3||0)):0)+wkGP(r);
 }
 function moPct(r){return Math.min(999,Math.round(moGPTotal(r)/r.goal*100));}
-// Daily GP goal = monthly goal / 21 working days in August
+// Daily GP goal = monthly goal / 21 working days in September
 function dailyGPGoal(r){return r.goal/D.meta.monthTotalDays;}
 // GP on track % = MTD / (days tracked * daily goal)
 function gpOnTrackPct(r){
@@ -462,7 +461,7 @@ function renderMonthLB(reps){
   }
   document.getElementById('lbmo').innerHTML=rows;
 }
-var PREV_MONTH = {"monthLabel": "July 2026", "weekDates": ["Jun 29 – Jul 3", "Jul 6–10", "Jul 13–17", "Jul 20–24", "Jul 27–31"], "reps": [{"name": "Alex McClellan", "team": "intrusion", "goal": 6000, "wk1": 66.76, "wk1c": 1, "wk2": 1482.64, "wk2c": 148, "wk3": 2167.62, "wk3c": 170, "wk4": 3349.95, "wk4c": 71, "wk5": 2311.76, "wk5c": 60, "nba_wk1": 0, "nba_wk2": 1, "nba_wk3": 1, "nba_wk4": 0, "nba_wk5": 0, "mtd": 9378.73}, {"name": "Alex Robinson", "team": "intrusion", "goal": 6000, "wk1": 125, "wk1c": 23, "wk2": 616.7, "wk2c": 372, "wk3": 1788.93, "wk3c": 266, "wk4": 2476.65, "wk4c": 282, "wk5": 1192.68, "wk5c": 183, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 1, "nba_wk4": 0, "nba_wk5": 1, "mtd": 6199.96}, {"name": "Dalton Martinez", "team": "intrusion", "goal": 11000, "wk1": 1352.08, "wk1c": 71, "wk2": 3365.68, "wk2c": 283, "wk3": 2857.39, "wk3c": 254, "wk4": 7837.14, "wk4c": 232, "wk5": 4966.9, "wk5c": 69, "nba_wk1": 1, "nba_wk2": 0, "nba_wk3": 0, "nba_wk4": 1, "nba_wk5": 1, "mtd": 20379.19}, {"name": "Daryn Hightower", "team": "intrusion", "goal": 6000, "wk1": 91.99, "wk1c": 121, "wk2": 936.31, "wk2c": 377, "wk3": 1304.82, "wk3c": 427, "wk4": 4300, "wk4c": 381, "wk5": 790.2, "wk5c": 277, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 0, "nba_wk4": 0, "nba_wk5": 0, "mtd": 7423.32}, {"name": "Kieran Logue", "team": "intrusion", "goal": 6000, "wk1": 645, "wk1c": 134, "wk2": 1680, "wk2c": 331, "wk3": 2325, "wk3c": 339, "wk4": 2350, "wk4c": 323, "wk5": 3925.38, "wk5c": 265, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 0, "nba_wk4": 0, "nba_wk5": 0, "mtd": 10925.38}, {"name": "Lee Epling", "team": "chamblee", "goal": 18000, "wk1": 500, "wk1c": 42, "wk2": 7301, "wk2c": 136, "wk3": 5647, "wk3c": 135, "wk4": 5116.4, "wk4c": 100, "wk5": 2994, "wk5c": 136, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 0, "nba_wk4": 1, "nba_wk5": 0, "mtd": 21558.4}, {"name": "Luke Kush", "team": "chamblee", "goal": 113000, "wk1": 6233.17, "wk1c": 34, "wk2": 32626.89, "wk2c": 127, "wk3": 24225.48, "wk3c": 178, "wk4": 32607.59, "wk4c": 111, "wk5": 32424.51, "wk5c": 121, "nba_wk1": 1, "nba_wk2": 1, "nba_wk3": 0, "nba_wk4": 1, "nba_wk5": 0, "mtd": 128117.64}, {"name": "Spencer Hines", "team": "chamblee", "goal": 115000, "wk1": 11486.05, "wk1c": 64, "wk2": 23949.34, "wk2c": 91, "wk3": 30594.62, "wk3c": 0, "wk4": 19627.97, "wk4c": 130, "wk5": 2630, "wk5c": 111, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 0, "nba_wk4": 0, "nba_wk5": 0, "mtd": 88287.98}]};
+var PREV_MONTH = {"monthLabel": "August 2026", "weekDates": ["Aug 3–7", "Aug 10–14", "Aug 17–21", "Aug 24–28", "Aug 31"], "reps": [{"name": "Alex McClellan", "team": "intrusion", "goal": 7000, "wk1": 7142.15, "wk1c": 140, "wk2": 3101.6, "wk2c": 59, "wk3": 1200, "wk3c": 99, "wk4": 1000, "wk4c": 61, "wk5": 0, "wk5c": 23, "nba_wk1": 0, "nba_wk2": 1, "nba_wk3": 0, "nba_wk4": 0, "nba_wk5": 0, "mtd": 12443.75}, {"name": "Dalton Martinez", "team": "intrusion", "goal": 16000, "wk1": 6502.52, "wk1c": 178, "wk2": 11019.23, "wk2c": 89, "wk3": 7955.83, "wk3c": 212, "wk4": 4304.35, "wk4c": 210, "wk5": 1465.53, "wk5c": 24, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 1, "nba_wk4": 0, "nba_wk5": 0, "mtd": 31247.46}, {"name": "Daryn Hightower", "team": "intrusion", "goal": 9000, "wk1": 2140.06, "wk1c": 432, "wk2": 2629.78, "wk2c": 183, "wk3": 1998.05, "wk3c": 286, "wk4": 655.42, "wk4c": 327, "wk5": 59.82, "wk5c": 99, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 1, "nba_wk4": 0, "nba_wk5": 0, "mtd": 7483.13}, {"name": "Kieran Logue", "team": "intrusion", "goal": 9000, "wk1": 4011.95, "wk1c": 243, "wk2": 2629.65, "wk2c": 217, "wk3": -1523.01, "wk3c": 410, "wk4": 1621.04, "wk4c": 324, "wk5": 0, "wk5c": 78, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 1, "nba_wk4": 0, "nba_wk5": 0, "mtd": 6739.63}, {"name": "Lee Epling", "team": "chamblee", "goal": 22500, "wk1": 2299, "wk1c": 173, "wk2": 5201, "wk2c": 94, "wk3": 2000, "wk3c": 59, "wk4": 400, "wk4c": 0, "wk5": 0, "wk5c": 0, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 0, "nba_wk4": 0, "nba_wk5": 0, "mtd": 9900}, {"name": "Luke Kush", "team": "chamblee", "goal": 125000, "wk1": 22251.81, "wk1c": 93, "wk2": 23779.64, "wk2c": 103, "wk3": 25371.38, "wk3c": 117, "wk4": 36716.4, "wk4c": 139, "wk5": 10818.31, "wk5c": 40, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 1, "nba_wk4": 1, "nba_wk5": 0, "mtd": 118937.54}, {"name": "Spencer Hines", "team": "chamblee", "goal": 100000, "wk1": 24638.19, "wk1c": 148, "wk2": 35347.16, "wk2c": 130, "wk3": 22061.96, "wk3c": 111, "wk4": 10392.15, "wk4c": 57, "wk5": 735.0, "wk5c": 23, "nba_wk1": 0, "nba_wk2": 0, "nba_wk3": 0, "nba_wk4": 0, "nba_wk5": 0, "mtd": 93174.46}]};
 function renderPrevMonth(){
   var pm=PREV_MONTH; var WD=pm.weekDates;
   document.getElementById('pmTitle').textContent=pm.monthLabel+' — weekly breakdown';
@@ -524,13 +523,13 @@ function renderPrevMonth(){
 function renderPrevWeeks(reps){
   var hist=JUNE_HISTORY;
   var cw=D.meta.curWeek||5;
-  var WD=D.meta.weekDates||['Jun 29 – Jul 3','Jul 6–10','Jul 13–17','Jul 20–24','Jul 27–31'];
+  var WD=D.meta.weekDates||['Sep 1–4','Sep 7–11','Sep 14–18','Sep 21–25','Sep 28–30'];
   hist.reps.forEach(function(h){
     var live=reps.find(function(r){return r.name===h.name;});
     if(live){ h['wk'+cw]=wkGP(live); h['wk'+cw+'c']=wkCalls(live); h['wk'+cw+'l']=wkLoads(live); }
   });
   var totalMonthNBAs=hist.reps.reduce(function(s,h){var l=reps.find(function(r){return r.name===h.name;});return s+(h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(h.nba_wk4||0)+(l?l.nba:0);},0);
-  document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in August</span>';
+  document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in September</span>';
   document.getElementById('pwNote').textContent='Week '+cw+' ('+WD[cw-1]+') is in progress (Day '+D.meta.dayOfWeek+' of '+D.meta.totalDays+') — GP and calls are current totals'+(cw>1?'; earlier weeks are locked.':'. Weeks '+(cw+1)+'–5 have not started.');
   function cellPair(wd){
     if(wd.gp===null||wd.st==='fut') return '<td class="gp-cell"><span style="color:var(--text2)">&#8212;</span></td><td class="calls-cell"><span style="color:var(--text2)">&#8212;</span></td>';
