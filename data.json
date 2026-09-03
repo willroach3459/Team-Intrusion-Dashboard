@@ -3,7 +3,7 @@
     "weekLabel": "Week of Sep 1",
     "dayOfWeek": 3,
     "totalDays": 4,
-    "lastUpdated": "9/3 — Week 1 day 3 Thursday (1400) · September",
+    "lastUpdated": "9/3 — Week 1 day 3 · drayage reconcile (Spencer +$1,587.75)",
     "monthDaysTracked": 3,
     "monthTotalDays": 21,
     "tiGoal": 58000,
@@ -55,6 +55,9 @@
           "loads": 3
         }
       }
+    },
+    "drayageSettled": {
+      "Spencer Hines": 1587.75
     }
   },
   "reps": [
@@ -211,7 +214,7 @@
       "calls_d3": 10,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 555.0,
+      "mtd_override": 2142.75,
       "loads_d1": 0,
       "loads_d2": 2,
       "loads_d3": 0,
