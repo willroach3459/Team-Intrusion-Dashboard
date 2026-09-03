@@ -169,11 +169,11 @@ tr:hover td{background:var(--bg2)}
         <thead>
           <tr>
             <th rowspan="2" style="vertical-align:bottom">Team</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Aug 3&ndash;7)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Aug 10&ndash;14)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Aug 17&ndash;21)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Aug 24&ndash;28)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Aug 31)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Sep 1&ndash;4)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Sep 7&ndash;11)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Sep 14&ndash;18)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Sep 21&ndash;25)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Sep 28&ndash;30)</th>
             <th rowspan="2" style="vertical-align:bottom">September MTD</th>
             <th rowspan="2" style="vertical-align:bottom">% of goal</th>
           </tr>
@@ -192,11 +192,11 @@ tr:hover td{background:var(--bg2)}
         <thead>
           <tr>
             <th rowspan="2" style="vertical-align:bottom">Rep</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Aug 3&ndash;7)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Aug 10&ndash;14)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Aug 17&ndash;21)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Aug 24&ndash;28)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Aug 31)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Sep 1&ndash;4)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Sep 7&ndash;11)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Sep 14&ndash;18)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Sep 21&ndash;25)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Sep 28&ndash;30)</th>
             <th rowspan="2" style="vertical-align:bottom">September MTD</th>
             <th rowspan="2" style="vertical-align:bottom">% of goal</th>
             <th rowspan="2" style="vertical-align:bottom">NBA</th>
@@ -221,12 +221,12 @@ tr:hover td{background:var(--bg2)}
         <thead>
           <tr>
             <th rowspan="2" style="vertical-align:bottom">Rep</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Jun 29 &ndash; Jul 3)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Jul 6&ndash;10)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Jul 13&ndash;17)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Jul 20&ndash;24)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Jul 27&ndash;31)</th>
-            <th rowspan="2" style="vertical-align:bottom">July MTD</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Aug 3&ndash;7)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Aug 10&ndash;14)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Aug 17&ndash;21)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Aug 24&ndash;28)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Aug 31)</th>
+            <th rowspan="2" style="vertical-align:bottom">August MTD</th>
             <th rowspan="2" style="vertical-align:bottom">% of goal</th>
             <th rowspan="2" style="vertical-align:bottom">NBA</th>
           </tr>
@@ -465,7 +465,7 @@ var PREV_MONTH = {"monthLabel": "August 2026", "weekDates": ["Aug 3–7", "Aug 1
 function renderPrevMonth(){
   var pm=PREV_MONTH; var WD=pm.weekDates;
   document.getElementById('pmTitle').textContent=pm.monthLabel+' — weekly breakdown';
-  document.getElementById('pmNote').textContent=pm.monthLabel+' final weekly numbers. Spencer’s drayage and McClellan’s warehouse settle in bulk at month-end, so those amounts land in the final week (Jul 27–31) — which is why that week runs high for them. Kept here so reps can compare against the current month; rolls forward when a new month starts.';
+  document.getElementById('pmNote').textContent=pm.monthLabel+' final weekly numbers. Spencer’s drayage settles as containers deliver and McClellan’s warehouse settles in bulk, so their weekly splits can look lumpy. Kept here so reps can compare against the current month; rolls forward when a new month starts.';
   document.getElementById('pmRepTitle').textContent=pm.monthLabel+' — all reps by week';
   document.getElementById('pmTitle').textContent=pm.monthLabel+' — weekly breakdown';
   var sortedPM=[].concat(pm.reps).sort(function(a,b){return (b.mtd||0)-(a.mtd||0);});
