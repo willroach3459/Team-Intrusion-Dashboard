@@ -110,8 +110,8 @@
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 32247.46,
-      "velPrior": 1.462
+      "velBase": 32065.49,
+      "velPrior": 1.453
     },
     {
       "name": "Daryn Hightower",
@@ -137,8 +137,8 @@
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 8483.13,
-      "velPrior": 0.888
+      "velBase": 8353.64,
+      "velPrior": 0.873
     },
     {
       "name": "Kieran Logue",
@@ -164,8 +164,8 @@
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 7739.63,
-      "velPrior": 0.565
+      "velBase": 8130.13,
+      "velPrior": 0.598
     },
     {
       "name": "Luke Kush",
@@ -191,8 +191,8 @@
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 119937.54,
-      "velPrior": 0.921
+      "velBase": 142240.87,
+      "velPrior": 1.094
     },
     {
       "name": "Spencer Hines",
@@ -218,8 +218,8 @@
       "loads_d3": 0,
       "loads_d4": 0,
       "loads_d5": 0,
-      "velBase": 94174.46,
-      "velPrior": 1.044
+      "velBase": 123914.74,
+      "velPrior": 1.377
     }
   ],
   "prevWeek": [
@@ -230,27 +230,27 @@
     },
     {
       "name": "Dalton Martinez",
-      "gp": 31247.46,
+      "gp": 31065.49,
       "nba": 1
     },
     {
       "name": "Daryn Hightower",
-      "gp": 7483.13,
+      "gp": 7353.64,
       "nba": 1
     },
     {
       "name": "Kieran Logue",
-      "gp": 6739.63,
+      "gp": 7130.13,
       "nba": 1
     },
     {
       "name": "Luke Kush",
-      "gp": 118937.54,
+      "gp": 141240.87,
       "nba": 2
     },
     {
       "name": "Spencer Hines",
-      "gp": 93174.46,
+      "gp": 122914.74,
       "nba": 0
     }
   ]
