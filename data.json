@@ -3,7 +3,7 @@
     "weekLabel": "Week of Sep 14",
     "dayOfWeek": 4,
     "totalDays": 5,
-    "lastUpdated": "9/17 EOD final \u2014 Week 3 day 4 Thursday closed \u00b7 September",
+    "lastUpdated": "9/17 8pm \u2014 shipped MTD settle (Spencer drayage batch) \u00b7 September",
     "monthDaysTracked": 12,
     "monthTotalDays": 21,
     "tiGoal": 58000,
@@ -58,7 +58,7 @@
     },
     "drayageNote": "Spencer settled to pickup basis $13,837.54 (29 drayage containers, $8,317.54) per 9/10 ShippedReport; +$5642.72 drayage catch-up in d3",
     "snapshot": "Mon 9/14 7:50am \u00b7 Wk2 close settle (shipped MTD thru 9/13 + RC outbound true-up)",
-    "settled": "Shipped MTD reconcile 9/16 8pm: prior weeks re-trued (Luke +40.89, Spencer -19.05); current week held on profitability. Continental Western & Mike Hot Deals still $0 (on-asset cost unkeyed)."
+    "settled": "Shipped MTD reconcile 9/17: Spencer drayage +$9,255.74 recognized (wk1 +2,033, wk2 +7,223; drayage now $26,192, 84 loads). Others unchanged. Current week held on profitability."
   },
   "reps": [
     {
@@ -214,7 +214,7 @@
       "calls_d3": 27,
       "calls_d4": 13,
       "calls_d5": 0,
-      "mtd_override": 23626.14,
+      "mtd_override": 32881.88,
       "loads_d1": 2,
       "loads_d2": 0,
       "loads_d3": 1,
