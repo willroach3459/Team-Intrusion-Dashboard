@@ -3,7 +3,7 @@
     "weekLabel": "Week of Sep 21",
     "dayOfWeek": 3,
     "totalDays": 5,
-    "lastUpdated": "9/23 EOD final \u2014 Week 4 day 3 Wednesday \u00b7 September",
+    "lastUpdated": "9/23 8pm \u2014 shipped MTD settle, prior weeks re-trued \u00b7 September",
     "monthDaysTracked": 16,
     "monthTotalDays": 21,
     "tiGoal": 58000,
@@ -58,7 +58,7 @@
     },
     "drayageNote": "Spencer settled to pickup basis $13,837.54 (29 drayage containers, $8,317.54) per 9/10 ShippedReport; +$5642.72 drayage catch-up in d3",
     "snapshot": "Wed 9/23 EOD final \u00b7 Week 4 day 3",
-    "settled": "Shipped MTD reconcile 9/21: all prior weeks re-trued to recognized (Week 3 now recognized-basis: Dalton -4,725, Daryn -1,020, Luke -792 = booked-not-yet-shipped; Spencer +1,678 drayage). Continental Western & Mike Hot Deals still $0."
+    "settled": "Shipped MTD reconcile 9/23: Spencer drayage +$15,470 recognized (drayage now $42,123, 134 loads); Luke +$318. Dalton Week 3 still not recovered (loads unshipped). Continental Western & Mike Hot Deals still $0."
   },
   "reps": [
     {
@@ -106,7 +106,7 @@
       "calls_d3": 36,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 19511.26,
+      "mtd_override": 19492.87,
       "loads_d1": 2,
       "loads_d2": 9,
       "loads_d3": 6,
@@ -187,7 +187,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 82254.94,
+      "mtd_override": 84045.28,
       "loads_d1": 16,
       "loads_d2": 22,
       "loads_d3": 17,
@@ -214,7 +214,7 @@
       "calls_d3": 3,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 36572.68,
+      "mtd_override": 52043.15,
       "loads_d1": 0,
       "loads_d2": 2,
       "loads_d3": 1,
