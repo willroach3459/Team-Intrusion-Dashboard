@@ -3,7 +3,7 @@
     "weekLabel": "Week of Sep 28",
     "dayOfWeek": 2,
     "totalDays": 3,
-    "lastUpdated": "9/29 5pm \u2014 Week 5 Day 2 (Tue) EOD \u00b7 profitability GP \u00b7 September",
+    "lastUpdated": "9/29 5:20pm \u2014 shipped MTD settle \u00b7 prior weeks re-trued \u00b7 September",
     "monthDaysTracked": 20,
     "monthTotalDays": 21,
     "tiGoal": 58000,
@@ -57,8 +57,8 @@
       }
     },
     "drayageNote": "Spencer settled to pickup basis $13,837.54 (29 drayage containers, $8,317.54) per 9/10 ShippedReport; +$5642.72 drayage catch-up in d3",
-    "snapshot": "Week 5 Day 2 (Tue 9/29) \u00b7 5pm EOD \u00b7 booked GP (profitability)",
-    "settled": "Per-rep shipped reconcile 9/28: prior weeks re-trued off single-rep shipped reports (team-wide export was under-capturing Dalton & Daryn). Dalton +7,829, Daryn +3,932, Kieran +1,483, Luke +872, Alex +50, Spencer +43. Team MTD 193,841 -> 208,049. Week 5 stays on profitability."
+    "snapshot": "Week 5 Day 2 (Tue 9/29) \u00b7 EOD settled \u00b7 prior wks recognized, wk5 profitability",
+    "settled": "Shipped settle 9/29: Spencer +12,018 (Scan Global drayage recognized wk3/wk4), Dalton +623, Luke +548, Daryn -3,071 (Move Logistix load 131657016 sell zeroed: +2,840->-150; acct now -910 MTD). Team prior weeks 208,049->218,167."
   },
   "reps": [
     {
@@ -106,7 +106,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 24343.95,
+      "mtd_override": 24966.69,
       "loads_d1": 3,
       "loads_d2": 1,
       "loads_d3": 0,
@@ -133,7 +133,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 11763.46,
+      "mtd_override": 8692.7,
       "loads_d1": 0,
       "loads_d2": 1,
       "loads_d3": 0,
@@ -187,7 +187,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 116482.28,
+      "mtd_override": 117030.5,
       "loads_d1": 22,
       "loads_d2": 30,
       "loads_d3": 0,
@@ -214,7 +214,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 65701.31,
+      "mtd_override": 77719.19,
       "loads_d1": 2,
       "loads_d2": 4,
       "loads_d3": 0,
