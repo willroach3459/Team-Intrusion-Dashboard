@@ -3,7 +3,7 @@
     "weekLabel": "Week of Sep 28",
     "dayOfWeek": 3,
     "totalDays": 3,
-    "lastUpdated": "9/30 12pm \u2014 Week 5 Day 3 (month-end) intraday \u00b7 profitability GP \u00b7 September",
+    "lastUpdated": "9/30 \u2014 PTS asset-cost GP applied (29 Sept loads @ $2.032/mi) \u00b7 September",
     "monthDaysTracked": 21,
     "monthTotalDays": 21,
     "tiGoal": 58000,
@@ -58,7 +58,7 @@
     },
     "drayageNote": "Spencer settled to pickup basis $13,837.54 (29 drayage containers, $8,317.54) per 9/10 ShippedReport; +$5642.72 drayage catch-up in d3",
     "snapshot": "Week 5 Day 3 (Wed 9/30, month-end) \u00b7 12pm intraday \u00b7 booked GP, grows by close",
-    "settled": "Shipped settle 9/29 (rev 8:50pm): Spencer +12,018 drayage recognized; Daryn's two Move Logistix negative loads (-760, -150) REMOVED from book entirely (voided/reassigned) \u2014 wk4 re-trued to 986.59. Note: the original +2,840 Move Logistix revenue is also gone; account shows no Sept activity."
+    "settled": "Shipped settle 9/29 (rev 8:50pm): Spencer +12,018 drayage recognized; Daryn's two Move Logistix negative loads (-760, -150) REMOVED from book entirely (voided/reassigned) \u2014 wk4 re-trued to 986.59. Note: the original +2,840 Move Logistix revenue is also gone; account shows no Sept activity. | PTS adj 9/30: asset GP layered in ahead of TAI keying (Alex +1,736 wk3; Dalton +4,813 across wks; Luke +4,588). At next shipped settle: if TAI still shows $0 on a PTS load, KEEP the asset GP and flag; once TAI is keyed, TAI wins."
   },
   "reps": [
     {
@@ -79,7 +79,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 6660.0,
+      "mtd_override": 8395.79,
       "loads_d1": 0,
       "loads_d2": 1,
       "loads_d3": 0,
@@ -96,7 +96,7 @@
       "callTarget": 300,
       "dailyCallTarget": 60,
       "callLabel": "60/day",
-      "gp_d1": 55.0,
+      "gp_d1": 284.99,
       "gp_d2": 77.35,
       "gp_d3": 2186.86,
       "gp_d4": 0,
@@ -106,7 +106,7 @@
       "calls_d3": 25,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 27153.55,
+      "mtd_override": 31966.48,
       "loads_d1": 3,
       "loads_d2": 1,
       "loads_d3": 5,
@@ -187,7 +187,7 @@
       "calls_d3": 0,
       "calls_d4": 0,
       "calls_d5": 0,
-      "mtd_override": 122688.16,
+      "mtd_override": 127275.96,
       "loads_d1": 22,
       "loads_d2": 30,
       "loads_d3": 14,
