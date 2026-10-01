@@ -1,259 +1,259 @@
 {
-  "meta": {
-    "weekLabel": "Week of Sep 28",
-    "dayOfWeek": 3,
-    "totalDays": 3,
-    "lastUpdated": "9/30 FINAL \u2014 September close: all weeks recognized + PTS guard \u00b7 Monday drayage true-up pending",
-    "monthDaysTracked": 21,
-    "monthTotalDays": 21,
-    "tiGoal": 58000,
-    "chGoal": 240000,
-    "weekStartDow": 0,
-    "curWeek": 5,
-    "weekDates": [
-      "Sep 1\u20134",
-      "Sep 7\u201311",
-      "Sep 14\u201318",
-      "Sep 21\u201325",
-      "Sep 28\u201330"
-    ],
-    "warehouse": {
-      "Alex McClellan": {}
-    },
-    "prevDay": {
-      "label": "Mon 8/31 \u00b7 last working day of August (prior-day baseline)",
-      "date": "2026-08-31",
-      "reps": {
-        "Alex McClellan": {
-          "gp": 0.0,
-          "calls": 23,
-          "loads": 0
-        },
-        "Dalton Martinez": {
-          "gp": 1465.53,
-          "calls": 24,
-          "loads": 7
-        },
-        "Daryn Hightower": {
-          "gp": 59.82,
-          "calls": 99,
-          "loads": 2
-        },
-        "Kieran Logue": {
-          "gp": 0.0,
-          "calls": 78,
-          "loads": 0
-        },
-        "Luke Kush": {
-          "gp": 10818.31,
-          "calls": 40,
-          "loads": 25
-        },
-        "Spencer Hines": {
-          "gp": 735.0,
-          "calls": 23,
-          "loads": 3
-        }
-      }
-    },
-    "drayageNote": "Spencer settled to pickup basis $13,837.54 (29 drayage containers, $8,317.54) per 9/10 ShippedReport; +$5642.72 drayage catch-up in d3",
-    "snapshot": "SEPTEMBER FINAL (provisional) \u00b7 recognized basis \u00b7 22 PTS loads on asset GP pending TAI keys \u00b7 drayage true-up Mon",
-    "settled": "Sept close 9/30: all 5 weeks recognized. PTS: Alex's 7 keyed in TAI (verified); Dalton's 13 + Luke's 9 STILL $0 in TAI \u2014 board carries asset GP ($4,813 + $4,588) per guard. Outstanding: Spencer 106 committed Sept-pickup loads ($33,336 booked) + Luke $1,185 + Dalton $462 \u2014 recognize into early Oct, captured in Monday true-up."
-  },
-  "reps": [
-    {
-      "name": "Alex McClellan",
-      "team": "intrusion",
-      "goal": 8000,
-      "nba": 0,
-      "callTarget": 80,
-      "dailyCallTarget": 16,
-      "callLabel": "80/wk",
-      "gp_d1": 0.0,
-      "gp_d2": 400.0,
-      "gp_d3": 1450.0,
-      "gp_d4": 0,
-      "gp_d5": 0,
-      "calls_d1": 7,
-      "calls_d2": 9,
-      "calls_d3": 2,
-      "calls_d4": 0,
-      "calls_d5": 0,
-      "mtd_override": 9845.79,
-      "loads_d1": 0,
-      "loads_d2": 1,
-      "loads_d3": 1,
-      "loads_d4": 0,
-      "loads_d5": 0,
-      "velBase": 13443.75,
-      "velPrior": 1.199
-    },
-    {
-      "name": "Dalton Martinez",
-      "team": "intrusion",
-      "goal": 30000,
-      "nba": 0,
-      "callTarget": 300,
-      "dailyCallTarget": 60,
-      "callLabel": "60/day",
-      "gp_d1": 284.99,
-      "gp_d2": 77.35,
-      "gp_d3": 1231.94,
-      "gp_d4": 0,
-      "gp_d5": 0,
-      "calls_d1": 19,
-      "calls_d2": 32,
-      "calls_d3": 41,
-      "calls_d4": 0,
-      "calls_d5": 0,
-      "mtd_override": 31011.56,
-      "loads_d1": 3,
-      "loads_d2": 1,
-      "loads_d3": 7,
-      "loads_d4": 0,
-      "loads_d5": 0,
-      "velBase": 32065.49,
-      "velPrior": 1.453
-    },
-    {
-      "name": "Daryn Hightower",
-      "team": "intrusion",
-      "goal": 10000,
-      "nba": 0,
-      "callTarget": 400,
-      "dailyCallTarget": 80,
-      "callLabel": "80/day",
-      "gp_d1": 0.0,
-      "gp_d2": 150.0,
-      "gp_d3": 0.0,
-      "gp_d4": 0,
-      "gp_d5": 0,
-      "calls_d1": 0,
-      "calls_d2": 67,
-      "calls_d3": 83,
-      "calls_d4": 0,
-      "calls_d5": 0,
-      "mtd_override": 9602.7,
-      "loads_d1": 0,
-      "loads_d2": 1,
-      "loads_d3": 0,
-      "loads_d4": 0,
-      "loads_d5": 0,
-      "velBase": 8353.64,
-      "velPrior": 0.873
-    },
-    {
-      "name": "Kieran Logue",
-      "team": "intrusion",
-      "goal": 10000,
-      "nba": 0,
-      "callTarget": 400,
-      "dailyCallTarget": 80,
-      "callLabel": "80/day",
-      "gp_d1": 44.01,
-      "gp_d2": 630.0,
-      "gp_d3": 34.83,
-      "gp_d4": 0,
-      "gp_d5": 0,
-      "calls_d1": 65,
-      "calls_d2": 56,
-      "calls_d3": 72,
-      "calls_d4": 0,
-      "calls_d5": 0,
-      "mtd_override": 6023.31,
-      "loads_d1": 1,
-      "loads_d2": 2,
-      "loads_d3": 1,
-      "loads_d4": 0,
-      "loads_d5": 0,
-      "velBase": 8130.13,
-      "velPrior": 0.598
-    },
-    {
-      "name": "Luke Kush",
-      "team": "chamblee",
-      "goal": 130000,
-      "nba": 0,
-      "callTarget": 175,
-      "dailyCallTarget": 35,
-      "callLabel": "35/day",
-      "gp_d1": 7340.64,
-      "gp_d2": 12398.73,
-      "gp_d3": 6004.69,
-      "gp_d4": 0,
-      "gp_d5": 0,
-      "calls_d1": 0,
-      "calls_d2": 0,
-      "calls_d3": 0,
-      "calls_d4": 0,
-      "calls_d5": 0,
-      "mtd_override": 127622.99,
-      "loads_d1": 22,
-      "loads_d2": 30,
-      "loads_d3": 17,
-      "loads_d4": 0,
-      "loads_d5": 0,
-      "velBase": 142240.87,
-      "velPrior": 1.094
-    },
-    {
-      "name": "Spencer Hines",
-      "team": "chamblee",
-      "goal": 110000,
-      "nba": 0,
-      "callTarget": 175,
-      "dailyCallTarget": 35,
-      "callLabel": "35/day",
-      "gp_d1": 810.0,
-      "gp_d2": 985.0,
-      "gp_d3": 625.25,
-      "gp_d4": 0,
-      "gp_d5": 0,
-      "calls_d1": 16,
-      "calls_d2": 2,
-      "calls_d3": 0,
-      "calls_d4": 0,
-      "calls_d5": 0,
-      "mtd_override": 80198.44,
-      "loads_d1": 2,
-      "loads_d2": 4,
-      "loads_d3": 3,
-      "loads_d4": 0,
-      "loads_d5": 0,
-      "velBase": 123914.74,
-      "velPrior": 1.377
-    }
+ "meta": {
+  "weekLabel": "Week of Sep 28",
+  "dayOfWeek": 3,
+  "totalDays": 3,
+  "lastUpdated": "10/1 TRUE-UP \u2014 September FINAL: drayage/cost true-up applied from 10/1 shipped pulls",
+  "monthDaysTracked": 21,
+  "monthTotalDays": 21,
+  "tiGoal": 58000,
+  "chGoal": 240000,
+  "weekStartDow": 0,
+  "curWeek": 5,
+  "weekDates": [
+   "Sep 1\u20134",
+   "Sep 7\u201311",
+   "Sep 14\u201318",
+   "Sep 21\u201325",
+   "Sep 28\u201330"
   ],
-  "prevWeek": [
-    {
-      "name": "Alex McClellan",
-      "gp": 12443.75,
-      "nba": 1
+  "warehouse": {
+   "Alex McClellan": {}
+  },
+  "prevDay": {
+   "label": "Mon 8/31 \u00b7 last working day of August (prior-day baseline)",
+   "date": "2026-08-31",
+   "reps": {
+    "Alex McClellan": {
+     "gp": 0.0,
+     "calls": 23,
+     "loads": 0
     },
-    {
-      "name": "Dalton Martinez",
-      "gp": 31065.49,
-      "nba": 1
+    "Dalton Martinez": {
+     "gp": 1465.53,
+     "calls": 24,
+     "loads": 7
     },
-    {
-      "name": "Daryn Hightower",
-      "gp": 7353.64,
-      "nba": 1
+    "Daryn Hightower": {
+     "gp": 59.82,
+     "calls": 99,
+     "loads": 2
     },
-    {
-      "name": "Kieran Logue",
-      "gp": 7130.13,
-      "nba": 1
+    "Kieran Logue": {
+     "gp": 0.0,
+     "calls": 78,
+     "loads": 0
     },
-    {
-      "name": "Luke Kush",
-      "gp": 141240.87,
-      "nba": 2
+    "Luke Kush": {
+     "gp": 10818.31,
+     "calls": 40,
+     "loads": 25
     },
-    {
-      "name": "Spencer Hines",
-      "gp": 122914.74,
-      "nba": 0
+    "Spencer Hines": {
+     "gp": 735.0,
+     "calls": 23,
+     "loads": 3
     }
-  ]
+   }
+  },
+  "drayageNote": "Spencer settled to pickup basis $13,837.54 (29 drayage containers, $8,317.54) per 9/10 ShippedReport; +$5642.72 drayage catch-up in d3",
+  "snapshot": "SEPTEMBER FINAL (trued-up 10/1) \u00b7 recognized basis \u00b7 Dalton 13 + Luke 9 PTS loads still on asset GP ($4,812.93 + $4,587.80) \u2014 TAI not keyed",
+  "settled": "10/1 true-up: Spencer +$1,773.10 (7 wk4 drayage loads recognized), Luke -$1,575.00 wk4 cost movement, Dalton +$555.00 cur (now 15 recognized cur loads). PTS guard re-checked: Alex 7 keyed (TAI wins, unchanged); Dalton 13 + Luke 9 STILL $0 in TAI \u2014 asset GP held. Outstanding committed: Spencer 99/$30,811.45 \u00b7 Luke 7/$1,184.60 \u00b7 Dalton 6/$461.60 \u00b7 Daryn 3/$0 \u2014 recognize into October."
+ },
+ "reps": [
+  {
+   "name": "Alex McClellan",
+   "team": "intrusion",
+   "goal": 8000,
+   "nba": 0,
+   "callTarget": 80,
+   "dailyCallTarget": 16,
+   "callLabel": "80/wk",
+   "gp_d1": 0.0,
+   "gp_d2": 400.0,
+   "gp_d3": 1450.0,
+   "gp_d4": 0,
+   "gp_d5": 0,
+   "calls_d1": 7,
+   "calls_d2": 9,
+   "calls_d3": 2,
+   "calls_d4": 0,
+   "calls_d5": 0,
+   "mtd_override": 9845.79,
+   "loads_d1": 0,
+   "loads_d2": 1,
+   "loads_d3": 1,
+   "loads_d4": 0,
+   "loads_d5": 0,
+   "velBase": 13443.75,
+   "velPrior": 1.199
+  },
+  {
+   "name": "Dalton Martinez",
+   "team": "intrusion",
+   "goal": 30000,
+   "nba": 0,
+   "callTarget": 300,
+   "dailyCallTarget": 60,
+   "callLabel": "60/day",
+   "gp_d1": 284.99,
+   "gp_d2": 77.35,
+   "gp_d3": 1786.94,
+   "gp_d4": 0,
+   "gp_d5": 0,
+   "calls_d1": 19,
+   "calls_d2": 32,
+   "calls_d3": 41,
+   "calls_d4": 0,
+   "calls_d5": 0,
+   "mtd_override": 31566.56,
+   "loads_d1": 3,
+   "loads_d2": 1,
+   "loads_d3": 7,
+   "loads_d4": 0,
+   "loads_d5": 0,
+   "velBase": 32065.49,
+   "velPrior": 1.453
+  },
+  {
+   "name": "Daryn Hightower",
+   "team": "intrusion",
+   "goal": 10000,
+   "nba": 0,
+   "callTarget": 400,
+   "dailyCallTarget": 80,
+   "callLabel": "80/day",
+   "gp_d1": 0.0,
+   "gp_d2": 150.0,
+   "gp_d3": 0.0,
+   "gp_d4": 0,
+   "gp_d5": 0,
+   "calls_d1": 0,
+   "calls_d2": 67,
+   "calls_d3": 83,
+   "calls_d4": 0,
+   "calls_d5": 0,
+   "mtd_override": 9602.7,
+   "loads_d1": 0,
+   "loads_d2": 1,
+   "loads_d3": 0,
+   "loads_d4": 0,
+   "loads_d5": 0,
+   "velBase": 8353.64,
+   "velPrior": 0.873
+  },
+  {
+   "name": "Kieran Logue",
+   "team": "intrusion",
+   "goal": 10000,
+   "nba": 0,
+   "callTarget": 400,
+   "dailyCallTarget": 80,
+   "callLabel": "80/day",
+   "gp_d1": 44.01,
+   "gp_d2": 630.0,
+   "gp_d3": 34.83,
+   "gp_d4": 0,
+   "gp_d5": 0,
+   "calls_d1": 65,
+   "calls_d2": 56,
+   "calls_d3": 72,
+   "calls_d4": 0,
+   "calls_d5": 0,
+   "mtd_override": 6023.31,
+   "loads_d1": 1,
+   "loads_d2": 2,
+   "loads_d3": 1,
+   "loads_d4": 0,
+   "loads_d5": 0,
+   "velBase": 8130.13,
+   "velPrior": 0.598
+  },
+  {
+   "name": "Luke Kush",
+   "team": "chamblee",
+   "goal": 130000,
+   "nba": 0,
+   "callTarget": 175,
+   "dailyCallTarget": 35,
+   "callLabel": "35/day",
+   "gp_d1": 7340.64,
+   "gp_d2": 12398.73,
+   "gp_d3": 6004.69,
+   "gp_d4": 0,
+   "gp_d5": 0,
+   "calls_d1": 0,
+   "calls_d2": 0,
+   "calls_d3": 0,
+   "calls_d4": 0,
+   "calls_d5": 0,
+   "mtd_override": 126047.99,
+   "loads_d1": 22,
+   "loads_d2": 30,
+   "loads_d3": 17,
+   "loads_d4": 0,
+   "loads_d5": 0,
+   "velBase": 142240.87,
+   "velPrior": 1.094
+  },
+  {
+   "name": "Spencer Hines",
+   "team": "chamblee",
+   "goal": 110000,
+   "nba": 0,
+   "callTarget": 175,
+   "dailyCallTarget": 35,
+   "callLabel": "35/day",
+   "gp_d1": 810.0,
+   "gp_d2": 985.0,
+   "gp_d3": 625.25,
+   "gp_d4": 0,
+   "gp_d5": 0,
+   "calls_d1": 16,
+   "calls_d2": 2,
+   "calls_d3": 0,
+   "calls_d4": 0,
+   "calls_d5": 0,
+   "mtd_override": 81971.54,
+   "loads_d1": 2,
+   "loads_d2": 4,
+   "loads_d3": 3,
+   "loads_d4": 0,
+   "loads_d5": 0,
+   "velBase": 123914.74,
+   "velPrior": 1.377
+  }
+ ],
+ "prevWeek": [
+  {
+   "name": "Alex McClellan",
+   "gp": 12443.75,
+   "nba": 1
+  },
+  {
+   "name": "Dalton Martinez",
+   "gp": 31065.49,
+   "nba": 1
+  },
+  {
+   "name": "Daryn Hightower",
+   "gp": 7353.64,
+   "nba": 1
+  },
+  {
+   "name": "Kieran Logue",
+   "gp": 7130.13,
+   "nba": 1
+  },
+  {
+   "name": "Luke Kush",
+   "gp": 141240.87,
+   "nba": 2
+  },
+  {
+   "name": "Spencer Hines",
+   "gp": 122914.74,
+   "nba": 0
+  }
+ ]
 }
