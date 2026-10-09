@@ -1,27 +1,27 @@
 {
  "meta": {
   "weekLabel": "Week of Oct 5",
-  "dayOfWeek": 4,
+  "dayOfWeek": 5,
   "totalDays": 5,
-  "lastUpdated": "10/8 \u00b7 5pm EOD \u00b7 Thursday final",
-  "monthDaysTracked": 6,
+  "lastUpdated": "10/9 · 10am · Friday morning",
+  "monthDaysTracked": 7,
   "monthTotalDays": 22,
   "tiGoal": 62000,
   "chGoal": 250000,
   "weekStartDow": 0,
   "curWeek": 2,
   "weekDates": [
-   "Oct 1\u20132",
-   "Oct 5\u20139",
-   "Oct 12\u201316",
-   "Oct 19\u201323",
-   "Oct 26\u201330"
+   "Oct 1–2",
+   "Oct 5–9",
+   "Oct 12–16",
+   "Oct 19–23",
+   "Oct 26–30"
   ],
   "warehouse": {
    "Alex McClellan": {}
   },
   "prevDay": {
-   "label": "Fri 10/2 \u00b7 last working day (prior-day baseline)",
+   "label": "Fri 10/2 · last working day (prior-day baseline)",
    "date": "2026-10-02",
    "reps": {
     "Alex McClellan": {
@@ -57,8 +57,8 @@
    }
   },
   "drayageNote": "Sept tail: Spencer 99 committed Sept-pickup loads ($30,811.45) + Luke $1,184.60 + Dalton $461.60 recognize against the frozen September archive, not October MTD",
-  "snapshot": "OCTOBER \u00b7 day 6 of 22 \u00b7 Thu 10/8 EOD",
-  "settled": "SPLIT FINAL 10/8: Protech -> Dalton, Cardinal Plastics -> Kieran (swap confirmed by Will; TAI already matches). Dalton active book: Fabco + Protech. Kieran: KountryWood, Infinity, Das, Rack Avenger, Cardinal, NAD&Me, Dabomatic, Unlimited Packaging. WK1 RE-TRUE 10/8: Spencer +$518.00, Luke +$667.92 (Night Light sell fixed), Dalton +$200.00; Kieran/Alex exact. All 5 Permanent Ink wk1 loads still $0 in TAI - asset GP held. NEW Permanent Ink $0 loads for Sunday wk2 settle: Dalton Perimeter #131950535 (+$229.99), Luke Socali #132009468 (+$402.90), Vanguard #132007840 (+$429.87) & #131981172 (+$429.32); Luke GA Specialty #131995820 FLAGGED - 1,000 lane-mi at $2.032 = $2,033 cost vs $800 sell = -$1,233 asset GP, needs Will\u2019s call. Reassignments landed: Das Medical + Rack Avenger -> Kieran, Fabco -> Dalton CONFIRMED; Protech went to DALTON (plan said Kieran - confirm intent). Dalton new: Kaplan C/O Trans Insight (10 loads, 3 NEGATIVE: -100 invoiced, -55, -5 - lane priced thin), Florence Filter revived (4 loads $575), Milkyway back ($1,505 net, one -95), Harrison Contracting (-18.59). Spencer: 3 Scan Global negatives (-220/-150/-150) + $3,800 buy=sell STILL unkeyed; 138 committed drayage loads $33,424 queued. Kieran Barclays SG $900 buy=sell still unfixed. Alex: Radix 3 containers STILL committed (not picked up - no NBA yet) + 2 new JNF committed drayage $955. TI GOAL 10/6: team Intrusion goal held at $62,000 after Daryn exit (his $11K stays in the team number since his book split to Dalton/Kieran; individual goals unchanged: Alex 8K, Dalton 32K, Kieran 11K). ROSTER 10/6: Daryn Hightower terminated and removed from October board (his Oct-to-date $91.77 / 1 load / wk1 44.48 comes off team MTD; September archive untouched). BOOK SPLIT -> KIERAN: KountryWood, Fabco Industries, Infinity Golf Cart, Rack Avenger, Protech USA, NAD&Me, Dabomatic, Unlimited Packaging ATL (~$8,725 of Sept GP). -> DALTON: Das Medical + Cardinal Plastics (easy LTL, ~$877 Sept GP, ~10 loads/mo). In-flight to work/cancel: Rack Avenger #131833059 (Committed), NAD&Me #131711850 (Committed), KountryWood #131635524 (Committed), Das Medical #131938845 (In Transit, $44.48 - now Dalton). Chase owners needed: Barnhart Bolt pricing (~$10M, submitted) and the reefer RFP. TAI + SalesDash + RingCentral ext 275 reassignment pending. SEPT CORRECTION 10/6: Kieran NBA #2 added to September archive - BloomWood Cabinetry (load 131858858, $30, shipped 9/29 wk5). Sept team NBAs now 12. NBA logged 10/6: Kieran #2 - AllPacks (load 131952270, $150, shipped 10/2, delivered+invoiced; converted from his Sept Top-3 pipeline). CALL POLICY 10/5: only outbound calls count (inbound excluded) \u2014 applied to all of October; September archive stays as graded. NBA logged 10/5: Kieran - Stephen Gould (multi-shipper, 4 loads wk1 incl. $1,300 Permanent Ink load on asset GP $764.36 + $900 Barclays buy=sell pending fix). Wk1 settle 10/4: recognized by pickup 10/1-10/4. Alex/Daryn/Kieran exact; Dalton -$172.25 vs booked (quotes + cost movement); Luke -$757.04 (Night Light #131955099 buy $600/sell $0 NOT KEYED; Socali #131885716 -$150 accessorial, sell $0); Spencer +$120.25, 77 committed drayage loads ($15,404.75) queued. Permanent Ink asset GP applied to wk1 (RS Group $2.032/mi, TAI-wins guard): Dalton +$465.24 (2 Perimeter), Kieran +$764.36 (Stephen Gould #131893801), Luke +$795.80 (ML Ball + Socali). Still unresolved buy=sell, NOT asset carrier: Dalton One Circle #131914937 $400 (Harrison Jr Trucking), Kieran Stephen Gould #131904128 $900 (Barclays), Spencer Scan Global #131679143 $3,800 (IG Transportation). Alex: Radix USA Co NEW - 3 committed drayage containers $1,170 (possible NBA). Sept tail + 22 PTS keys still open."
+  "snapshot": "OCTOBER · day 7 of 22 · Fri 10/9 10am",
+  "settled": "SPLIT FINAL 10/8: Protech -> Dalton, Cardinal Plastics -> Kieran (swap confirmed by Will; TAI already matches). Dalton active book: Fabco + Protech. Kieran: KountryWood, Infinity, Das, Rack Avenger, Cardinal, NAD&Me, Dabomatic, Unlimited Packaging. WK1 RE-TRUE 10/8: Spencer +$518.00, Luke +$667.92 (Night Light sell fixed), Dalton +$200.00; Kieran/Alex exact. All 5 Permanent Ink wk1 loads still $0 in TAI - asset GP held. NEW Permanent Ink $0 loads for Sunday wk2 settle: Dalton Perimeter #131950535 (+$229.99), Luke Socali #132009468 (+$402.90), Vanguard #132007840 (+$429.87) & #131981172 (+$429.32); Luke GA Specialty #131995820 FLAGGED - 1,000 lane-mi at $2.032 = $2,033 cost vs $800 sell = -$1,233 asset GP, needs Will’s call. Reassignments landed: Das Medical + Rack Avenger -> Kieran, Fabco -> Dalton CONFIRMED; Protech went to DALTON (plan said Kieran - confirm intent). Dalton new: Kaplan C/O Trans Insight (10 loads, 3 NEGATIVE: -100 invoiced, -55, -5 - lane priced thin), Florence Filter revived (4 loads $575), Milkyway back ($1,505 net, one -95), Harrison Contracting (-18.59). Spencer: 3 Scan Global negatives (-220/-150/-150) + $3,800 buy=sell STILL unkeyed; 138 committed drayage loads $33,424 queued. Kieran Barclays SG $900 buy=sell still unfixed. Alex: Radix 3 containers STILL committed (not picked up - no NBA yet) + 2 new JNF committed drayage $955. TI GOAL 10/6: team Intrusion goal held at $62,000 after Daryn exit (his $11K stays in the team number since his book split to Dalton/Kieran; individual goals unchanged: Alex 8K, Dalton 32K, Kieran 11K). ROSTER 10/6: Daryn Hightower terminated and removed from October board (his Oct-to-date $91.77 / 1 load / wk1 44.48 comes off team MTD; September archive untouched). BOOK SPLIT -> KIERAN: KountryWood, Fabco Industries, Infinity Golf Cart, Rack Avenger, Protech USA, NAD&Me, Dabomatic, Unlimited Packaging ATL (~$8,725 of Sept GP). -> DALTON: Das Medical + Cardinal Plastics (easy LTL, ~$877 Sept GP, ~10 loads/mo). In-flight to work/cancel: Rack Avenger #131833059 (Committed), NAD&Me #131711850 (Committed), KountryWood #131635524 (Committed), Das Medical #131938845 (In Transit, $44.48 - now Dalton). Chase owners needed: Barnhart Bolt pricing (~$10M, submitted) and the reefer RFP. TAI + SalesDash + RingCentral ext 275 reassignment pending. SEPT CORRECTION 10/6: Kieran NBA #2 added to September archive - BloomWood Cabinetry (load 131858858, $30, shipped 9/29 wk5). Sept team NBAs now 12. NBA logged 10/6: Kieran #2 - AllPacks (load 131952270, $150, shipped 10/2, delivered+invoiced; converted from his Sept Top-3 pipeline). CALL POLICY 10/5: only outbound calls count (inbound excluded) — applied to all of October; September archive stays as graded. NBA logged 10/5: Kieran - Stephen Gould (multi-shipper, 4 loads wk1 incl. $1,300 Permanent Ink load on asset GP $764.36 + $900 Barclays buy=sell pending fix). Wk1 settle 10/4: recognized by pickup 10/1-10/4. Alex/Daryn/Kieran exact; Dalton -$172.25 vs booked (quotes + cost movement); Luke -$757.04 (Night Light #131955099 buy $600/sell $0 NOT KEYED; Socali #131885716 -$150 accessorial, sell $0); Spencer +$120.25, 77 committed drayage loads ($15,404.75) queued. Permanent Ink asset GP applied to wk1 (RS Group $2.032/mi, TAI-wins guard): Dalton +$465.24 (2 Perimeter), Kieran +$764.36 (Stephen Gould #131893801), Luke +$795.80 (ML Ball + Socali). Still unresolved buy=sell, NOT asset carrier: Dalton One Circle #131914937 $400 (Harrison Jr Trucking), Kieran Stephen Gould #131904128 $900 (Barclays), Spencer Scan Global #131679143 $3,800 (IG Transportation). Alex: Radix USA Co NEW - 3 committed drayage containers $1,170 (possible NBA). Sept tail + 22 PTS keys still open."
  },
  "reps": [
   {
@@ -73,12 +73,12 @@
    "gp_d2": 0.0,
    "gp_d3": 300.0,
    "gp_d4": 0.0,
-   "gp_d5": 0,
+   "gp_d5": 0.0,
    "calls_d1": 0,
    "calls_d2": 2,
    "calls_d3": 7,
    "calls_d4": 3,
-   "calls_d5": 0,
+   "calls_d5": 16,
    "mtd_override": 1850.0,
    "loads_d1": 2,
    "loads_d2": 0,
@@ -101,21 +101,21 @@
    "gp_d2": 1794.91,
    "gp_d3": 676.05,
    "gp_d4": 701.46,
-   "gp_d5": 0,
+   "gp_d5": 353.5,
    "calls_d1": 9,
    "calls_d2": 33,
    "calls_d3": 28,
    "calls_d4": 20,
    "calls_d5": 0,
-   "mtd_override": 7607.15,
+   "mtd_override": 7960.65,
    "loads_d1": 10,
    "loads_d2": 9,
    "loads_d3": 5,
    "loads_d4": 6,
-   "loads_d5": 0,
+   "loads_d5": 6,
    "velBase": 32566.56,
    "velPrior": 0.984,
-   "loads_mtd_override": 44
+   "loads_mtd_override": 50
   },
   {
    "name": "Kieran Logue",
@@ -129,21 +129,21 @@
    "gp_d2": 536.01,
    "gp_d3": 380.47,
    "gp_d4": 1190.51,
-   "gp_d5": 0,
+   "gp_d5": 800.0,
    "calls_d1": 85,
    "calls_d2": 64,
    "calls_d3": 74,
    "calls_d4": 76,
-   "calls_d5": 0,
-   "mtd_override": 4832.21,
+   "calls_d5": 13,
+   "mtd_override": 5632.21,
    "loads_d1": 4,
    "loads_d2": 5,
    "loads_d3": 5,
    "loads_d4": 5,
-   "loads_d5": 0,
+   "loads_d5": 3,
    "velBase": 7023.31,
    "velPrior": 0.741,
-   "loads_mtd_override": 29
+   "loads_mtd_override": 32
   },
   {
    "name": "Luke Kush",
@@ -157,21 +157,21 @@
    "gp_d2": 3764.13,
    "gp_d3": 5039.17,
    "gp_d4": 2482.14,
-   "gp_d5": 0,
+   "gp_d5": 3955.88,
    "calls_d1": 0,
    "calls_d2": 11,
    "calls_d3": 33,
    "calls_d4": 26,
-   "calls_d5": 0,
-   "mtd_override": 23842.65,
+   "calls_d5": 4,
+   "mtd_override": 27798.53,
    "loads_d1": 17,
    "loads_d2": 17,
    "loads_d3": 18,
    "loads_d4": 16,
-   "loads_d5": 0,
+   "loads_d5": 10,
    "velBase": 127047.99,
    "velPrior": 0.886,
-   "loads_mtd_override": 98
+   "loads_mtd_override": 108
   },
   {
    "name": "Spencer Hines",
@@ -185,21 +185,21 @@
    "gp_d2": 1895.0,
    "gp_d3": 1120.0,
    "gp_d4": 975.0,
-   "gp_d5": 0,
+   "gp_d5": 30.0,
    "calls_d1": 19,
    "calls_d2": 0,
    "calls_d3": 17,
    "calls_d4": 3,
    "calls_d5": 0,
-   "mtd_override": 7853.25,
+   "mtd_override": 7883.25,
    "loads_d1": 6,
    "loads_d2": 2,
    "loads_d3": 3,
    "loads_d4": 2,
-   "loads_d5": 0,
+   "loads_d5": 1,
    "velBase": 82971.54,
    "velPrior": 0.661,
-   "loads_mtd_override": 22
+   "loads_mtd_override": 23
   }
  ],
  "prevWeek": [
