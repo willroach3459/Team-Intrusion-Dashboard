@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Team Dashboard — October 2026</title>
+<title>Team Dashboard — November 2026</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
 <style>
 :root{--bg:#fff;--bg2:#f7f7f5;--border:#e0ddd6;--text:#1a1a18;--text2:#6b6a65;--green:#639922;--amber:#EF9F27;--red:#E24B4A;--gbg:#EAF3DE;--gfg:#27500A;--abg:#FAEEDA;--afg:#633806;--rbg:#FCEBEB;--rfg:#791F1F;--bbg:#E6F1FB;--bfg:#0C447C;--pbg:#EEEDFE;--pfg:#3C3489;--r:10px;--sh:0 1px 4px rgba(0,0,0,.07)}
@@ -80,7 +80,7 @@ tr:hover td{background:var(--bg2)}
 </head>
 <body>
 <header>
-  <div class="logo"><div class="dot"></div>Team Dashboard &mdash; October 2026</div>
+  <div class="logo"><div class="dot"></div>Team Dashboard &mdash; November 2026</div>
   <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
     <span class="live"><span class="ldot"></span><span id="lbl">Loading...</span></span>
     <span class="hmeta" id="wkLabel"></span>
@@ -106,7 +106,7 @@ tr:hover td{background:var(--bg2)}
           <div style="font-size:12px" id="nbaText"></div>
         </div>
       </div>
-      <p class="sec">October running total &mdash; % to goal</p>
+      <p class="sec">November running total &mdash; % to goal</p>
       <div class="tg">
         <div class="tb"><div style="font-size:12px;color:var(--text2);margin-bottom:5px">Team Intrusion</div><div class="tbig" id="ti-p"></div><div style="font-size:11px;color:var(--text2);margin-top:2px" id="ti-d"></div><div class="pw"><div class="pb" id="ti-b"></div></div><div style="font-size:10px;color:var(--text2);margin-top:4px" id="ti-bk"></div></div>
         <div class="tb"><div style="font-size:12px;color:var(--text2);margin-bottom:5px">Chamblee</div><div class="tbig" id="ch-p"></div><div style="font-size:11px;color:var(--text2);margin-top:2px" id="ch-d"></div><div class="pw"><div class="pb" id="ch-b"></div></div><div style="font-size:10px;color:var(--text2);margin-top:4px" id="ch-bk"></div></div>
@@ -133,7 +133,7 @@ tr:hover td{background:var(--bg2)}
       </div>
       <div class="stabs">
         <button class="stab on" onclick="slb('wk',event)">This week</button>
-        <button class="stab" onclick="slb('mo',event)">October monthly</button>
+        <button class="stab" onclick="slb('mo',event)">November monthly</button>
       </div>
       <div id="lb-wk">
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;margin-bottom:16px;font-size:12px;line-height:1.7">
@@ -158,7 +158,7 @@ tr:hover td{background:var(--bg2)}
     <div id="pg-pw" class="pg">
       <div class="month-header">
         <div>
-          <div style="font-size:16px;font-weight:600">October 2026 &mdash; Week by Week</div>
+          <div style="font-size:16px;font-weight:600">November 2026 &mdash; Week by Week</div>
           <div style="font-size:12px;color:var(--text2);margin-top:3px">GP, loads &amp; calls by week &middot; Resets each new month</div>
         </div>
         <div id="moNBABadge"></div>
@@ -169,12 +169,12 @@ tr:hover td{background:var(--bg2)}
         <thead>
           <tr>
             <th rowspan="2" style="vertical-align:bottom">Team</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Oct 1&ndash;2)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Oct 5&ndash;9)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Oct 12&ndash;16)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Oct 19&ndash;23)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Oct 26&ndash;30)</th>
-            <th rowspan="2" style="vertical-align:bottom">October MTD</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Nov 2&ndash;6)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Nov 9&ndash;13)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Nov 16&ndash;20)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Nov 23&ndash;27)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Nov 30)</th>
+            <th rowspan="2" style="vertical-align:bottom">November MTD</th>
             <th rowspan="2" style="vertical-align:bottom">% of goal</th>
           </tr>
           <tr>
@@ -192,12 +192,12 @@ tr:hover td{background:var(--bg2)}
         <thead>
           <tr>
             <th rowspan="2" style="vertical-align:bottom">Rep</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Oct 1&ndash;2)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Oct 5&ndash;9)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Oct 12&ndash;16)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Oct 19&ndash;23)</th>
-            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Oct 26&ndash;30)</th>
-            <th rowspan="2" style="vertical-align:bottom">October MTD</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 1 (Nov 2&ndash;6)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 2 (Nov 9&ndash;13)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 3 (Nov 16&ndash;20)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 4 (Nov 23&ndash;27)</th>
+            <th colspan="2" style="text-align:center;border-bottom:1px solid var(--border)">Week 5 (Nov 30)</th>
+            <th rowspan="2" style="vertical-align:bottom">November MTD</th>
             <th rowspan="2" style="vertical-align:bottom">% of goal</th>
             <th rowspan="2" style="vertical-align:bottom">NBA</th>
           </tr>
@@ -249,17 +249,17 @@ tr:hover td{background:var(--bg2)}
 var DATA_URL = 'data.json';
 var D = null;
 var DAY_LABELS = ['Mon','Tue','Wed','Thu','Fri'];
-// October 2026: 22 working days (no holidays)
+// November 2026: 21 working days (Thanksgiving not trimmed yet)
 // Days tracked so far comes from data.json monthDaysTracked
 // Remaining days = 20 - monthDaysTracked
 // Daily GP goal per rep = goal / 20
 var JUNE_HISTORY = {
   reps: [
-    {name:'Alex McClellan', team:'intrusion', goal:8000, wk1:650,wk1c:53,wk2:2162,wk2c:63,wk3:2149,wk3c:64,wk4:2969.42,wk4c:65,wk5:null,wk5c:null,wk1l:2,wk2l:6,wk3l:6,wk4l:6,wk5l:null,nba_wk1:0,nba_wk2:1,nba_wk3:1,nba_wk4:1,nba_wk5:0},
-    {name:'Dalton Martinez', team:'intrusion', goal:32000, wk1:2720.03,wk1c:27,wk2:8172.6,wk2c:111,wk3:8091.12,wk3c:97,wk4:8315.92,wk4c:189,wk5:null,wk5c:null,wk1l:14,wk2l:47,wk3l:41,wk4l:41,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0,nba_wk5:0},
-    {name:'Kieran Logue', team:'intrusion', goal:11000, wk1:1967.9,wk1c:123,wk2:4166.11,wk2c:356,wk3:3893.03,wk3c:347,wk4:5919.56,wk4c:242,wk5:null,wk5c:null,wk1l:10,wk2l:24,wk3l:18,wk4l:43,wk5l:null,nba_wk1:2,nba_wk2:0,nba_wk3:0,nba_wk4:0,nba_wk5:2},
-    {name:'Luke Kush', team:'chamblee', goal:135000, wk1:8280.22,wk1c:19,wk2:24471.62,wk2c:92,wk3:35528.49,wk3c:96,wk4:28200.26,wk4c:82,wk5:null,wk5c:null,wk1l:30,wk2l:92,wk3l:105,wk4l:94,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0,nba_wk5:0},
-    {name:'Spencer Hines', team:'chamblee', goal:115000, wk1:9028.42,wk1c:0,wk2:35317.64,wk2c:39,wk3:38778.05,wk3c:21,wk4:43792.83,wk4c:15,wk5:null,wk5c:null,wk1l:36,wk2l:141,wk3l:150,wk4l:191,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0,nba_wk5:0}
+    {name:'Alex McClellan', team:'intrusion', goal:15000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0,nba_wk5:0},
+    {name:'Dalton Martinez', team:'intrusion', goal:38000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0,nba_wk5:0},
+    {name:'Kieran Logue', team:'intrusion', goal:18000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0,nba_wk5:0},
+    {name:'Luke Kush', team:'chamblee', goal:140000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0,nba_wk5:0},
+    {name:'Spencer Hines', team:'chamblee', goal:120000, wk1:null,wk1c:null,wk2:null,wk2c:null,wk3:null,wk3c:null,wk4:null,wk4c:null,wk5:null,wk5c:null,wk1l:null,wk2l:null,wk3l:null,wk4l:null,wk5l:null,nba_wk1:0,nba_wk2:0,nba_wk3:0,nba_wk4:0,nba_wk5:0}
   ]
 };
 function load(){
@@ -320,7 +320,7 @@ function moGPTotal(r){
   return (h?((h.wk1||0)+(h.wk2||0)+(h.wk3||0)):0)+wkGP(r);
 }
 function moPct(r){return Math.min(999,Math.round(moGPTotal(r)/r.goal*100));}
-// Daily GP goal = monthly goal / 22 working days in October
+// Daily GP goal = monthly goal / 21 working days in November
 function dailyGPGoal(r){return r.goal/D.meta.monthTotalDays;}
 // GP on track % = MTD / (days tracked * daily goal)
 function gpOnTrackPct(r){
@@ -522,13 +522,13 @@ function renderPrevMonth(){
 function renderPrevWeeks(reps){
   var hist=JUNE_HISTORY;
   var cw=D.meta.curWeek||5;
-  var WD=D.meta.weekDates||['Oct 1–2','Oct 5–9','Oct 12–16','Oct 19–23','Oct 26–30'];
+  var WD=D.meta.weekDates||['Nov 2–6','Nov 9–13','Nov 16–20','Nov 23–27','Nov 30'];
   hist.reps.forEach(function(h){
     var live=reps.find(function(r){return r.name===h.name;});
     if(live){ h['wk'+cw]=wkGP(live); h['wk'+cw+'c']=wkCalls(live); h['wk'+cw+'l']=wkLoads(live); }
   });
   var totalMonthNBAs=hist.reps.reduce(function(s,h){var l=reps.find(function(r){return r.name===h.name;});return s+(h.nba_wk1||0)+(h.nba_wk2||0)+(h.nba_wk3||0)+(h.nba_wk4||0)+(l?l.nba:0);},0);
-  document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in October</span>';
+  document.getElementById('moNBABadge').innerHTML='<span class="bd bp2" style="font-size:12px;padding:4px 10px">&#9733; '+totalMonthNBAs+' NBAs in November</span>';
   document.getElementById('pwNote').textContent='Week '+cw+' ('+WD[cw-1]+') is in progress (Day '+D.meta.dayOfWeek+' of '+D.meta.totalDays+') — GP and calls are current totals'+(cw>1?'; earlier weeks are locked.':'. Weeks '+(cw+1)+'–5 have not started.');
   function cellPair(wd){
     if(wd.gp===null||wd.st==='fut') return '<td class="gp-cell"><span style="color:var(--text2)">&#8212;</span></td><td class="calls-cell"><span style="color:var(--text2)">&#8212;</span></td>';
